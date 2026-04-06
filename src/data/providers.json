@@ -1,0 +1,19 @@
+[
+  { "id": "amex-platinum", "name": "Amex Platinum", "type": "credit-card", "logo": "💳", "color": "#c4b590" },
+  { "id": "amex-gold", "name": "Amex Gold", "type": "credit-card", "logo": "💳", "color": "#d4a843" },
+  { "id": "chase-sapphire-reserve", "name": "Chase Sapphire Reserve", "type": "credit-card", "logo": "💳", "color": "#003087" },
+  { "id": "chase-freedom-flex", "name": "Chase Freedom Flex", "type": "credit-card", "logo": "💳", "color": "#003087" },
+  { "id": "capital-one-venture", "name": "Capital One Venture", "type": "credit-card", "logo": "💳", "color": "#004977" },
+  { "id": "citi-credit-cards", "name": "Citi Credit Cards", "type": "credit-card", "logo": "💳", "color": "#003B70" },
+  { "id": "mercury-bank", "name": "Mercury Bank", "type": "bank", "logo": "🏦", "color": "#5856d6" },
+  { "id": "usaa", "name": "USAA", "type": "bank", "logo": "🏦", "color": "#00529b" },
+  { "id": "apple-one", "name": "Apple One", "type": "subscription", "logo": "📱", "color": "#555555" },
+  { "id": "amazon-prime", "name": "Amazon Prime", "type": "subscription", "logo": "📦", "color": "#ff9900" },
+  { "id": "spotify-premium", "name": "Spotify Premium", "type": "subscription", "logo": "🎵", "color": "#1db954" },
+  { "id": "t-mobile", "name": "T-Mobile", "type": "subscription", "logo": "📱", "color": "#e20074" },
+  { "id": "walmart-plus", "name": "Walmart+", "type": "subscription", "logo": "🛒", "color": "#0071ce" },
+  { "id": "costco", "name": "Costco", "type": "membership", "logo": "🏪", "color": "#e31837" },
+  { "id": "aaa", "name": "AAA", "type": "membership", "logo": "🚗", "color": "#003b73" },
+  { "id": "hilton-honors", "name": "Hilton Honors", "type": "membership", "logo": "🏨", "color": "#104c97" },
+  { "id": "github-student-pack", "name": "GitHub Student Pack", "type": "membership", "logo": "💻", "color": "#24292e" }
+]
