@@ -1,13 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-charcoal: #0f0f0f;
-  --color-charcoal-light: #1c1c1c;
-  --color-gold: #f5c842;
-  --color-gold-dark: #d4a91e;
-  --color-gold-light: #fce588;
-  --font-syne: 'Syne', sans-serif;
-  --font-inter: 'Inter', sans-serif;
+  --color-cream: #FEFCF6;
+  --color-cream-dark: #F5F0E8;
+  --color-ink: #1a1a2e;
+  --color-ink-light: #3d3d5c;
+  --color-ink-muted: #8888a4;
+  --color-coral: #FF6B6B;
+  --color-coral-light: #FF9B9B;
+  --color-purple: #7C5CFC;
+  --color-purple-light: #A78BFA;
+  --color-teal: #4ECDC4;
+  --color-teal-light: #7EDDD6;
+  --color-sunny: #FFD93D;
+  --color-sunny-light: #FFE57A;
+  --color-pink: #FF85A1;
+  --color-blue: #60A5FA;
+  --color-mint: #34D399;
+  --color-orange: #FB923C;
+  --font-heading: 'DM Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 html {
@@ -15,37 +27,68 @@ html {
 }
 
 body {
-  background-color: #0f0f0f;
-  color: #ffffff;
+  background-color: #FEFCF6;
+  color: #1a1a2e;
+  font-family: var(--font-body);
 }
 
 ::selection {
-  background-color: #f5c842;
-  color: #0f0f0f;
+  background-color: #7C5CFC;
+  color: white;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #1c1c1c;
-}
-::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #f5c842;
+/* Animated gradient background for hero */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-15px) rotate(2deg); }
+  66% { transform: translateY(-8px) rotate(-1deg); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(3deg); }
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(15px) scale(1.05); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 @keyframes shimmer {
@@ -53,16 +96,95 @@ body {
   100% { background-position: 200% 0; }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-out forwards;
+@keyframes borderRotate {
+  0% { --angle: 0deg; }
+  100% { --angle: 360deg; }
 }
 
-.animate-slide-up {
-  animation: slideUp 0.6s ease-out forwards;
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
 }
 
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-slow { animation: floatSlow 8s ease-in-out infinite; }
+.animate-float-reverse { animation: floatReverse 7s ease-in-out infinite; }
+.animate-pulse-soft { animation: pulse-soft 3s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 20s linear infinite; }
+.animate-slide-up { animation: slideUp 0.6s ease-out both; }
+.animate-slide-in { animation: slideIn 0.5s ease-out both; }
+.animate-scale-in { animation: scaleIn 0.4s ease-out both; }
+.animate-bounce-in { animation: bounceIn 0.6s ease-out both; }
+.animate-wiggle { animation: wiggle 2s ease-in-out infinite; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-1000 { animation-delay: 1s; }
+.delay-2000 { animation-delay: 2s; }
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #FF6B6B, #7C5CFC, #4ECDC4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-warm {
+  background: linear-gradient(135deg, #FF6B6B, #FFD93D, #FB923C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-cool {
+  background: linear-gradient(135deg, #7C5CFC, #60A5FA, #4ECDC4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card 3D hover */
+.card-3d {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.card-3d:hover {
+  transform: translateY(-6px) rotateX(2deg) rotateY(-1deg);
+}
+
+/* Gradient border wrapper */
+.gradient-border {
+  position: relative;
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, #FF6B6B22, #7C5CFC22, #4ECDC422);
+  padding: 1px;
+}
+.gradient-border-inner {
+  background: white;
+  border-radius: calc(1.25rem - 1px);
+}
+.gradient-border:hover {
+  background: linear-gradient(135deg, #FF6B6B55, #7C5CFC55, #4ECDC455);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F5F0E8; }
+::-webkit-scrollbar-thumb { background: #d4d0c8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #7C5CFC; }
+
+/* Category color map */
+.cat-travel { --cat-color: #4ECDC4; --cat-bg: #4ECDC410; }
+.cat-food { --cat-color: #FF6B6B; --cat-bg: #FF6B6B10; }
+.cat-software { --cat-color: #7C5CFC; --cat-bg: #7C5CFC10; }
+.cat-finance { --cat-color: #34D399; --cat-bg: #34D39910; }
+.cat-health { --cat-color: #FF85A1; --cat-bg: #FF85A110; }
+.cat-shopping { --cat-color: #FFD93D; --cat-bg: #FFD93D10; }
+.cat-entertainment { --cat-color: #60A5FA; --cat-bg: #60A5FA10; }

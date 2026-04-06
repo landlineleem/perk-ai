@@ -1,14 +1,14 @@
 "use client";
 
 const categories = [
-  { id: "all", label: "All", icon: "✦" },
-  { id: "Travel", label: "Travel", icon: "✈️" },
-  { id: "Food", label: "Food", icon: "🍽️" },
-  { id: "Software", label: "Software", icon: "💻" },
-  { id: "Finance", label: "Finance", icon: "💰" },
-  { id: "Health", label: "Health", icon: "🏥" },
-  { id: "Shopping", label: "Shopping", icon: "🛍️" },
-  { id: "Entertainment", label: "Entertainment", icon: "🎬" },
+  { id: "all", label: "All", emoji: "🌟", color: "from-ink to-ink-light" },
+  { id: "Travel", label: "Travel", emoji: "✈️", color: "from-teal to-teal-light" },
+  { id: "Food", label: "Food", emoji: "🍕", color: "from-coral to-coral-light" },
+  { id: "Software", label: "Software", emoji: "💎", color: "from-purple to-purple-light" },
+  { id: "Finance", label: "Finance", emoji: "💸", color: "from-mint to-teal" },
+  { id: "Health", label: "Health", emoji: "💖", color: "from-pink to-coral-light" },
+  { id: "Shopping", label: "Shopping", emoji: "🛍️", color: "from-sunny to-orange" },
+  { id: "Entertainment", label: "Entertainment", emoji: "🎉", color: "from-blue to-purple-light" },
 ];
 
 export default function CategoryFilter({
@@ -24,13 +24,15 @@ export default function CategoryFilter({
         <button
           key={cat.id}
           onClick={() => onChange(cat.id)}
-          className={`flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 ${
+          className={`flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold transition-all duration-300 ${
             selected === cat.id
-              ? "border-gold/40 bg-gold/10 text-gold shadow-[0_0_15px_rgba(245,200,66,0.1)]"
-              : "border-white/10 bg-white/[0.03] text-white/50 hover:border-white/20 hover:text-white/70"
+              ? `bg-gradient-to-r ${cat.color} text-white shadow-lg scale-[1.03]`
+              : "bg-white text-ink-muted border border-ink/[0.06] hover:border-ink/10 hover:shadow-md hover:scale-[1.02] hover:text-ink"
           }`}
         >
-          <span className="text-xs">{cat.icon}</span>
+          <span className={`text-sm transition-transform duration-200 ${selected === cat.id ? "animate-wiggle" : ""}`}>
+            {cat.emoji}
+          </span>
           {cat.label}
         </button>
       ))}

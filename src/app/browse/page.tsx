@@ -8,11 +8,11 @@ import SearchBar from "@/components/SearchBar";
 import CategoryFilter from "@/components/CategoryFilter";
 
 const providerTypes = [
-  { id: "all", label: "All Types" },
-  { id: "credit-card", label: "Credit Cards" },
-  { id: "bank", label: "Banks" },
-  { id: "subscription", label: "Subscriptions" },
-  { id: "membership", label: "Memberships" },
+  { id: "all", label: "All Types", emoji: "🌟" },
+  { id: "credit-card", label: "Credit Cards", emoji: "💳" },
+  { id: "bank", label: "Banks", emoji: "🏦" },
+  { id: "subscription", label: "Subscriptions", emoji: "📱" },
+  { id: "membership", label: "Memberships", emoji: "🎫" },
 ];
 
 const sortOptions = [
@@ -31,7 +31,6 @@ export default function BrowsePage() {
   const filteredPerks = useMemo(() => {
     let result = [...perksData];
 
-    // Filter by search
     if (search) {
       const q = search.toLowerCase();
       result = result.filter(
@@ -44,17 +43,14 @@ export default function BrowsePage() {
       );
     }
 
-    // Filter by category
     if (category !== "all") {
       result = result.filter((p) => p.category === category);
     }
 
-    // Filter by provider type
     if (providerType !== "all") {
       result = result.filter((p) => p.providerType === providerType);
     }
 
-    // Sort
     switch (sort) {
       case "newest":
         result.sort(
@@ -83,90 +79,99 @@ export default function BrowsePage() {
   }, [search, category, providerType, sort]);
 
   return (
-    <div className="mx-auto min-h-screen max-w-7xl px-6 py-12">
-      {/* Header */}
-      <div className="mb-10">
-        <h1
-          className="mb-3 text-3xl font-bold md:text-4xl"
-          style={{ fontFamily: "var(--font-syne)" }}
-        >
-          Browse all perks
-        </h1>
-        <p className="text-white/40">
-          {filteredPerks.length} perks across {providerTypes.length - 1} provider
-          types
-        </p>
-      </div>
+    <div className="min-h-screen">
+      {/* Header with gradient bg */}
+      <div className="relative overflow-hidden bg-gradient-to-b from-purple/5 via-cream to-cream pb-4 pt-10">
+        <div className="pointer-events-none absolute -top-20 right-0 h-72 w-72 rounded-full bg-purple/8 blur-[80px]" />
+        <div className="pointer-events-none absolute top-10 -left-20 h-56 w-56 rounded-full bg-teal/8 blur-[60px]" />
 
-      {/* Search */}
-      <div className="mb-6">
-        <SearchBar value={search} onChange={setSearch} />
-      </div>
-
-      {/* Category filter */}
-      <div className="mb-6">
-        <CategoryFilter selected={category} onChange={setCategory} />
-      </div>
-
-      {/* Provider type + Sort */}
-      <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex flex-wrap gap-2">
-          {providerTypes.map((pt) => (
-            <button
-              key={pt.id}
-              onClick={() => setProviderType(pt.id)}
-              className={`rounded-lg border px-3 py-1.5 text-xs font-medium transition-all ${
-                providerType === pt.id
-                  ? "border-gold/30 bg-gold/10 text-gold"
-                  : "border-white/10 text-white/40 hover:border-white/20 hover:text-white/60"
-              }`}
-            >
-              {pt.label}
-            </button>
-          ))}
-        </div>
-
-        <div className="flex items-center gap-2">
-          <SlidersHorizontal className="h-3.5 w-3.5 text-white/30" />
-          <select
-            value={sort}
-            onChange={(e) => setSort(e.target.value)}
-            className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/60 outline-none focus:border-gold/30"
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div className="mb-2 text-4xl animate-bounce-in">🗂️</div>
+          <h1
+            className="mb-2 text-4xl font-black md:text-5xl animate-slide-up"
+            style={{ fontFamily: "var(--font-heading)" }}
           >
-            {sortOptions.map((opt) => (
-              <option key={opt.id} value={opt.id} className="bg-charcoal">
-                {opt.label}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      {/* Results */}
-      {filteredPerks.length > 0 ? (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredPerks.map((perk) => (
-            <PerkCard key={perk.id} perk={perk} />
-          ))}
-        </div>
-      ) : (
-        <div className="rounded-2xl border border-white/5 bg-white/[0.02] py-20 text-center">
-          <p className="text-lg text-white/30">No perks match your filters</p>
-          <p className="mt-2 text-sm text-white/20">
-            Try broadening your search or clearing some filters
+            Browse <span className="gradient-text-cool">all perks</span>
+          </h1>
+          <p className="text-ink-muted animate-slide-up delay-100">
+            <span className="font-semibold text-ink">{filteredPerks.length}</span> perks across {providerTypes.length - 1} provider types
           </p>
-          <button
-            onClick={() => {
-              setSearch("");
-              setCategory("all");
-              setProviderType("all");
-            }}
-            className="mt-4 rounded-full border border-gold/30 px-5 py-2 text-sm text-gold transition-colors hover:bg-gold/10"
-          >
-            Clear all filters
-          </button>
         </div>
-      )}
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 py-6">
+        {/* Search */}
+        <div className="mb-6">
+          <SearchBar value={search} onChange={setSearch} />
+        </div>
+
+        {/* Category filter */}
+        <div className="mb-6">
+          <CategoryFilter selected={category} onChange={setCategory} />
+        </div>
+
+        {/* Provider type + Sort */}
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap gap-2">
+            {providerTypes.map((pt) => (
+              <button
+                key={pt.id}
+                onClick={() => setProviderType(pt.id)}
+                className={`flex items-center gap-1.5 rounded-xl border px-3.5 py-2 text-sm font-semibold transition-all duration-200 ${
+                  providerType === pt.id
+                    ? "border-purple/30 bg-purple/8 text-purple shadow-sm"
+                    : "border-ink/[0.06] bg-white text-ink-muted hover:border-ink/10 hover:shadow-sm hover:text-ink"
+                }`}
+              >
+                <span className="text-xs">{pt.emoji}</span>
+                {pt.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-2 rounded-xl border border-ink/[0.06] bg-white px-3 py-1.5">
+            <SlidersHorizontal className="h-3.5 w-3.5 text-ink-muted" />
+            <select
+              value={sort}
+              onChange={(e) => setSort(e.target.value)}
+              className="bg-transparent text-sm font-medium text-ink outline-none cursor-pointer"
+            >
+              {sortOptions.map((opt) => (
+                <option key={opt.id} value={opt.id}>
+                  {opt.label}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Results */}
+        {filteredPerks.length > 0 ? (
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {filteredPerks.map((perk, i) => (
+              <PerkCard key={perk.id} perk={perk} index={i} />
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-3xl border-2 border-dashed border-ink/10 bg-white py-20 text-center">
+            <div className="mb-3 text-5xl">😅</div>
+            <p className="text-lg font-bold text-ink/60">No perks match your filters</p>
+            <p className="mt-1 text-sm text-ink-muted">
+              Try broadening your search or clearing some filters
+            </p>
+            <button
+              onClick={() => {
+                setSearch("");
+                setCategory("all");
+                setProviderType("all");
+              }}
+              className="mt-5 rounded-full bg-gradient-to-r from-coral to-purple px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-purple/20 transition-all hover:scale-[1.03] active:scale-[0.98]"
+            >
+              Clear all filters
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,12 +1,47 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Sparkles, ArrowRight, TrendingUp } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import perksData from "@/data/perks.json";
 import PerkCard from "@/components/PerkCard";
 import SearchBar from "@/components/SearchBar";
 import CategoryFilter from "@/components/CategoryFilter";
+
+function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const animated = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !animated.current) {
+          animated.current = true;
+          const duration = 1200;
+          const start = performance.now();
+          const step = (now: number) => {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setCount(Math.floor(eased * target));
+            if (progress < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [target]);
+
+  return (
+    <div ref={ref} className="text-4xl md:text-5xl font-black" style={{ fontFamily: "var(--font-heading)" }}>
+      {count.toLocaleString()}{suffix}
+    </div>
+  );
+}
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -31,47 +66,58 @@ export default function Home() {
   }, [search, category]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       {/* Hero section */}
-      <section className="relative overflow-hidden">
-        {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gold/[0.03] via-transparent to-transparent" />
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-gold/[0.04] blur-[120px]" />
+      <section className="relative pb-20 pt-12 md:pt-20">
+        {/* Floating decorative elements */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          {/* Large gradient orbs */}
+          <div className="absolute -top-20 -right-20 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-coral/15 to-purple/10 blur-[80px] animate-float-slow" />
+          <div className="absolute top-40 -left-32 h-[400px] w-[400px] rounded-full bg-gradient-to-br from-teal/12 to-blue/8 blur-[80px] animate-float" />
+          <div className="absolute bottom-0 right-1/4 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-sunny/10 to-coral/8 blur-[60px] animate-float-reverse" />
 
-        <div className="relative mx-auto max-w-7xl px-6 pb-16 pt-24 md:pt-32">
+          {/* Floating emoji decorations */}
+          <div className="absolute top-24 right-[15%] text-4xl animate-float opacity-40 hidden lg:block">✈️</div>
+          <div className="absolute top-48 left-[10%] text-3xl animate-float-slow opacity-30 hidden lg:block">💳</div>
+          <div className="absolute bottom-32 right-[20%] text-3xl animate-float-reverse opacity-30 hidden lg:block">🎉</div>
+          <div className="absolute top-36 right-[35%] text-2xl animate-float opacity-20 hidden lg:block">💎</div>
+          <div className="absolute bottom-48 left-[18%] text-4xl animate-float-slow opacity-25 hidden lg:block">🛍️</div>
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 text-xs font-medium text-gold">
-              <Sparkles className="h-3 w-3" />
-              Discover every perk you're missing
+            {/* Badge */}
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-ink shadow-lg shadow-ink/5 animate-slide-up border border-ink/[0.04]">
+              <span className="flex h-2 w-2 rounded-full bg-gradient-to-r from-coral to-purple animate-pulse-soft" />
+              Stop leaving money on the table
             </div>
 
             <h1
-              className="mb-6 text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1]"
-              style={{ fontFamily: "var(--font-syne)" }}
+              className="mb-6 text-5xl font-black leading-[1.1] tracking-tight md:text-7xl animate-slide-up delay-100"
+              style={{ fontFamily: "var(--font-heading)" }}
             >
-              Your perks,{" "}
-              <span className="bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">
-                all in one place
-              </span>
+              Every perk you
+              <br />
+              <span className="gradient-text">deserve to know</span>
             </h1>
 
-            <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-white/50 md:text-lg">
-              Stop leaving money on the table. Track every benefit from your
-              credit cards, bank accounts, subscriptions, and memberships.
+            <p className="mx-auto mb-10 max-w-lg text-lg leading-relaxed text-ink-muted animate-slide-up delay-200">
+              Discover hidden benefits from your credit cards, bank accounts,
+              subscriptions, and memberships — all in one beautiful place.
             </p>
 
-            <div className="mx-auto mb-6 max-w-lg">
-              <SearchBar value={search} onChange={setSearch} />
+            <div className="mx-auto mb-8 max-w-xl animate-slide-up delay-300">
+              <SearchBar value={search} onChange={setSearch} large />
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/30">
-              <span>Popular:</span>
+            <div className="flex flex-wrap items-center justify-center gap-2.5 animate-slide-up delay-400">
+              <span className="text-sm text-ink-muted">Try:</span>
               {["Amex Platinum", "Chase Sapphire", "Apple One", "Costco"].map(
                 (term) => (
                   <button
                     key={term}
                     onClick={() => setSearch(term)}
-                    className="rounded-full border border-white/10 px-3 py-1 text-xs transition-colors hover:border-gold/30 hover:text-gold"
+                    className="rounded-full bg-white border border-ink/[0.06] px-4 py-1.5 text-sm font-medium text-ink-muted shadow-sm transition-all duration-200 hover:shadow-md hover:border-purple/20 hover:text-purple hover:scale-[1.04] active:scale-[0.98]"
                   >
                     {term}
                   </button>
@@ -82,48 +128,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats bar */}
-      <section className="border-y border-white/5 bg-charcoal-light/50">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-6 py-6 md:grid-cols-4">
-          {[
-            { label: "Perks tracked", value: `${perksData.length}+` },
-            { label: "Providers", value: "17" },
-            { label: "Categories", value: "7" },
-            { label: "Total value", value: "$160k+" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-xl font-bold text-gold md:text-2xl" style={{ fontFamily: "var(--font-syne)" }}>
-                {stat.value}
+      {/* Stats section */}
+      <section className="relative py-16 md:py-20">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+            {[
+              { value: 42, suffix: "+", label: "Perks tracked", emoji: "🎁", gradient: "from-coral/10 to-coral/5" },
+              { value: 17, suffix: "", label: "Providers", emoji: "🏢", gradient: "from-purple/10 to-purple/5" },
+              { value: 7, suffix: "", label: "Categories", emoji: "📂", gradient: "from-teal/10 to-teal/5" },
+              { value: 160, suffix: "k+", label: "Total value", emoji: "💰", gradient: "from-sunny/10 to-sunny/5" },
+            ].map((stat, i) => (
+              <div
+                key={stat.label}
+                className={`rounded-3xl bg-gradient-to-br ${stat.gradient} border border-ink/[0.04] p-6 text-center animate-scale-in`}
+                style={{ animationDelay: `${i * 100 + 300}ms` }}
+              >
+                <div className="mb-2 text-2xl">{stat.emoji}</div>
+                <div className="gradient-text">
+                  <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                </div>
+                <div className="mt-1 text-sm font-medium text-ink-muted">{stat.label}</div>
               </div>
-              <div className="text-xs text-white/30">{stat.label}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Featured Perks */}
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section className="mx-auto max-w-7xl px-6 py-10">
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <div className="mb-2 flex items-center gap-2 text-gold">
-              <TrendingUp className="h-4 w-4" />
-              <span className="text-xs font-semibold uppercase tracking-wider">
+          <div className="animate-slide-in">
+            <div className="mb-2 flex items-center gap-2">
+              <span className="text-xl">🔥</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-coral">
                 Featured
               </span>
             </div>
             <h2
-              className="text-2xl font-bold md:text-3xl"
-              style={{ fontFamily: "var(--font-syne)" }}
+              className="text-3xl font-black md:text-4xl"
+              style={{ fontFamily: "var(--font-heading)" }}
             >
               Most popular perks
             </h2>
           </div>
           <Link
             href="/browse"
-            className="group flex items-center gap-1.5 text-sm font-medium text-white/50 transition-colors hover:text-gold"
+            className="group flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition-all hover:shadow-lg hover:scale-[1.03] active:scale-[0.98]"
           >
-            View all perks
-            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            View all
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
 
@@ -132,15 +185,16 @@ export default function Home() {
         </div>
 
         {featuredPerks.length > 0 ? (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredPerks.map((perk) => (
-              <PerkCard key={perk.id} perk={perk} />
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredPerks.map((perk, i) => (
+              <PerkCard key={perk.id} perk={perk} index={i} />
             ))}
           </div>
         ) : (
-          <div className="rounded-2xl border border-white/5 bg-white/[0.02] py-16 text-center">
-            <p className="text-lg text-white/30">No perks found</p>
-            <p className="mt-1 text-sm text-white/20">
+          <div className="rounded-3xl border-2 border-dashed border-ink/10 bg-white py-20 text-center">
+            <div className="mb-3 text-4xl">🔍</div>
+            <p className="text-lg font-semibold text-ink/60">No perks found</p>
+            <p className="mt-1 text-sm text-ink-muted">
               Try adjusting your search or filters
             </p>
           </div>
@@ -148,40 +202,52 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-t border-white/5 bg-charcoal-light/30">
-        <div className="mx-auto max-w-7xl px-6 py-20 text-center">
-          <h2
-            className="mb-4 text-2xl font-bold md:text-3xl"
-            style={{ fontFamily: "var(--font-syne)" }}
-          >
-            See what you're{" "}
-            <span className="text-gold">actually entitled to</span>
-          </h2>
-          <p className="mx-auto mb-8 max-w-md text-white/40">
-            Select your credit cards, subscriptions, and memberships to instantly
-            see every perk available to you.
-          </p>
-          <Link
-            href="/my-perks"
-            className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-sm font-bold text-charcoal transition-all hover:bg-gold-light hover:shadow-[0_0_30px_rgba(245,200,66,0.3)]"
-          >
-            <Sparkles className="h-4 w-4" />
-            Unlock My Perks
-          </Link>
+      <section className="py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-ink via-ink-light to-purple/80 p-10 md:p-16 text-center">
+            {/* Decorative orbs inside CTA */}
+            <div className="pointer-events-none absolute -top-12 -right-12 h-48 w-48 rounded-full bg-coral/20 blur-[50px] animate-float" />
+            <div className="pointer-events-none absolute -bottom-12 -left-12 h-48 w-48 rounded-full bg-teal/20 blur-[50px] animate-float-slow" />
+
+            <div className="relative">
+              <div className="mb-4 text-5xl animate-bounce-in">🚀</div>
+              <h2
+                className="mb-4 text-3xl font-black text-white md:text-4xl"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                See what you&apos;re{" "}
+                <span className="gradient-text-warm">actually entitled to</span>
+              </h2>
+              <p className="mx-auto mb-8 max-w-md text-base text-white/60">
+                Select your credit cards, subscriptions, and memberships to
+                instantly surface every perk.
+              </p>
+              <Link
+                href="/my-perks"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-white px-8 py-4 text-base font-bold text-ink shadow-2xl transition-all duration-300 hover:shadow-white/20 hover:scale-[1.05] active:scale-[0.98]"
+              >
+                <span className="transition-transform group-hover:scale-110 group-hover:rotate-12">✨</span>
+                Unlock My Perks
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/5 bg-charcoal">
+      <footer className="border-t border-ink/5 bg-cream-dark/50">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row">
           <div className="flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-gold" />
-            <span className="text-sm font-bold" style={{ fontFamily: "var(--font-syne)" }}>
-              Perk<span className="text-gold">.ai</span>
+            <div className="flex h-6 w-6 items-center justify-center rounded-lg bg-gradient-to-br from-coral via-purple to-teal">
+              <span className="text-[10px] font-black text-white">P</span>
+            </div>
+            <span className="text-sm font-bold" style={{ fontFamily: "var(--font-heading)" }}>
+              Perk<span className="gradient-text">.ai</span>
             </span>
           </div>
-          <p className="text-xs text-white/20">
-            Made with care. Not affiliated with any listed providers.
+          <p className="text-xs text-ink-muted">
+            Made with ❤️ &middot; Not affiliated with any listed providers.
           </p>
         </div>
       </footer>

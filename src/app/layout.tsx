@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Syne } from "next/font/google";
+import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 const inter = Inter({
-  variable: "--font-inter",
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
-const syne = Syne({
-  variable: "--font-syne",
+const dmSans = DM_Sans({
+  variable: "--font-heading",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -25,11 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${syne.variable}`}>
-      <body
-        className="min-h-screen bg-charcoal text-white antialiased"
-        style={{ fontFamily: "var(--font-inter)" }}
-      >
+    <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
+      <body className="min-h-screen bg-cream text-ink antialiased">
         <Navbar />
         <main>{children}</main>
       </body>
