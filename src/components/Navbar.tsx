@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -18,13 +19,15 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-border/60">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-            <span className="text-sm font-bold text-white" style={{ fontFamily: "var(--font-heading)" }}>P</span>
-          </div>
-          <span className="text-lg font-bold tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
-            Perk<span className="text-primary">.ai</span>
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt="Perk.AI"
+            width={120}
+            height={36}
+            className="h-7 w-auto"
+            priority
+          />
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">

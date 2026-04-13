@@ -353,14 +353,13 @@ export default function Home() {
       {/* ===== FOOTER ===== */}
       <footer className="border-t border-border/60">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row lg:px-10">
-          <div className="flex items-center gap-2.5">
-            <div className="flex h-6 w-6 items-center justify-center rounded-md bg-primary">
-              <span className="text-[10px] font-bold text-white">P</span>
-            </div>
-            <span className="text-sm font-bold" style={{ fontFamily: "var(--font-heading)" }}>
-              Perk<span className="text-primary">.ai</span>
-            </span>
-          </div>
+          <Image
+            src="/images/logo.png"
+            alt="Perk.AI"
+            width={100}
+            height={30}
+            className="h-5 w-auto"
+          />
           <p className="text-xs text-ink-muted">
             Not affiliated with any listed providers. For informational purposes only, not financial advice.
           </p>

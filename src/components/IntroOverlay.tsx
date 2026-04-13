@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 export default function IntroOverlay() {
   const [phase, setPhase] = useState<"waiting" | "playing" | "done">("waiting");
@@ -46,27 +47,19 @@ export default function IntroOverlay() {
 
       {/* Logo */}
       <div className="relative z-10 flex flex-col items-center">
-        <div
-          className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-[#0D6E5E]"
-          style={{ animation: "introRevealLogo 1.2s ease-out both" }}
-        >
-          <span className="text-3xl font-bold text-white" style={{ fontFamily: "var(--font-heading)" }}>
-            P
-          </span>
+        <div style={{ animation: "introRevealLogo 1.2s ease-out both" }}>
+          <Image
+            src="/images/logo.png"
+            alt="Perk.AI"
+            width={280}
+            height={84}
+            className="h-16 w-auto md:h-20"
+            priority
+          />
         </div>
 
-        <h1
-          className="mb-2 text-3xl font-bold text-white tracking-tight"
-          style={{
-            fontFamily: "var(--font-heading)",
-            animation: "introRevealText 1s ease-out 0.3s both",
-          }}
-        >
-          Perk<span className="text-[#0D6E5E]">.ai</span>
-        </h1>
-
         <p
-          className="mb-10 text-sm text-white/30"
+          className="mt-6 mb-10 text-sm text-white/30"
           style={{ animation: "introRevealText 1s ease-out 0.5s both" }}
         >
           Every benefit you deserve to know
