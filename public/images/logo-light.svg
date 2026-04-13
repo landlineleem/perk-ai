@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" fill="none">
+  <!-- Perk in dark ink for light backgrounds -->
+  <text x="0" y="56" font-family="'Georgia', 'Times New Roman', serif" font-size="60" font-weight="400" fill="#0A0F1C">Perk</text>
+  <!-- 4-pointed sparkle star -->
+  <g transform="translate(168, 8)">
+    <path d="M14 0 L16.5 11 L14 22 L11.5 11 Z" fill="#0D6E5E"/>
+    <path d="M3 11 L14 8.5 L25 11 L14 13.5 Z" fill="#0D6E5E"/>
+    <path d="M6.5 3.5 L12.5 9.5 L21.5 18.5 L15.5 12.5 Z" fill="#0D6E5E" opacity="0.7"/>
+    <path d="M21.5 3.5 L15.5 9.5 L6.5 18.5 L12.5 12.5 Z" fill="#0D6E5E" opacity="0.7"/>
+  </g>
+  <!-- AI in green -->
+  <text x="208" y="56" font-family="'Georgia', 'Times New Roman', serif" font-size="60" font-weight="400" fill="#0D6E5E">AI</text>
+</svg>

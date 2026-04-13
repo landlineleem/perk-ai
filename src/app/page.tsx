@@ -353,11 +353,10 @@ export default function Home() {
       {/* ===== FOOTER ===== */}
       <footer className="border-t border-border/60">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row lg:px-10">
-          <Image
-            src="/images/logo.png"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo-light.svg"
             alt="Perk.AI"
-            width={100}
-            height={30}
             className="h-5 w-auto"
           />
           <p className="text-xs text-ink-muted">

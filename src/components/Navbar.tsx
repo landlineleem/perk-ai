@@ -20,13 +20,11 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-border/60">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
         <Link href="/" className="flex items-center">
-          <Image
-            src="/images/logo.png"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo-light.svg"
             alt="Perk.AI"
-            width={120}
-            height={36}
-            className="h-7 w-auto"
-            priority
+            className="h-8 w-auto"
           />
         </Link>
 

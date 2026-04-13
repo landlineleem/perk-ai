@@ -47,16 +47,13 @@ export default function IntroOverlay() {
 
       {/* Logo */}
       <div className="relative z-10 flex flex-col items-center">
-        <div style={{ animation: "introRevealLogo 1.2s ease-out both" }}>
-          <Image
-            src="/images/logo.png"
-            alt="Perk.AI"
-            width={280}
-            height={84}
-            className="h-16 w-auto md:h-20"
-            priority
-          />
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/logo-dark.svg"
+          alt="Perk.AI"
+          className="h-14 w-auto md:h-20"
+          style={{ animation: "introRevealLogo 1.2s ease-out both" }}
+        />
 
         <p
           className="mt-6 mb-10 text-sm text-white/30"
