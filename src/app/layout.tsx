@@ -17,7 +17,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Perk.ai — Discover Every Perk You're Missing",
   description:
-    "A beautifully designed hub to discover and track every perk, deal, benefit, and discount you have access to.",
+    "Discover and track every perk, deal, benefit, and discount you have access to — credit cards, subscriptions, loyalty programs, and memberships in one place.",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
-      <body className="min-h-screen bg-cream text-ink antialiased">
+      <body className="min-h-screen bg-base text-ink antialiased">
         <Navbar />
         <main>{children}</main>
       </body>

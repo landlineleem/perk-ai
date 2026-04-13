@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shield, Bell, Layers } from "lucide-react";
 import perksData from "@/data/perks.json";
 import PerkCard from "@/components/PerkCard";
 import SearchBar from "@/components/SearchBar";
@@ -18,7 +18,7 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
       ([entry]) => {
         if (entry.isIntersecting && !animated.current) {
           animated.current = true;
-          const duration = 1200;
+          const duration = 1000;
           const start = performance.now();
           const step = (now: number) => {
             const elapsed = now - start;
@@ -37,7 +37,7 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
   }, [target]);
 
   return (
-    <div ref={ref} className="text-4xl md:text-5xl font-black" style={{ fontFamily: "var(--font-heading)" }}>
+    <div ref={ref} className="text-3xl md:text-4xl font-bold tabular-nums" style={{ fontFamily: "var(--font-heading)" }}>
       {count.toLocaleString()}{suffix}
     </div>
   );
@@ -66,58 +66,41 @@ export default function Home() {
   }, [search, category]);
 
   return (
-    <div className="min-h-screen overflow-hidden">
-      {/* Hero section */}
-      <section className="relative pb-20 pt-12 md:pt-20">
-        {/* Floating decorative elements */}
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          {/* Large gradient orbs */}
-          <div className="absolute -top-20 -right-20 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-coral/15 to-purple/10 blur-[80px] animate-float-slow" />
-          <div className="absolute top-40 -left-32 h-[400px] w-[400px] rounded-full bg-gradient-to-br from-teal/12 to-blue/8 blur-[80px] animate-float" />
-          <div className="absolute bottom-0 right-1/4 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-sunny/10 to-coral/8 blur-[60px] animate-float-reverse" />
-
-          {/* Floating emoji decorations */}
-          <div className="absolute top-24 right-[15%] text-4xl animate-float opacity-40 hidden lg:block">✈️</div>
-          <div className="absolute top-48 left-[10%] text-3xl animate-float-slow opacity-30 hidden lg:block">💳</div>
-          <div className="absolute bottom-32 right-[20%] text-3xl animate-float-reverse opacity-30 hidden lg:block">🎉</div>
-          <div className="absolute top-36 right-[35%] text-2xl animate-float opacity-20 hidden lg:block">💎</div>
-          <div className="absolute bottom-48 left-[18%] text-4xl animate-float-slow opacity-25 hidden lg:block">🛍️</div>
-        </div>
-
-        <div className="relative mx-auto max-w-7xl px-6">
-          <div className="mx-auto max-w-3xl text-center">
-            {/* Badge */}
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-ink shadow-lg shadow-ink/5 animate-slide-up border border-ink/[0.04]">
-              <span className="flex h-2 w-2 rounded-full bg-gradient-to-r from-coral to-purple animate-pulse-soft" />
+    <div className="min-h-screen">
+      {/* Hero */}
+      <section className="border-b border-border bg-surface">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent-subtle px-3 py-1 text-xs font-semibold text-accent animate-slide-up">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
               Stop leaving money on the table
             </div>
 
             <h1
-              className="mb-6 text-5xl font-black leading-[1.1] tracking-tight md:text-7xl animate-slide-up delay-100"
+              className="mb-4 text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl animate-slide-up delay-75"
               style={{ fontFamily: "var(--font-heading)" }}
             >
-              Every perk you
-              <br />
-              <span className="gradient-text">deserve to know</span>
+              Every perk you{" "}
+              <span className="text-accent">deserve to know</span>
             </h1>
 
-            <p className="mx-auto mb-10 max-w-lg text-lg leading-relaxed text-ink-muted animate-slide-up delay-200">
-              Discover hidden benefits from your credit cards, bank accounts,
-              subscriptions, and memberships — all in one beautiful place.
+            <p className="mx-auto mb-8 max-w-md text-base leading-relaxed text-ink-muted animate-slide-up delay-150">
+              Discover hidden benefits from your credit cards, subscriptions,
+              loyalty programs, and memberships — all in one place.
             </p>
 
-            <div className="mx-auto mb-8 max-w-xl animate-slide-up delay-300">
+            <div className="mx-auto mb-6 max-w-lg animate-slide-up delay-200">
               <SearchBar value={search} onChange={setSearch} large />
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-2.5 animate-slide-up delay-400">
-              <span className="text-sm text-ink-muted">Try:</span>
+            <div className="flex flex-wrap items-center justify-center gap-2 animate-slide-up delay-300">
+              <span className="text-xs text-ink-faint">Try:</span>
               {["Amex Platinum", "Chase Sapphire", "Apple One", "Costco"].map(
                 (term) => (
                   <button
                     key={term}
                     onClick={() => setSearch(term)}
-                    className="rounded-full bg-white border border-ink/[0.06] px-4 py-1.5 text-sm font-medium text-ink-muted shadow-sm transition-all duration-200 hover:shadow-md hover:border-purple/20 hover:text-purple hover:scale-[1.04] active:scale-[0.98]"
+                    className="rounded-md border border-border bg-base px-3 py-1 text-xs font-medium text-ink-muted transition-colors hover:border-ink-faint hover:text-ink"
                   >
                     {term}
                   </button>
@@ -128,26 +111,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats section */}
-      <section className="relative py-16 md:py-20">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+      {/* Value props */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid gap-6 md:grid-cols-3">
             {[
-              { value: 42, suffix: "+", label: "Perks tracked", emoji: "🎁", gradient: "from-coral/10 to-coral/5" },
-              { value: 17, suffix: "", label: "Providers", emoji: "🏢", gradient: "from-purple/10 to-purple/5" },
-              { value: 7, suffix: "", label: "Categories", emoji: "📂", gradient: "from-teal/10 to-teal/5" },
-              { value: 160, suffix: "k+", label: "Total value", emoji: "💰", gradient: "from-sunny/10 to-sunny/5" },
-            ].map((stat, i) => (
+              {
+                icon: <Layers className="h-5 w-5" />,
+                title: "All your perks, one place",
+                desc: "Credit cards, subscriptions, loyalty programs, memberships — aggregated and organized.",
+              },
+              {
+                icon: <Bell className="h-5 w-5" />,
+                title: "Never miss a benefit",
+                desc: "Track expiring credits, monthly resets, and time-sensitive offers before they disappear.",
+              },
+              {
+                icon: <Shield className="h-5 w-5" />,
+                title: "Know your total value",
+                desc: "See exactly how much your perks are worth and what you're leaving on the table.",
+              },
+            ].map((item, i) => (
               <div
-                key={stat.label}
-                className={`rounded-3xl bg-gradient-to-br ${stat.gradient} border border-ink/[0.04] p-6 text-center animate-scale-in`}
-                style={{ animationDelay: `${i * 100 + 300}ms` }}
+                key={item.title}
+                className="rounded-xl border border-border bg-surface p-6 animate-slide-up"
+                style={{ animationDelay: `${i * 100 + 200}ms` }}
               >
-                <div className="mb-2 text-2xl">{stat.emoji}</div>
-                <div className="gradient-text">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-subtle text-accent">
+                  {item.icon}
+                </div>
+                <h3 className="mb-1 text-sm font-semibold text-ink">{item.title}</h3>
+                <p className="text-sm leading-relaxed text-ink-muted">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="border-y border-border bg-surface py-12">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            {[
+              { value: 42, suffix: "+", label: "Perks tracked" },
+              { value: 17, label: "Providers" },
+              { value: 7, label: "Categories" },
+              { value: 160, suffix: "k+", label: "Total value" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-accent">
                   <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                 </div>
-                <div className="mt-1 text-sm font-medium text-ink-muted">{stat.label}</div>
+                <div className="mt-1 text-xs font-medium text-ink-muted">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -155,17 +170,14 @@ export default function Home() {
       </section>
 
       {/* Featured Perks */}
-      <section className="mx-auto max-w-7xl px-6 py-10">
-        <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div className="animate-slide-in">
-            <div className="mb-2 flex items-center gap-2">
-              <span className="text-xl">🔥</span>
-              <span className="text-xs font-bold uppercase tracking-widest text-coral">
-                Featured
-              </span>
-            </div>
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent">
+              Featured
+            </p>
             <h2
-              className="text-3xl font-black md:text-4xl"
+              className="text-2xl font-bold md:text-3xl"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               Most popular perks
@@ -173,81 +185,71 @@ export default function Home() {
           </div>
           <Link
             href="/browse"
-            className="group flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition-all hover:shadow-lg hover:scale-[1.03] active:scale-[0.98]"
+            className="group flex items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:text-accent-light"
           >
             View all
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
 
-        <div className="mb-8">
+        <div className="mb-6">
           <CategoryFilter selected={category} onChange={setCategory} />
         </div>
 
         {featuredPerks.length > 0 ? (
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featuredPerks.map((perk, i) => (
               <PerkCard key={perk.id} perk={perk} index={i} />
             ))}
           </div>
         ) : (
-          <div className="rounded-3xl border-2 border-dashed border-ink/10 bg-white py-20 text-center">
-            <div className="mb-3 text-4xl">🔍</div>
-            <p className="text-lg font-semibold text-ink/60">No perks found</p>
-            <p className="mt-1 text-sm text-ink-muted">
+          <div className="rounded-xl border border-dashed border-border bg-surface py-16 text-center">
+            <p className="text-sm font-medium text-ink-muted">No perks found</p>
+            <p className="mt-1 text-xs text-ink-faint">
               Try adjusting your search or filters
             </p>
           </div>
         )}
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-ink via-ink-light to-purple/80 p-10 md:p-16 text-center">
-            {/* Decorative orbs inside CTA */}
-            <div className="pointer-events-none absolute -top-12 -right-12 h-48 w-48 rounded-full bg-coral/20 blur-[50px] animate-float" />
-            <div className="pointer-events-none absolute -bottom-12 -left-12 h-48 w-48 rounded-full bg-teal/20 blur-[50px] animate-float-slow" />
-
-            <div className="relative">
-              <div className="mb-4 text-5xl animate-bounce-in">🚀</div>
-              <h2
-                className="mb-4 text-3xl font-black text-white md:text-4xl"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                See what you&apos;re{" "}
-                <span className="gradient-text-warm">actually entitled to</span>
-              </h2>
-              <p className="mx-auto mb-8 max-w-md text-base text-white/60">
-                Select your credit cards, subscriptions, and memberships to
-                instantly surface every perk.
-              </p>
-              <Link
-                href="/my-perks"
-                className="group inline-flex items-center gap-2.5 rounded-full bg-white px-8 py-4 text-base font-bold text-ink shadow-2xl transition-all duration-300 hover:shadow-white/20 hover:scale-[1.05] active:scale-[0.98]"
-              >
-                <span className="transition-transform group-hover:scale-110 group-hover:rotate-12">✨</span>
-                Unlock My Perks
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
+      {/* CTA */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="rounded-2xl bg-ink p-10 md:p-16 text-center">
+            <h2
+              className="mb-3 text-2xl font-bold text-white md:text-3xl"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              See what you&apos;re actually entitled to
+            </h2>
+            <p className="mx-auto mb-8 max-w-md text-sm text-white/50">
+              Select your credit cards, subscriptions, and memberships to
+              instantly surface every perk you&apos;re paying for but not using.
+            </p>
+            <Link
+              href="/my-perks"
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-base"
+            >
+              Unlock my perks
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-ink/5 bg-cream-dark/50">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row">
+      <footer className="border-t border-border">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-6 md:flex-row">
           <div className="flex items-center gap-2">
-            <div className="flex h-6 w-6 items-center justify-center rounded-lg bg-gradient-to-br from-coral via-purple to-teal">
-              <span className="text-[10px] font-black text-white">P</span>
+            <div className="flex h-5 w-5 items-center justify-center rounded bg-accent">
+              <span className="text-[9px] font-bold text-white">P</span>
             </div>
-            <span className="text-sm font-bold" style={{ fontFamily: "var(--font-heading)" }}>
-              Perk<span className="gradient-text">.ai</span>
+            <span className="text-sm font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
+              Perk<span className="text-accent">.ai</span>
             </span>
           </div>
-          <p className="text-xs text-ink-muted">
-            Made with ❤️ &middot; Not affiliated with any listed providers.
+          <p className="text-xs text-ink-faint">
+            Not affiliated with any listed providers. For informational purposes only.
           </p>
         </div>
       </footer>

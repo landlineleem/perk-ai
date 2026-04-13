@@ -8,11 +8,11 @@ import SearchBar from "@/components/SearchBar";
 import CategoryFilter from "@/components/CategoryFilter";
 
 const providerTypes = [
-  { id: "all", label: "All Types", emoji: "🌟" },
-  { id: "credit-card", label: "Credit Cards", emoji: "💳" },
-  { id: "bank", label: "Banks", emoji: "🏦" },
-  { id: "subscription", label: "Subscriptions", emoji: "📱" },
-  { id: "membership", label: "Memberships", emoji: "🎫" },
+  { id: "all", label: "All Types" },
+  { id: "credit-card", label: "Credit Cards" },
+  { id: "bank", label: "Banks" },
+  { id: "subscription", label: "Subscriptions" },
+  { id: "membership", label: "Memberships" },
 ];
 
 const sortOptions = [
@@ -80,57 +80,55 @@ export default function BrowsePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Header with gradient bg */}
-      <div className="relative overflow-hidden bg-gradient-to-b from-purple/5 via-cream to-cream pb-4 pt-10">
-        <div className="pointer-events-none absolute -top-20 right-0 h-72 w-72 rounded-full bg-purple/8 blur-[80px]" />
-        <div className="pointer-events-none absolute top-10 -left-20 h-56 w-56 rounded-full bg-teal/8 blur-[60px]" />
-
-        <div className="relative mx-auto max-w-7xl px-6">
-          <div className="mb-2 text-4xl animate-bounce-in">🗂️</div>
+      {/* Header */}
+      <div className="border-b border-border bg-surface py-8">
+        <div className="mx-auto max-w-6xl px-6">
+          <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent">
+            Browse
+          </p>
           <h1
-            className="mb-2 text-4xl font-black md:text-5xl animate-slide-up"
+            className="mb-1 text-2xl font-bold md:text-3xl animate-slide-up"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Browse <span className="gradient-text-cool">all perks</span>
+            All perks
           </h1>
-          <p className="text-ink-muted animate-slide-up delay-100">
+          <p className="text-sm text-ink-muted animate-slide-up delay-75">
             <span className="font-semibold text-ink">{filteredPerks.length}</span> perks across {providerTypes.length - 1} provider types
           </p>
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-6">
+      <div className="mx-auto max-w-6xl px-6 py-6">
         {/* Search */}
-        <div className="mb-6">
+        <div className="mb-4">
           <SearchBar value={search} onChange={setSearch} />
         </div>
 
         {/* Category filter */}
-        <div className="mb-6">
+        <div className="mb-4">
           <CategoryFilter selected={category} onChange={setCategory} />
         </div>
 
         {/* Provider type + Sort */}
-        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap gap-2">
+        <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap gap-1.5">
             {providerTypes.map((pt) => (
               <button
                 key={pt.id}
                 onClick={() => setProviderType(pt.id)}
-                className={`flex items-center gap-1.5 rounded-xl border px-3.5 py-2 text-sm font-semibold transition-all duration-200 ${
+                className={`rounded-lg border px-3 py-1.5 text-sm font-medium transition-colors ${
                   providerType === pt.id
-                    ? "border-purple/30 bg-purple/8 text-purple shadow-sm"
-                    : "border-ink/[0.06] bg-white text-ink-muted hover:border-ink/10 hover:shadow-sm hover:text-ink"
+                    ? "border-accent/30 bg-accent-subtle text-accent"
+                    : "border-border bg-surface text-ink-muted hover:border-ink-faint hover:text-ink"
                 }`}
               >
-                <span className="text-xs">{pt.emoji}</span>
                 {pt.label}
               </button>
             ))}
           </div>
 
-          <div className="flex items-center gap-2 rounded-xl border border-ink/[0.06] bg-white px-3 py-1.5">
-            <SlidersHorizontal className="h-3.5 w-3.5 text-ink-muted" />
+          <div className="flex items-center gap-2 rounded-lg border border-border bg-surface px-3 py-1.5">
+            <SlidersHorizontal className="h-3.5 w-3.5 text-ink-faint" />
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value)}
@@ -147,16 +145,15 @@ export default function BrowsePage() {
 
         {/* Results */}
         {filteredPerks.length > 0 ? (
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {filteredPerks.map((perk, i) => (
               <PerkCard key={perk.id} perk={perk} index={i} />
             ))}
           </div>
         ) : (
-          <div className="rounded-3xl border-2 border-dashed border-ink/10 bg-white py-20 text-center">
-            <div className="mb-3 text-5xl">😅</div>
-            <p className="text-lg font-bold text-ink/60">No perks match your filters</p>
-            <p className="mt-1 text-sm text-ink-muted">
+          <div className="rounded-xl border border-dashed border-border bg-surface py-16 text-center">
+            <p className="text-sm font-medium text-ink-muted">No perks match your filters</p>
+            <p className="mt-1 text-xs text-ink-faint">
               Try broadening your search or clearing some filters
             </p>
             <button
@@ -165,7 +162,7 @@ export default function BrowsePage() {
                 setCategory("all");
                 setProviderType("all");
               }}
-              className="mt-5 rounded-full bg-gradient-to-r from-coral to-purple px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-purple/20 transition-all hover:scale-[1.03] active:scale-[0.98]"
+              className="mt-4 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-light"
             >
               Clear all filters
             </button>

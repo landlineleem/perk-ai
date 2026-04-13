@@ -14,18 +14,18 @@ interface Perk {
   expiration: string | null;
 }
 
-const categoryColors: Record<string, { gradient: string; text: string; bg: string; shadow: string }> = {
-  Travel: { gradient: "from-teal to-teal-light", text: "text-teal", bg: "bg-teal/8", shadow: "shadow-teal/10" },
-  Food: { gradient: "from-coral to-coral-light", text: "text-coral", bg: "bg-coral/8", shadow: "shadow-coral/10" },
-  Software: { gradient: "from-purple to-purple-light", text: "text-purple", bg: "bg-purple/8", shadow: "shadow-purple/10" },
-  Finance: { gradient: "from-mint to-teal", text: "text-mint", bg: "bg-mint/8", shadow: "shadow-mint/10" },
-  Health: { gradient: "from-pink to-coral-light", text: "text-pink", bg: "bg-pink/8", shadow: "shadow-pink/10" },
-  Shopping: { gradient: "from-sunny to-orange", text: "text-orange", bg: "bg-sunny/8", shadow: "shadow-sunny/10" },
-  Entertainment: { gradient: "from-blue to-purple-light", text: "text-blue", bg: "bg-blue/8", shadow: "shadow-blue/10" },
+const categoryStyle: Record<string, { text: string; bg: string }> = {
+  Travel: { text: "text-teal-700", bg: "bg-teal-50" },
+  Food: { text: "text-red-700", bg: "bg-red-50" },
+  Software: { text: "text-indigo-700", bg: "bg-indigo-50" },
+  Finance: { text: "text-emerald-700", bg: "bg-emerald-50" },
+  Health: { text: "text-pink-700", bg: "bg-pink-50" },
+  Shopping: { text: "text-amber-700", bg: "bg-amber-50" },
+  Entertainment: { text: "text-blue-700", bg: "bg-blue-50" },
 };
 
 export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: number }) {
-  const colors = categoryColors[perk.category] || categoryColors.Travel;
+  const style = categoryStyle[perk.category] || categoryStyle.Travel;
 
   const isExpiring =
     perk.expiration &&
@@ -34,30 +34,25 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
   return (
     <Link
       href={`/perk/${perk.id}`}
-      className="group block animate-scale-in"
-      style={{ animationDelay: `${index * 60}ms` }}
+      className="group block animate-slide-up"
+      style={{ animationDelay: `${index * 50}ms` }}
     >
-      <div className={`card-3d relative h-full overflow-hidden rounded-2xl bg-white border border-ink/[0.06] p-5 shadow-sm hover:shadow-xl ${colors.shadow} transition-all duration-300`}>
-        {/* Colored top accent bar */}
-        <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${colors.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-
+      <div className="relative h-full rounded-xl bg-surface border border-border p-5 transition-all duration-200 hover:border-border hover:shadow-md">
         {/* Top row */}
-        <div className="mb-3.5 flex items-center justify-between">
+        <div className="mb-3 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-cream-dark/50 to-cream text-lg shadow-sm">
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-base-dark/60 text-base">
               {perk.providerLogo}
             </span>
-            <div>
-              <span className="text-xs font-semibold text-ink/70">{perk.provider}</span>
-            </div>
+            <span className="text-xs font-medium text-ink-muted">{perk.provider}</span>
           </div>
-          <span className={`rounded-full ${colors.bg} px-2.5 py-1 text-[11px] font-bold ${colors.text} tracking-wide uppercase`}>
+          <span className={`rounded-md ${style.bg} px-2 py-0.5 text-[11px] font-semibold ${style.text}`}>
             {perk.category}
           </span>
         </div>
 
         {/* Title and description */}
-        <h3 className="mb-1.5 text-[15px] font-bold leading-snug text-ink group-hover:gradient-text transition-all duration-200">
+        <h3 className="mb-1 text-sm font-semibold leading-snug text-ink group-hover:text-accent transition-colors">
           {perk.title}
         </h3>
         <p className="mb-4 text-[13px] leading-relaxed text-ink-muted line-clamp-2">
@@ -66,18 +61,18 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
 
         {/* Bottom row */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <span className={`rounded-lg ${colors.bg} px-2.5 py-1 text-sm font-extrabold ${colors.text}`}>
+          <div className="flex items-center gap-2">
+            <span className="rounded-md bg-accent-subtle px-2 py-0.5 text-sm font-bold text-accent">
               {perk.value}
             </span>
             {isExpiring && (
-              <span className="flex items-center gap-1 text-[11px] font-medium text-orange">
+              <span className="flex items-center gap-1 text-[11px] font-medium text-warning">
                 <Clock className="h-3 w-3" />
                 Expiring
               </span>
             )}
           </div>
-          <div className={`flex h-8 w-8 items-center justify-center rounded-full bg-ink/5 text-ink/30 transition-all duration-300 group-hover:bg-gradient-to-br ${colors.gradient} group-hover:text-white group-hover:scale-110 group-hover:rotate-12`}>
+          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-base-dark/50 text-ink-faint transition-all duration-200 group-hover:bg-accent group-hover:text-white">
             <ArrowUpRight className="h-3.5 w-3.5" />
           </div>
         </div>

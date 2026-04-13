@@ -12,26 +12,6 @@ import {
 import perksData from "@/data/perks.json";
 import PerkCard from "@/components/PerkCard";
 
-const categoryColors: Record<string, { gradient: string; bg: string; text: string }> = {
-  Travel: { gradient: "from-teal to-teal-light", bg: "bg-teal/8", text: "text-teal" },
-  Food: { gradient: "from-coral to-coral-light", bg: "bg-coral/8", text: "text-coral" },
-  Software: { gradient: "from-purple to-purple-light", bg: "bg-purple/8", text: "text-purple" },
-  Finance: { gradient: "from-mint to-teal", bg: "bg-mint/8", text: "text-mint" },
-  Health: { gradient: "from-pink to-coral-light", bg: "bg-pink/8", text: "text-pink" },
-  Shopping: { gradient: "from-sunny to-orange", bg: "bg-sunny/8", text: "text-orange" },
-  Entertainment: { gradient: "from-blue to-purple-light", bg: "bg-blue/8", text: "text-blue" },
-};
-
-const categoryEmojis: Record<string, string> = {
-  Travel: "✈️",
-  Food: "🍕",
-  Software: "💎",
-  Finance: "💸",
-  Health: "💖",
-  Shopping: "🛍️",
-  Entertainment: "🎉",
-};
-
 export default function PerkDetailPage({
   params,
 }: {
@@ -53,20 +33,19 @@ export default function PerkDetailPage({
 
   if (!perk) {
     return (
-      <div className="mx-auto flex min-h-[60vh] max-w-7xl flex-col items-center justify-center px-6 py-20 text-center">
-        <div className="mb-4 text-6xl">🤔</div>
+      <div className="mx-auto flex min-h-[60vh] max-w-6xl flex-col items-center justify-center px-6 py-20 text-center">
         <h1
-          className="mb-3 text-2xl font-black"
+          className="mb-2 text-xl font-bold"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           Perk not found
         </h1>
-        <p className="mb-6 text-ink-muted">
+        <p className="mb-6 text-sm text-ink-muted">
           This perk doesn&apos;t exist or may have been removed.
         </p>
         <Link
           href="/browse"
-          className="rounded-full bg-gradient-to-r from-coral to-purple px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-purple/20 hover:scale-[1.03] transition-transform"
+          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-light"
         >
           Browse all perks
         </Link>
@@ -74,16 +53,14 @@ export default function PerkDetailPage({
     );
   }
 
-  const colors = categoryColors[perk.category] || categoryColors.Travel;
-
   return (
     <div className="min-h-screen">
-      {/* Gradient header area */}
-      <div className={`relative overflow-hidden bg-gradient-to-b from-${perk.category === "Travel" ? "teal" : perk.category === "Food" ? "coral" : perk.category === "Software" ? "purple" : perk.category === "Finance" ? "mint" : perk.category === "Health" ? "pink" : perk.category === "Entertainment" ? "blue" : "sunny"}/5 via-cream to-cream pb-2 pt-8`}>
-        <div className="mx-auto max-w-7xl px-6">
+      {/* Header */}
+      <div className="border-b border-border bg-surface py-6">
+        <div className="mx-auto max-w-6xl px-6">
           <Link
             href="/browse"
-            className="group mb-6 inline-flex items-center gap-2 rounded-full bg-white border border-ink/[0.06] px-4 py-2 text-sm font-medium text-ink-muted shadow-sm transition-all hover:shadow-md hover:text-ink"
+            className="group mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-ink-muted transition-colors hover:text-ink"
           >
             <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-0.5" />
             Back to all perks
@@ -91,40 +68,40 @@ export default function PerkDetailPage({
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-4">
-        <div className="grid gap-10 lg:grid-cols-[1fr_380px]">
+      <div className="mx-auto max-w-6xl px-6 py-8">
+        <div className="grid gap-10 lg:grid-cols-[1fr_360px]">
           {/* Main content */}
           <div className="animate-slide-up">
             {/* Header */}
             <div className="mb-8">
-              <div className="mb-5 flex items-center gap-3">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cream-dark/80 to-white text-2xl shadow-md border border-ink/[0.04]">
+              <div className="mb-4 flex items-center gap-3">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-base-dark/60 text-xl">
                   {perk.providerLogo}
                 </span>
                 <div>
-                  <div className="text-sm font-bold text-ink">{perk.provider}</div>
-                  <div className="text-xs capitalize text-ink-muted">
+                  <div className="text-sm font-semibold text-ink">{perk.provider}</div>
+                  <div className="text-xs capitalize text-ink-faint">
                     {perk.providerType.replace("-", " ")}
                   </div>
                 </div>
               </div>
 
               <h1
-                className="mb-5 text-3xl font-black leading-tight md:text-4xl"
+                className="mb-4 text-2xl font-bold leading-tight md:text-3xl"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 {perk.title}
               </h1>
 
-              <div className="flex flex-wrap items-center gap-2.5">
-                <span className={`rounded-xl ${colors.bg} px-4 py-2 text-sm font-extrabold ${colors.text}`}>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-md bg-accent-subtle px-3 py-1 text-sm font-bold text-accent">
                   {perk.value}
                 </span>
-                <span className="flex items-center gap-1.5 rounded-xl bg-ink/5 px-3 py-2 text-xs font-semibold text-ink/60">
-                  {categoryEmojis[perk.category]} {perk.category}
+                <span className="rounded-md bg-base-dark px-2.5 py-1 text-xs font-medium text-ink-muted">
+                  {perk.category}
                 </span>
                 {perk.expiration && (
-                  <span className="flex items-center gap-1.5 rounded-xl bg-orange/8 px-3 py-2 text-xs font-semibold text-orange">
+                  <span className="flex items-center gap-1 rounded-md bg-warning-subtle px-2.5 py-1 text-xs font-medium text-warning">
                     <Clock className="h-3 w-3" />
                     Expires{" "}
                     {new Date(perk.expiration).toLocaleDateString("en-US", {
@@ -138,34 +115,32 @@ export default function PerkDetailPage({
             </div>
 
             {/* Description */}
-            <div className="mb-10 rounded-3xl border border-ink/[0.06] bg-white p-7 shadow-sm">
-              <h2 className="mb-3 flex items-center gap-2 text-sm font-bold text-ink">
-                <span>📋</span> About this perk
-              </h2>
-              <p className="leading-relaxed text-ink-muted">
+            <div className="mb-8 rounded-xl border border-border bg-surface p-6">
+              <h2 className="mb-2 text-sm font-semibold text-ink">About this perk</h2>
+              <p className="text-sm leading-relaxed text-ink-muted">
                 {perk.fullDescription}
               </p>
             </div>
 
             {/* How to claim */}
-            <div className="mb-10">
+            <div className="mb-8">
               <h2
-                className="mb-5 flex items-center gap-2 text-xl font-black"
+                className="mb-4 text-base font-bold"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
-                <span>🗺️</span> How to claim
+                How to claim
               </h2>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {perk.claimSteps.map((step, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-4 rounded-2xl border border-ink/[0.06] bg-white p-5 shadow-sm animate-slide-in"
-                    style={{ animationDelay: `${i * 80}ms` }}
+                    className="flex items-start gap-3 rounded-xl border border-border bg-surface p-4 animate-slide-up"
+                    style={{ animationDelay: `${i * 60}ms` }}
                   >
-                    <div className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${colors.gradient} text-xs font-black text-white shadow-sm`}>
+                    <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md bg-accent text-xs font-bold text-white">
                       {i + 1}
                     </div>
-                    <p className="text-sm leading-relaxed text-ink/70 pt-1">
+                    <p className="text-sm leading-relaxed text-ink-muted pt-0.5">
                       {step}
                     </p>
                   </div>
@@ -174,12 +149,12 @@ export default function PerkDetailPage({
             </div>
 
             {/* Tags */}
-            <div className="mb-10 flex flex-wrap items-center gap-2">
-              <Tag className="h-3.5 w-3.5 text-ink-muted" />
+            <div className="flex flex-wrap items-center gap-2">
+              <Tag className="h-3.5 w-3.5 text-ink-faint" />
               {perk.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-ink/5 px-3 py-1 text-xs font-medium text-ink-muted"
+                  className="rounded-md bg-base-dark px-2.5 py-1 text-xs font-medium text-ink-muted"
                 >
                   #{tag}
                 </span>
@@ -188,33 +163,33 @@ export default function PerkDetailPage({
           </div>
 
           {/* Sidebar */}
-          <div className="lg:sticky lg:top-24 lg:self-start">
+          <div className="lg:sticky lg:top-20 lg:self-start">
             {/* Claim card */}
-            <div className="mb-6 overflow-hidden rounded-3xl border border-ink/[0.06] bg-white shadow-lg animate-scale-in">
-              <div className={`bg-gradient-to-r ${colors.gradient} p-6 text-center text-white`}>
-                <div className="mb-1 text-sm font-semibold text-white/70">
+            <div className="mb-6 overflow-hidden rounded-xl border border-border bg-surface">
+              <div className="bg-ink p-5 text-center text-white">
+                <div className="mb-0.5 text-xs font-medium text-white/40">
                   Estimated value
                 </div>
                 <div
-                  className="text-3xl font-black"
+                  className="text-2xl font-bold"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {perk.value}
                 </div>
               </div>
-              <div className="p-5">
+              <div className="p-4">
                 <a
                   href={perk.claimUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`mb-3 flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r ${colors.gradient} py-4 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]`}
+                  className="mb-3 flex w-full items-center justify-center gap-2 rounded-lg bg-accent py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-light"
                 >
                   Claim this perk
                   <ExternalLink className="h-3.5 w-3.5" />
                 </a>
 
-                <div className="flex items-center justify-center gap-1.5 text-xs text-ink-muted">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-mint" />
+                <div className="flex items-center justify-center gap-1.5 text-xs text-ink-faint">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-success" />
                   Verified & active
                 </div>
               </div>
@@ -223,8 +198,8 @@ export default function PerkDetailPage({
             {/* Related perks */}
             {relatedPerks.length > 0 && (
               <div>
-                <h3 className="mb-3 flex items-center gap-2 text-sm font-bold text-ink">
-                  <span>🔗</span> Related perks
+                <h3 className="mb-3 text-sm font-semibold text-ink">
+                  Related perks
                 </h3>
                 <div className="space-y-3">
                   {relatedPerks.map((rp, i) => (
