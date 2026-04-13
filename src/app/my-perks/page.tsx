@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect, useRef } from "react";
+import Image from "next/image";
 import { Search, Check, X } from "lucide-react";
 import perksData from "@/data/perks.json";
 import providersData from "@/data/providers.json";
@@ -9,16 +10,6 @@ import PerkCard from "@/components/PerkCard";
 function normalizeProvider(provider: string): string {
   return provider.toLowerCase().replace(/[\s\-]/g, "");
 }
-
-const categoryLabels: Record<string, string> = {
-  Travel: "Travel",
-  Food: "Food",
-  Software: "Software",
-  Finance: "Finance",
-  Health: "Health",
-  Shopping: "Shopping",
-  Entertainment: "Entertainment",
-};
 
 function AnimatedValue({ value }: { value: number }) {
   const [display, setDisplay] = useState(0);
@@ -51,9 +42,7 @@ export default function MyPerksPage() {
     if (!providerSearch) return providersData;
     const q = providerSearch.toLowerCase();
     return providersData.filter(
-      (p) =>
-        p.name.toLowerCase().includes(q) ||
-        p.type.toLowerCase().includes(q)
+      (p) => p.name.toLowerCase().includes(q) || p.type.toLowerCase().includes(q)
     );
   }, [providerSearch]);
 
@@ -65,12 +54,10 @@ export default function MyPerksPage() {
 
   const myPerks = useMemo(() => {
     if (selectedProviders.length === 0) return [];
-
     const selectedNames = selectedProviders.map((id) => {
       const provider = providersData.find((p) => p.id === id);
       return provider ? normalizeProvider(provider.name) : "";
     });
-
     return perksData.filter((perk) => {
       const perkProvider = normalizeProvider(perk.provider);
       return selectedNames.some(
@@ -80,8 +67,7 @@ export default function MyPerksPage() {
   }, [selectedProviders]);
 
   const totalValue = useMemo(() => {
-    const cents = myPerks.reduce((sum, p) => sum + p.valueCents, 0);
-    return Math.round(cents / 100);
+    return Math.round(myPerks.reduce((sum, p) => sum + p.valueCents, 0) / 100);
   }, [myPerks]);
 
   const groupedPerks = useMemo(() => {
@@ -96,53 +82,48 @@ export default function MyPerksPage() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <div className="border-b border-border bg-surface py-8">
-        <div className="mx-auto max-w-6xl px-6">
-          <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent animate-slide-up">
-            Personalized
-          </p>
+      <div className="bg-dark text-white">
+        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
           <h1
-            className="mb-1 text-2xl font-bold md:text-3xl animate-slide-up delay-75"
-            style={{ fontFamily: "var(--font-heading)" }}
+            className="mb-2 text-3xl tracking-tight md:text-4xl animate-fade-up"
+            style={{ fontFamily: "var(--font-serif)" }}
           >
             My Perks
           </h1>
-          <p className="text-sm text-ink-muted animate-slide-up delay-100">
+          <p className="text-sm text-white/40 animate-fade-up delay-100">
             Select what you have — see every benefit you&apos;re entitled to.
           </p>
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 py-8">
-        <div className="grid gap-8 lg:grid-cols-[320px_1fr]">
+      <div className="mx-auto max-w-7xl px-6 py-8 lg:px-10">
+        <div className="grid gap-8 lg:grid-cols-[340px_1fr]">
           {/* Provider selector */}
           <div className="lg:sticky lg:top-20 lg:self-start">
-            <div className="rounded-xl border border-border bg-surface p-4">
-              <h3 className="mb-3 text-sm font-semibold text-ink">
+            <div className="rounded-2xl border border-border/70 bg-surface p-5">
+              <h3 className="mb-4 text-sm font-bold text-ink" style={{ fontFamily: "var(--font-heading)" }}>
                 What do you have?
               </h3>
 
-              {/* Search */}
-              <div className="relative mb-3">
-                <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-ink-faint" />
+              <div className="relative mb-4">
+                <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-ink-muted" />
                 <input
                   type="text"
                   value={providerSearch}
                   onChange={(e) => setProviderSearch(e.target.value)}
                   placeholder="Search providers..."
-                  className="w-full rounded-lg border border-border bg-base py-2 pl-8 pr-3 text-sm text-ink placeholder-ink-faint outline-none transition-all focus:border-accent/40 focus:ring-2 focus:ring-accent/10"
+                  className="w-full rounded-xl border border-border bg-surface-alt py-2.5 pl-9 pr-3 text-sm text-ink placeholder-ink-faint outline-none focus:border-primary/40"
                 />
               </div>
 
-              {/* Selected count */}
               {selectedProviders.length > 0 && (
-                <div className="mb-3 flex items-center justify-between rounded-lg bg-accent-subtle px-3 py-2">
-                  <span className="text-xs font-semibold text-accent">
+                <div className="mb-3 flex items-center justify-between rounded-xl bg-primary-subtle px-3 py-2">
+                  <span className="text-xs font-semibold text-primary">
                     {selectedProviders.length} selected
                   </span>
                   <button
                     onClick={() => setSelectedProviders([])}
-                    className="flex items-center gap-1 text-xs font-medium text-ink-muted hover:text-ink transition-colors"
+                    className="flex items-center gap-1 text-xs font-medium text-ink-muted hover:text-ink"
                   >
                     <X className="h-3 w-3" />
                     Clear
@@ -150,23 +131,24 @@ export default function MyPerksPage() {
                 </div>
               )}
 
-              {/* Provider list */}
-              <div className="max-h-[420px] space-y-0.5 overflow-y-auto">
+              <div className="max-h-[480px] space-y-1 overflow-y-auto">
                 {filteredProviders.map((provider) => {
                   const isSelected = selectedProviders.includes(provider.id);
                   return (
                     <button
                       key={provider.id}
                       onClick={() => toggleProvider(provider.id)}
-                      className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition-colors ${
-                        isSelected
-                          ? "bg-accent-subtle"
-                          : "hover:bg-base-dark/50"
+                      className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left transition-colors ${
+                        isSelected ? "bg-primary-subtle" : "hover:bg-surface-alt"
                       }`}
                     >
-                      <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-base-dark/60 text-sm">
-                        {provider.logo}
-                      </span>
+                      <Image
+                        src={provider.logo}
+                        alt={provider.name}
+                        width={28}
+                        height={28}
+                        className="rounded object-contain"
+                      />
                       <div className="flex-1 min-w-0">
                         <div className={`text-sm font-medium truncate ${isSelected ? "text-ink" : "text-ink-secondary"}`}>
                           {provider.name}
@@ -176,9 +158,9 @@ export default function MyPerksPage() {
                         </div>
                       </div>
                       <div
-                        className={`flex h-4.5 w-4.5 flex-shrink-0 items-center justify-center rounded border-2 transition-colors ${
+                        className={`flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md border-2 transition-colors ${
                           isSelected
-                            ? "border-accent bg-accent text-white"
+                            ? "border-primary bg-primary text-white"
                             : "border-border"
                         }`}
                       >
@@ -194,57 +176,58 @@ export default function MyPerksPage() {
           {/* Results */}
           <div>
             {selectedProviders.length === 0 ? (
-              <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-border py-20 text-center">
+              <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border py-24 text-center">
+                <div className="mb-6 flex -space-x-4">
+                  {providersData.filter(p => p.cardImage).slice(0, 3).map((p) => (
+                    <div key={p.id} className="w-24 rounded-lg overflow-hidden shadow-md border-2 border-surface">
+                      <Image src={p.cardImage!} alt={p.name} width={500} height={315} className="object-cover" />
+                    </div>
+                  ))}
+                </div>
                 <h3
-                  className="mb-2 text-base font-semibold text-ink-muted"
+                  className="mb-2 text-lg font-bold text-ink"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   Your perks are waiting
                 </h3>
-                <p className="max-w-xs text-sm text-ink-faint">
-                  Select your credit cards, bank accounts, subscriptions, and
-                  memberships from the list to see all your benefits.
+                <p className="max-w-xs text-sm text-ink-muted">
+                  Select your credit cards, subscriptions, and memberships to uncover all your benefits.
                 </p>
               </div>
             ) : (
               <>
                 {/* Value banner */}
-                <div className="mb-8 rounded-xl bg-ink p-6 text-white animate-slide-up">
-                  <div className="flex items-center gap-4">
-                    <div>
-                      <div className="text-xs font-medium text-white/40 uppercase tracking-wider">
-                        Estimated annual perk value
-                      </div>
-                      <div
-                        className="text-3xl font-bold text-white tabular-nums"
-                        style={{ fontFamily: "var(--font-heading)" }}
-                      >
-                        $<AnimatedValue value={totalValue} />
-                        <span className="text-base font-normal text-white/30">
-                          +/year
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="mt-2 text-xs text-white/25">
-                    Based on {myPerks.length} perks across{" "}
-                    {selectedProviders.length} providers. Actual value varies by usage.
+                <div className="mb-8 rounded-2xl bg-dark p-8 text-white animate-fade-up">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/30 mb-2">
+                    Estimated annual perk value
+                  </p>
+                  <p
+                    className="text-4xl font-bold tabular-nums"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
+                    $<AnimatedValue value={totalValue} />
+                    <span className="text-lg font-normal text-white/25 ml-1">+/year</span>
+                  </p>
+                  <p className="mt-3 text-xs text-white/20">
+                    Based on {myPerks.length} perks across {selectedProviders.length} providers
                   </p>
                 </div>
 
                 {/* Grouped perks */}
                 {Object.entries(groupedPerks).map(([cat, perks]) => (
-                  <div key={cat} className="mb-8 animate-slide-up">
-                    <h3
-                      className="mb-3 flex items-center gap-2 text-base font-bold"
-                      style={{ fontFamily: "var(--font-heading)" }}
-                    >
-                      {categoryLabels[cat] || cat}
-                      <span className="rounded-md bg-base-dark px-2 py-0.5 text-xs font-semibold text-ink-muted">
+                  <div key={cat} className="mb-10">
+                    <div className="mb-4 flex items-center gap-3">
+                      <h3
+                        className="text-xl font-bold"
+                        style={{ fontFamily: "var(--font-heading)" }}
+                      >
+                        {cat}
+                      </h3>
+                      <span className="rounded-full bg-surface-alt px-2.5 py-0.5 text-xs font-semibold text-ink-muted">
                         {perks.length}
                       </span>
-                    </h3>
-                    <div className="grid gap-4 sm:grid-cols-2">
+                    </div>
+                    <div className="grid gap-5 sm:grid-cols-2">
                       {perks.map((perk, i) => (
                         <PerkCard key={perk.id} perk={perk} index={i} />
                       ))}

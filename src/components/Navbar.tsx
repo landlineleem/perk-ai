@@ -11,35 +11,31 @@ export default function Navbar() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/browse", label: "Browse" },
+    { href: "/browse", label: "Browse Perks" },
     { href: "/my-perks", label: "My Perks" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-border">
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent">
-            <span className="text-xs font-bold text-white">P</span>
+    <nav className="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-border/60">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
+        <Link href="/" className="flex items-center gap-2.5">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
+            <span className="text-sm font-bold text-white" style={{ fontFamily: "var(--font-heading)" }}>P</span>
           </div>
-          <span
-            className="text-base font-bold tracking-tight"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Perk<span className="text-accent">.ai</span>
+          <span className="text-lg font-bold tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
+            Perk<span className="text-primary">.ai</span>
           </span>
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden items-center gap-0.5 md:flex">
+        <div className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
+              className={`text-[13px] font-medium tracking-wide uppercase transition-colors ${
                 pathname === link.href
-                  ? "bg-accent-subtle text-accent"
-                  : "text-ink-muted hover:text-ink hover:bg-base-dark/50"
+                  ? "text-ink"
+                  : "text-ink-muted hover:text-ink"
               }`}
             >
               {link.label}
@@ -47,36 +43,32 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden md:flex">
           <Link
             href="/my-perks"
-            className="flex h-9 items-center gap-2 rounded-lg bg-accent px-4 text-sm font-semibold text-white transition-colors hover:bg-accent-light"
+            className="rounded-full bg-dark px-5 py-2 text-[13px] font-semibold text-white transition-all hover:bg-dark-surface"
           >
-            Get started
+            Get Started
           </Link>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-ink-muted hover:text-ink rounded-lg p-2 hover:bg-base-dark/50 transition-colors"
+          className="md:hidden text-ink-muted hover:text-ink p-2"
         >
           {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-border bg-surface px-6 pb-4 pt-2 md:hidden animate-fade-in">
+        <div className="border-t border-border/60 bg-cream px-6 pb-5 pt-3 md:hidden">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className={`block rounded-lg py-2.5 px-3 text-sm font-medium transition-colors ${
-                pathname === link.href
-                  ? "bg-accent-subtle text-accent"
-                  : "text-ink-muted hover:text-ink"
+              className={`block py-3 text-sm font-medium ${
+                pathname === link.href ? "text-ink" : "text-ink-muted"
               }`}
             >
               {link.label}
@@ -85,9 +77,9 @@ export default function Navbar() {
           <Link
             href="/my-perks"
             onClick={() => setMobileOpen(false)}
-            className="mt-2 flex h-10 items-center justify-center rounded-lg bg-accent text-sm font-semibold text-white"
+            className="mt-2 block rounded-full bg-dark py-3 text-center text-sm font-semibold text-white"
           >
-            Get started
+            Get Started
           </Link>
         </div>
       )}

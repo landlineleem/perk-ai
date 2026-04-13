@@ -2,6 +2,7 @@
 
 import { use, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowLeft,
   ExternalLink,
@@ -11,6 +12,35 @@ import {
 } from "lucide-react";
 import perksData from "@/data/perks.json";
 import PerkCard from "@/components/PerkCard";
+
+const providerImages: Record<string, string> = {
+  "Amex Platinum": "/images/brands/amex.png",
+  "Amex Gold": "/images/brands/amex.png",
+  "Chase Sapphire Reserve": "/images/brands/chase.png",
+  "Chase Freedom Flex": "/images/brands/chase.png",
+  "Capital One Venture": "/images/brands/capitalone.png",
+  "Citi Credit Cards": "/images/brands/citi.png",
+  "Mercury Bank": "/images/brands/mercury.png",
+  "USAA": "/images/brands/usaa.png",
+  "Apple One": "/images/brands/apple.png",
+  "Amazon Prime": "/images/brands/amazon.png",
+  "Spotify Premium": "/images/brands/spotify.png",
+  "T-Mobile": "/images/brands/tmobile.png",
+  "Walmart+": "/images/brands/walmart.png",
+  "Costco": "/images/brands/costco.png",
+  "AAA": "/images/brands/aaa.png",
+  "Hilton Honors": "/images/brands/hilton.png",
+  "GitHub Student Pack": "/images/brands/github.png",
+};
+
+const providerCardImages: Record<string, string> = {
+  "Amex Platinum": "/images/cards/amex-platinum.png",
+  "Amex Gold": "/images/cards/amex-gold.png",
+  "Chase Sapphire Reserve": "/images/cards/chase-sapphire-reserve.png",
+  "Chase Freedom Flex": "/images/cards/chase-freedom-flex.png",
+  "Capital One Venture": "/images/cards/capital-one-venture.png",
+  "Citi Credit Cards": "/images/cards/citi-double-cash.jpg",
+};
 
 export default function PerkDetailPage({
   params,
@@ -33,10 +63,10 @@ export default function PerkDetailPage({
 
   if (!perk) {
     return (
-      <div className="mx-auto flex min-h-[60vh] max-w-6xl flex-col items-center justify-center px-6 py-20 text-center">
+      <div className="mx-auto flex min-h-[60vh] max-w-7xl flex-col items-center justify-center px-6 py-20 text-center">
         <h1
-          className="mb-2 text-xl font-bold"
-          style={{ fontFamily: "var(--font-heading)" }}
+          className="mb-2 text-2xl font-bold"
+          style={{ fontFamily: "var(--font-serif)" }}
         >
           Perk not found
         </h1>
@@ -45,7 +75,7 @@ export default function PerkDetailPage({
         </p>
         <Link
           href="/browse"
-          className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-light"
+          className="rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white"
         >
           Browse all perks
         </Link>
@@ -53,55 +83,60 @@ export default function PerkDetailPage({
     );
   }
 
+  const logoSrc = providerImages[perk.provider];
+  const cardSrc = providerCardImages[perk.provider];
+
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <div className="border-b border-border bg-surface py-6">
-        <div className="mx-auto max-w-6xl px-6">
-          <Link
-            href="/browse"
-            className="group mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-ink-muted transition-colors hover:text-ink"
-          >
-            <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-0.5" />
-            Back to all perks
-          </Link>
-        </div>
-      </div>
+      {/* Hero with card image */}
+      <div className="bg-dark text-white overflow-hidden">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="py-6">
+            <Link
+              href="/browse"
+              className="group inline-flex items-center gap-1.5 text-sm text-white/40 transition-colors hover:text-white/70"
+            >
+              <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-0.5" />
+              Back to all perks
+            </Link>
+          </div>
 
-      <div className="mx-auto max-w-6xl px-6 py-8">
-        <div className="grid gap-10 lg:grid-cols-[1fr_360px]">
-          {/* Main content */}
-          <div className="animate-slide-up">
-            {/* Header */}
-            <div className="mb-8">
+          <div className="grid items-center gap-10 pb-14 lg:grid-cols-[1fr_auto]">
+            <div>
               <div className="mb-4 flex items-center gap-3">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-base-dark/60 text-xl">
-                  {perk.providerLogo}
-                </span>
+                {logoSrc && (
+                  <Image
+                    src={logoSrc}
+                    alt={perk.provider}
+                    width={32}
+                    height={32}
+                    className="rounded object-contain"
+                  />
+                )}
                 <div>
-                  <div className="text-sm font-semibold text-ink">{perk.provider}</div>
-                  <div className="text-xs capitalize text-ink-faint">
+                  <div className="text-sm font-medium text-white/80">{perk.provider}</div>
+                  <div className="text-xs capitalize text-white/30">
                     {perk.providerType.replace("-", " ")}
                   </div>
                 </div>
               </div>
 
               <h1
-                className="mb-4 text-2xl font-bold leading-tight md:text-3xl"
-                style={{ fontFamily: "var(--font-heading)" }}
+                className="mb-4 text-3xl tracking-tight md:text-4xl animate-fade-up"
+                style={{ fontFamily: "var(--font-serif)" }}
               >
                 {perk.title}
               </h1>
 
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded-md bg-accent-subtle px-3 py-1 text-sm font-bold text-accent">
+              <div className="flex flex-wrap items-center gap-2.5">
+                <span className="rounded-full bg-primary px-4 py-1.5 text-sm font-bold text-white">
                   {perk.value}
                 </span>
-                <span className="rounded-md bg-base-dark px-2.5 py-1 text-xs font-medium text-ink-muted">
+                <span className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-medium text-white/60">
                   {perk.category}
                 </span>
                 {perk.expiration && (
-                  <span className="flex items-center gap-1 rounded-md bg-warning-subtle px-2.5 py-1 text-xs font-medium text-warning">
+                  <span className="flex items-center gap-1 rounded-full bg-warning/20 px-3 py-1.5 text-xs font-medium text-yellow-300">
                     <Clock className="h-3 w-3" />
                     Expires{" "}
                     {new Date(perk.expiration).toLocaleDateString("en-US", {
@@ -114,10 +149,32 @@ export default function PerkDetailPage({
               </div>
             </div>
 
+            {/* Card image */}
+            {cardSrc && (
+              <div className="hidden lg:block w-[280px] animate-slide-cards delay-200">
+                <Image
+                  src={cardSrc}
+                  alt={perk.provider}
+                  width={500}
+                  height={315}
+                  className="rounded-xl shadow-2xl shadow-black/40"
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10">
+        <div className="grid gap-10 lg:grid-cols-[1fr_360px]">
+          {/* Main content */}
+          <div>
             {/* Description */}
-            <div className="mb-8 rounded-xl border border-border bg-surface p-6">
-              <h2 className="mb-2 text-sm font-semibold text-ink">About this perk</h2>
-              <p className="text-sm leading-relaxed text-ink-muted">
+            <div className="mb-8 rounded-2xl border border-border/70 bg-surface p-7">
+              <h2 className="mb-3 text-sm font-bold text-ink" style={{ fontFamily: "var(--font-heading)" }}>
+                About this perk
+              </h2>
+              <p className="text-[15px] leading-relaxed text-ink-secondary">
                 {perk.fullDescription}
               </p>
             </div>
@@ -125,22 +182,22 @@ export default function PerkDetailPage({
             {/* How to claim */}
             <div className="mb-8">
               <h2
-                className="mb-4 text-base font-bold"
+                className="mb-5 text-xl font-bold"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 How to claim
               </h2>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {perk.claimSteps.map((step, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-3 rounded-xl border border-border bg-surface p-4 animate-slide-up"
+                    className="flex items-start gap-4 rounded-xl border border-border/70 bg-surface p-5 animate-fade-up"
                     style={{ animationDelay: `${i * 60}ms` }}
                   >
-                    <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md bg-accent text-xs font-bold text-white">
+                    <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-dark text-xs font-bold text-white">
                       {i + 1}
                     </div>
-                    <p className="text-sm leading-relaxed text-ink-muted pt-0.5">
+                    <p className="text-sm leading-relaxed text-ink-secondary pt-0.5">
                       {step}
                     </p>
                   </div>
@@ -150,11 +207,11 @@ export default function PerkDetailPage({
 
             {/* Tags */}
             <div className="flex flex-wrap items-center gap-2">
-              <Tag className="h-3.5 w-3.5 text-ink-faint" />
+              <Tag className="h-3.5 w-3.5 text-ink-muted" />
               {perk.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-md bg-base-dark px-2.5 py-1 text-xs font-medium text-ink-muted"
+                  className="rounded-full bg-surface-alt px-3 py-1 text-xs font-medium text-ink-muted"
                 >
                   #{tag}
                 </span>
@@ -164,41 +221,35 @@ export default function PerkDetailPage({
 
           {/* Sidebar */}
           <div className="lg:sticky lg:top-20 lg:self-start">
-            {/* Claim card */}
-            <div className="mb-6 overflow-hidden rounded-xl border border-border bg-surface">
-              <div className="bg-ink p-5 text-center text-white">
-                <div className="mb-0.5 text-xs font-medium text-white/40">
+            <div className="mb-6 overflow-hidden rounded-2xl border border-border/70 bg-surface">
+              <div className="bg-dark p-6 text-center text-white">
+                <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/30">
                   Estimated value
-                </div>
-                <div
-                  className="text-2xl font-bold"
-                  style={{ fontFamily: "var(--font-heading)" }}
-                >
+                </p>
+                <p className="text-3xl font-bold" style={{ fontFamily: "var(--font-heading)" }}>
                   {perk.value}
-                </div>
+                </p>
               </div>
-              <div className="p-4">
+              <div className="p-5">
                 <a
                   href={perk.claimUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mb-3 flex w-full items-center justify-center gap-2 rounded-lg bg-accent py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-light"
+                  className="mb-3 flex w-full items-center justify-center gap-2 rounded-full bg-primary py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light"
                 >
                   Claim this perk
                   <ExternalLink className="h-3.5 w-3.5" />
                 </a>
-
-                <div className="flex items-center justify-center gap-1.5 text-xs text-ink-faint">
+                <div className="flex items-center justify-center gap-1.5 text-xs text-ink-muted">
                   <CheckCircle2 className="h-3.5 w-3.5 text-success" />
                   Verified & active
                 </div>
               </div>
             </div>
 
-            {/* Related perks */}
             {relatedPerks.length > 0 && (
               <div>
-                <h3 className="mb-3 text-sm font-semibold text-ink">
+                <h3 className="mb-3 text-sm font-bold text-ink" style={{ fontFamily: "var(--font-heading)" }}>
                   Related perks
                 </h3>
                 <div className="space-y-3">

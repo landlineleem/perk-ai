@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import IntroOverlay from "@/components/IntroOverlay";
 
 const inter = Inter({
   variable: "--font-body",
@@ -17,7 +18,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Perk.ai — Discover Every Perk You're Missing",
   description:
-    "Discover and track every perk, deal, benefit, and discount you have access to — credit cards, subscriptions, loyalty programs, and memberships in one place.",
+    "Discover and track every perk, benefit, and discount from your credit cards, subscriptions, loyalty programs, and memberships.",
 };
 
 export default function RootLayout({
@@ -27,7 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
-      <body className="min-h-screen bg-base text-ink antialiased">
+      <body className="min-h-screen bg-cream text-ink antialiased">
+        <IntroOverlay />
         <Navbar />
         <main>{children}</main>
       </body>

@@ -2,8 +2,10 @@
 
 import { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, Shield, Bell, Layers } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import perksData from "@/data/perks.json";
+import providersData from "@/data/providers.json";
 import PerkCard from "@/components/PerkCard";
 import SearchBar from "@/components/SearchBar";
 import CategoryFilter from "@/components/CategoryFilter";
@@ -37,9 +39,9 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
   }, [target]);
 
   return (
-    <div ref={ref} className="text-3xl md:text-4xl font-bold tabular-nums" style={{ fontFamily: "var(--font-heading)" }}>
+    <span ref={ref} className="tabular-nums">
       {count.toLocaleString()}{suffix}
-    </div>
+    </span>
   );
 }
 
@@ -65,191 +67,311 @@ export default function Home() {
       });
   }, [search, category]);
 
+  const creditCardProviders = providersData.filter((p) => p.type === "credit-card");
+
   return (
     <div className="min-h-screen">
-      {/* Hero */}
-      <section className="border-b border-border bg-surface">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-          <div className="mx-auto max-w-2xl text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent-subtle px-3 py-1 text-xs font-semibold text-accent animate-slide-up">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+      {/* ===== HERO — asymmetric layout with card imagery ===== */}
+      <section className="relative overflow-hidden bg-dark text-white">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1fr_1fr] lg:px-10">
+          {/* Left — copy */}
+          <div className="relative z-10 max-w-xl">
+            <p
+              className="mb-5 text-sm font-medium tracking-widest uppercase text-primary-light animate-fade-up"
+            >
               Stop leaving money on the table
-            </div>
+            </p>
 
             <h1
-              className="mb-4 text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl animate-slide-up delay-75"
-              style={{ fontFamily: "var(--font-heading)" }}
+              className="mb-6 text-[3.2rem] leading-[1.08] tracking-tight md:text-[4.2rem] animate-fade-up delay-100"
+              style={{ fontFamily: "var(--font-serif)" }}
             >
-              Every perk you{" "}
-              <span className="text-accent">deserve to know</span>
+              Every perk you <em className="text-primary-light">deserve</em> to know
             </h1>
 
-            <p className="mx-auto mb-8 max-w-md text-base leading-relaxed text-ink-muted animate-slide-up delay-150">
-              Discover hidden benefits from your credit cards, subscriptions,
-              loyalty programs, and memberships — all in one place.
+            <p className="mb-10 text-base leading-relaxed text-white/50 max-w-md animate-fade-up delay-200">
+              Your credit cards, subscriptions, and memberships hold thousands in
+              hidden value. We surface every benefit so nothing goes to waste.
             </p>
 
-            <div className="mx-auto mb-6 max-w-lg animate-slide-up delay-200">
-              <SearchBar value={search} onChange={setSearch} large />
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center gap-2 animate-slide-up delay-300">
-              <span className="text-xs text-ink-faint">Try:</span>
-              {["Amex Platinum", "Chase Sapphire", "Apple One", "Costco"].map(
-                (term) => (
-                  <button
-                    key={term}
-                    onClick={() => setSearch(term)}
-                    className="rounded-md border border-border bg-base px-3 py-1 text-xs font-medium text-ink-muted transition-colors hover:border-ink-faint hover:text-ink"
-                  >
-                    {term}
-                  </button>
-                )
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Value props */}
-      <section className="py-16 md:py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              {
-                icon: <Layers className="h-5 w-5" />,
-                title: "All your perks, one place",
-                desc: "Credit cards, subscriptions, loyalty programs, memberships — aggregated and organized.",
-              },
-              {
-                icon: <Bell className="h-5 w-5" />,
-                title: "Never miss a benefit",
-                desc: "Track expiring credits, monthly resets, and time-sensitive offers before they disappear.",
-              },
-              {
-                icon: <Shield className="h-5 w-5" />,
-                title: "Know your total value",
-                desc: "See exactly how much your perks are worth and what you're leaving on the table.",
-              },
-            ].map((item, i) => (
-              <div
-                key={item.title}
-                className="rounded-xl border border-border bg-surface p-6 animate-slide-up"
-                style={{ animationDelay: `${i * 100 + 200}ms` }}
+            <div className="flex flex-wrap items-center gap-4 animate-fade-up delay-300">
+              <Link
+                href="/my-perks"
+                className="rounded-full bg-primary px-7 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-primary-light"
               >
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-subtle text-accent">
-                  {item.icon}
-                </div>
-                <h3 className="mb-1 text-sm font-semibold text-ink">{item.title}</h3>
-                <p className="text-sm leading-relaxed text-ink-muted">{item.desc}</p>
+                Unlock My Perks
+              </Link>
+              <Link
+                href="/browse"
+                className="rounded-full border border-white/20 px-7 py-3.5 text-[15px] font-medium text-white/70 transition-all hover:border-white/40 hover:text-white"
+              >
+                Browse All
+              </Link>
+            </div>
+          </div>
+
+          {/* Right — stacked credit card images */}
+          <div className="relative hidden lg:block animate-slide-cards delay-300">
+            <div className="card-stack relative h-[420px]">
+              {/* Back card */}
+              <div className="absolute right-0 top-8 w-[340px] rotate-6 opacity-60">
+                <Image
+                  src="/images/cards/chase-sapphire-reserve.png"
+                  alt="Chase Sapphire Reserve"
+                  width={500}
+                  height={315}
+                  className="rounded-xl shadow-2xl shadow-black/40"
+                />
+              </div>
+              {/* Middle card */}
+              <div className="absolute right-12 top-0 w-[340px] rotate-2 opacity-80">
+                <Image
+                  src="/images/cards/amex-gold.png"
+                  alt="Amex Gold"
+                  width={500}
+                  height={315}
+                  className="rounded-xl shadow-2xl shadow-black/30"
+                />
+              </div>
+              {/* Front card */}
+              <div className="absolute right-24 top-12 w-[360px] -rotate-3">
+                <Image
+                  src="/images/cards/amex-platinum.png"
+                  alt="Amex Platinum"
+                  width={500}
+                  height={315}
+                  className="rounded-xl shadow-2xl shadow-black/50"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Ambient gradients */}
+        <div className="pointer-events-none absolute top-0 right-0 h-full w-1/2 bg-gradient-to-l from-primary/5 to-transparent" />
+        <div className="pointer-events-none absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-cream to-transparent" />
+      </section>
+
+      {/* ===== PROVIDER LOGOS MARQUEE ===== */}
+      <section className="border-b border-border/60 py-8 overflow-hidden">
+        <p className="mb-5 text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-ink-muted">
+          Perks from providers you already use
+        </p>
+        <div className="relative">
+          <div className="marquee-track">
+            {[...providersData, ...providersData].map((p, i) => (
+              <div key={`${p.id}-${i}`} className="flex flex-shrink-0 items-center justify-center px-8">
+                <Image
+                  src={p.logo}
+                  alt={p.name}
+                  width={40}
+                  height={40}
+                  className="opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300 object-contain"
+                />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="border-y border-border bg-surface py-12">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            {[
-              { value: 42, suffix: "+", label: "Perks tracked" },
-              { value: 17, label: "Providers" },
-              { value: 7, label: "Categories" },
-              { value: 160, suffix: "k+", label: "Total value" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-accent">
-                  <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                </div>
-                <div className="mt-1 text-xs font-medium text-ink-muted">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* ===== SEARCH + QUICK FILTERS ===== */}
+      <section className="mx-auto max-w-3xl px-6 py-14 text-center">
+        <h2
+          className="mb-3 text-3xl md:text-4xl tracking-tight animate-fade-up"
+          style={{ fontFamily: "var(--font-serif)" }}
+        >
+          What are you looking for?
+        </h2>
+        <p className="mb-8 text-sm text-ink-muted">
+          Search across {perksData.length} perks from {providersData.length} providers
+        </p>
+        <SearchBar value={search} onChange={setSearch} large />
       </section>
 
-      {/* Featured Perks */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
-        <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent">
-              Featured
-            </p>
-            <h2
-              className="text-2xl font-bold md:text-3xl"
-              style={{ fontFamily: "var(--font-heading)" }}
+      {/* ===== BENTO STATS ===== */}
+      <section className="mx-auto max-w-7xl px-6 pb-16 lg:px-10">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+          {[
+            { value: 42, suffix: "+", label: "Perks tracked", sub: "and growing weekly" },
+            { value: 17, suffix: "", label: "Providers", sub: "cards, apps & more" },
+            { value: 7, suffix: "", label: "Categories", sub: "travel to entertainment" },
+            { value: 160, suffix: "k", label: "Total value", sub: "in potential savings", prefix: "$" },
+          ].map((stat, i) => (
+            <div
+              key={stat.label}
+              className="rounded-2xl bg-surface border border-border/70 p-6 animate-fade-up"
+              style={{ animationDelay: `${i * 80}ms` }}
             >
-              Most popular perks
-            </h2>
+              <p className="text-3xl font-bold text-ink" style={{ fontFamily: "var(--font-heading)" }}>
+                {stat.prefix || ""}<AnimatedCounter target={stat.value} suffix={stat.suffix} />
+              </p>
+              <p className="mt-1 text-sm font-medium text-ink">{stat.label}</p>
+              <p className="text-xs text-ink-muted">{stat.sub}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ===== FEATURED CARDS SHOWCASE ===== */}
+      <section className="bg-surface-alt border-y border-border/60">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+          <div className="mb-3 flex items-end justify-between">
+            <div>
+              <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
+                Featured
+              </p>
+              <h2
+                className="text-3xl tracking-tight md:text-4xl"
+                style={{ fontFamily: "var(--font-serif)" }}
+              >
+                Popular perks
+              </h2>
+            </div>
+            <Link
+              href="/browse"
+              className="group hidden items-center gap-1.5 text-sm font-medium text-ink-muted transition-colors hover:text-ink md:flex"
+            >
+              View all perks
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            </Link>
           </div>
-          <Link
-            href="/browse"
-            className="group flex items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:text-accent-light"
+
+          <div className="mb-8 mt-6">
+            <CategoryFilter selected={category} onChange={setCategory} />
+          </div>
+
+          {featuredPerks.length > 0 ? (
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {featuredPerks.map((perk, i) => (
+                <PerkCard key={perk.id} perk={perk} index={i} />
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-2xl border-2 border-dashed border-border py-16 text-center">
+              <p className="text-sm text-ink-muted">No perks found for your filters</p>
+            </div>
+          )}
+
+          <div className="mt-8 text-center md:hidden">
+            <Link
+              href="/browse"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-primary"
+            >
+              View all perks
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CREDIT CARD SHOWCASE ===== */}
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+        <div className="mb-12 max-w-lg">
+          <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
+            Credit Cards
+          </p>
+          <h2
+            className="mb-3 text-3xl tracking-tight md:text-4xl"
+            style={{ fontFamily: "var(--font-serif)" }}
           >
-            View all
-            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-          </Link>
+            Premium cards, premium perks
+          </h2>
+          <p className="text-sm leading-relaxed text-ink-muted">
+            Your annual fee pays for more than you think. See what
+            you&apos;re entitled to from every card in your wallet.
+          </p>
         </div>
 
-        <div className="mb-6">
-          <CategoryFilter selected={category} onChange={setCategory} />
-        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {creditCardProviders.map((card, i) => {
+            const cardPerks = perksData.filter(
+              (p) => p.provider === card.name
+            );
+            const totalCents = cardPerks.reduce((sum, p) => sum + p.valueCents, 0);
 
-        {featuredPerks.length > 0 ? (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredPerks.map((perk, i) => (
-              <PerkCard key={perk.id} perk={perk} index={i} />
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-xl border border-dashed border-border bg-surface py-16 text-center">
-            <p className="text-sm font-medium text-ink-muted">No perks found</p>
-            <p className="mt-1 text-xs text-ink-faint">
-              Try adjusting your search or filters
-            </p>
-          </div>
-        )}
+            return (
+              <Link
+                href={`/browse?provider=${card.id}`}
+                key={card.id}
+                className="group block animate-fade-up"
+                style={{ animationDelay: `${i * 80}ms` }}
+              >
+                <div className="card-hover overflow-hidden rounded-2xl bg-surface border border-border/70">
+                  {card.cardImage && (
+                    <div className="relative h-44 bg-dark overflow-hidden">
+                      <Image
+                        src={card.cardImage}
+                        alt={card.name}
+                        fill
+                        className="object-contain p-6 transition-transform duration-500 group-hover:scale-110"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                  )}
+                  <div className="p-5">
+                    <div className="flex items-center gap-2.5 mb-2">
+                      <Image
+                        src={card.logo}
+                        alt={card.name}
+                        width={20}
+                        height={20}
+                        className="rounded object-contain"
+                      />
+                      <h3 className="text-sm font-semibold text-ink">{card.name}</h3>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p className="text-xs text-ink-muted">
+                        {cardPerks.length} perks · ${Math.round(totalCents / 100).toLocaleString()}+/yr value
+                      </p>
+                      <ArrowRight className="h-3.5 w-3.5 text-ink-muted transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 md:py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="rounded-2xl bg-ink p-10 md:p-16 text-center">
+      {/* ===== CTA ===== */}
+      <section className="bg-dark text-white">
+        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+          <div className="mx-auto max-w-2xl text-center">
             <h2
-              className="mb-3 text-2xl font-bold text-white md:text-3xl"
-              style={{ fontFamily: "var(--font-heading)" }}
+              className="mb-4 text-3xl tracking-tight md:text-5xl"
+              style={{ fontFamily: "var(--font-serif)" }}
             >
-              See what you&apos;re actually entitled to
+              See what you&apos;re <em className="text-primary-light">actually</em> paying for
             </h2>
-            <p className="mx-auto mb-8 max-w-md text-sm text-white/50">
-              Select your credit cards, subscriptions, and memberships to
-              instantly surface every perk you&apos;re paying for but not using.
+            <p className="mx-auto mb-10 max-w-md text-sm leading-relaxed text-white/40">
+              Select your cards, subscriptions, and memberships. We&apos;ll show you
+              every perk, credit, and benefit — so you never leave money on the table again.
             </p>
             <Link
               href="/my-perks"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-base"
+              className="inline-flex items-center gap-2.5 rounded-full bg-primary px-8 py-4 text-[15px] font-semibold text-white transition-all hover:bg-primary-light"
             >
-              Unlock my perks
+              Unlock My Perks
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-6 md:flex-row">
-          <div className="flex items-center gap-2">
-            <div className="flex h-5 w-5 items-center justify-center rounded bg-accent">
-              <span className="text-[9px] font-bold text-white">P</span>
+      {/* ===== FOOTER ===== */}
+      <footer className="border-t border-border/60">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row lg:px-10">
+          <div className="flex items-center gap-2.5">
+            <div className="flex h-6 w-6 items-center justify-center rounded-md bg-primary">
+              <span className="text-[10px] font-bold text-white">P</span>
             </div>
-            <span className="text-sm font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
-              Perk<span className="text-accent">.ai</span>
+            <span className="text-sm font-bold" style={{ fontFamily: "var(--font-heading)" }}>
+              Perk<span className="text-primary">.ai</span>
             </span>
           </div>
-          <p className="text-xs text-ink-faint">
-            Not affiliated with any listed providers. For informational purposes only.
+          <p className="text-xs text-ink-muted">
+            Not affiliated with any listed providers. For informational purposes only, not financial advice.
           </p>
         </div>
       </footer>

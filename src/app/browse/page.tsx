@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Image from "next/image";
 import { SlidersHorizontal } from "lucide-react";
 import perksData from "@/data/perks.json";
+import providersData from "@/data/providers.json";
 import PerkCard from "@/components/PerkCard";
 import SearchBar from "@/components/SearchBar";
 import CategoryFilter from "@/components/CategoryFilter";
@@ -16,10 +18,10 @@ const providerTypes = [
 ];
 
 const sortOptions = [
-  { id: "newest", label: "Newest" },
   { id: "popular", label: "Most Popular" },
-  { id: "expiring", label: "Expiring Soon" },
+  { id: "newest", label: "Newest" },
   { id: "value-high", label: "Highest Value" },
+  { id: "expiring", label: "Expiring Soon" },
 ];
 
 export default function BrowsePage() {
@@ -43,20 +45,12 @@ export default function BrowsePage() {
       );
     }
 
-    if (category !== "all") {
-      result = result.filter((p) => p.category === category);
-    }
-
-    if (providerType !== "all") {
-      result = result.filter((p) => p.providerType === providerType);
-    }
+    if (category !== "all") result = result.filter((p) => p.category === category);
+    if (providerType !== "all") result = result.filter((p) => p.providerType === providerType);
 
     switch (sort) {
       case "newest":
-        result.sort(
-          (a, b) =>
-            new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime()
-        );
+        result.sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime());
         break;
       case "popular":
         result.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
@@ -65,9 +59,7 @@ export default function BrowsePage() {
         result.sort((a, b) => {
           if (!a.expiration) return 1;
           if (!b.expiration) return -1;
-          return (
-            new Date(a.expiration).getTime() - new Date(b.expiration).getTime()
-          );
+          return new Date(a.expiration).getTime() - new Date(b.expiration).getTime();
         });
         break;
       case "value-high":
@@ -80,46 +72,52 @@ export default function BrowsePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <div className="border-b border-border bg-surface py-8">
-        <div className="mx-auto max-w-6xl px-6">
-          <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent">
-            Browse
-          </p>
-          <h1
-            className="mb-1 text-2xl font-bold md:text-3xl animate-slide-up"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            All perks
-          </h1>
-          <p className="text-sm text-ink-muted animate-slide-up delay-75">
-            <span className="font-semibold text-ink">{filteredPerks.length}</span> perks across {providerTypes.length - 1} provider types
-          </p>
+      {/* Header with card images */}
+      <div className="bg-dark text-white overflow-hidden">
+        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
+          <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto]">
+            <div>
+              <h1
+                className="mb-2 text-3xl tracking-tight md:text-4xl animate-fade-up"
+                style={{ fontFamily: "var(--font-serif)" }}
+              >
+                Browse all perks
+              </h1>
+              <p className="text-sm text-white/40 animate-fade-up delay-100">
+                <span className="text-white/70 font-medium">{filteredPerks.length} perks</span> across {providerTypes.length - 1} provider types
+              </p>
+            </div>
+            {/* Mini card fan */}
+            <div className="hidden lg:flex items-center gap-3 animate-slide-cards delay-200">
+              {providersData.filter(p => p.cardImage).slice(0, 3).map((p, i) => (
+                <div key={p.id} className="w-28 opacity-50 hover:opacity-100 transition-opacity" style={{ transform: `rotate(${(i - 1) * 5}deg)` }}>
+                  <Image src={p.cardImage!} alt={p.name} width={500} height={315} className="rounded-lg shadow-lg" />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 py-6">
-        {/* Search */}
-        <div className="mb-4">
+      <div className="mx-auto max-w-7xl px-6 py-8 lg:px-10">
+        <div className="mb-6">
           <SearchBar value={search} onChange={setSearch} />
         </div>
 
-        {/* Category filter */}
-        <div className="mb-4">
+        <div className="mb-5">
           <CategoryFilter selected={category} onChange={setCategory} />
         </div>
 
-        {/* Provider type + Sort */}
-        <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap gap-1.5">
+        <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap gap-2">
             {providerTypes.map((pt) => (
               <button
                 key={pt.id}
                 onClick={() => setProviderType(pt.id)}
-                className={`rounded-lg border px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`rounded-full border px-4 py-2 text-[13px] font-medium transition-all ${
                   providerType === pt.id
-                    ? "border-accent/30 bg-accent-subtle text-accent"
-                    : "border-border bg-surface text-ink-muted hover:border-ink-faint hover:text-ink"
+                    ? "border-dark bg-dark text-white"
+                    : "border-border bg-surface text-ink-muted hover:text-ink hover:border-ink-muted"
                 }`}
               >
                 {pt.label}
@@ -127,42 +125,33 @@ export default function BrowsePage() {
             ))}
           </div>
 
-          <div className="flex items-center gap-2 rounded-lg border border-border bg-surface px-3 py-1.5">
-            <SlidersHorizontal className="h-3.5 w-3.5 text-ink-faint" />
+          <div className="flex items-center gap-2 rounded-xl border border-border bg-surface px-3 py-2">
+            <SlidersHorizontal className="h-3.5 w-3.5 text-ink-muted" />
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value)}
-              className="bg-transparent text-sm font-medium text-ink outline-none cursor-pointer"
+              className="bg-transparent text-[13px] font-medium text-ink outline-none cursor-pointer"
             >
               {sortOptions.map((opt) => (
-                <option key={opt.id} value={opt.id}>
-                  {opt.label}
-                </option>
+                <option key={opt.id} value={opt.id}>{opt.label}</option>
               ))}
             </select>
           </div>
         </div>
 
-        {/* Results */}
         {filteredPerks.length > 0 ? (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {filteredPerks.map((perk, i) => (
               <PerkCard key={perk.id} perk={perk} index={i} />
             ))}
           </div>
         ) : (
-          <div className="rounded-xl border border-dashed border-border bg-surface py-16 text-center">
-            <p className="text-sm font-medium text-ink-muted">No perks match your filters</p>
-            <p className="mt-1 text-xs text-ink-faint">
-              Try broadening your search or clearing some filters
-            </p>
+          <div className="rounded-2xl border-2 border-dashed border-border bg-surface py-20 text-center">
+            <p className="text-base font-medium text-ink-muted">No perks match your filters</p>
+            <p className="mt-1 text-sm text-ink-faint">Try broadening your search</p>
             <button
-              onClick={() => {
-                setSearch("");
-                setCategory("all");
-                setProviderType("all");
-              }}
-              className="mt-4 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-light"
+              onClick={() => { setSearch(""); setCategory("all"); setProviderType("all"); }}
+              className="mt-5 rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white"
             >
               Clear all filters
             </button>

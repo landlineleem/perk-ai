@@ -3,7 +3,7 @@
 const categories = [
   { id: "all", label: "All" },
   { id: "Travel", label: "Travel" },
-  { id: "Food", label: "Food" },
+  { id: "Food", label: "Food & Dining" },
   { id: "Software", label: "Software" },
   { id: "Finance", label: "Finance" },
   { id: "Health", label: "Health" },
@@ -19,15 +19,15 @@ export default function CategoryFilter({
   onChange: (cat: string) => void;
 }) {
   return (
-    <div className="flex flex-wrap gap-1.5">
+    <div className="flex flex-wrap gap-2">
       {categories.map((cat) => (
         <button
           key={cat.id}
           onClick={() => onChange(cat.id)}
-          className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
+          className={`rounded-full px-4 py-2 text-[13px] font-medium transition-all ${
             selected === cat.id
-              ? "bg-accent text-white"
-              : "bg-surface text-ink-muted border border-border hover:border-ink-faint hover:text-ink"
+              ? "bg-dark text-white"
+              : "bg-surface-alt text-ink-muted hover:text-ink hover:bg-border/60"
           }`}
         >
           {cat.label}
