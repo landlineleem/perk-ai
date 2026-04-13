@@ -4,11 +4,11 @@ const categories = [
   { id: "all", label: "All" },
   { id: "Travel", label: "Travel" },
   { id: "Food", label: "Food & Dining" },
-  { id: "Software", label: "Software" },
-  { id: "Finance", label: "Finance" },
-  { id: "Health", label: "Health" },
   { id: "Shopping", label: "Shopping" },
   { id: "Entertainment", label: "Entertainment" },
+  { id: "Finance", label: "Finance" },
+  { id: "Software", label: "Software" },
+  { id: "Health", label: "Health" },
 ];
 
 export default function CategoryFilter({

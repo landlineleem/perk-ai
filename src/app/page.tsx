@@ -6,7 +6,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import perksData from "@/data/perks.json";
 import providersData from "@/data/providers.json";
-import { providerCardImages } from "@/data/imageMap";
+import { providerCardImages, uniqueBrands } from "@/data/imageMap";
 import PerkCard, { BrandLogo } from "@/components/PerkCard";
 import SearchBar from "@/components/SearchBar";
 import CategoryFilter from "@/components/CategoryFilter";
@@ -157,13 +157,15 @@ export default function Home() {
       {/* ===== PROVIDER LOGOS MARQUEE ===== */}
       <section className="border-b border-border/60 py-8 overflow-hidden">
         <p className="mb-5 text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-ink-muted">
-          Perks from providers you already use
+          Perks from {uniqueBrands.length}+ providers you already use
         </p>
         <div className="relative">
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-cream to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-cream to-transparent z-10" />
           <div className="marquee-track">
-            {[...providersData, ...providersData].map((p, i) => (
-              <div key={`${p.id}-${i}`} className="flex flex-shrink-0 items-center justify-center px-8 opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
-                <BrandLogo provider={p.name} size={36} />
+            {[...uniqueBrands, ...uniqueBrands].map((p, i) => (
+              <div key={`${p.id}-${i}`} className="flex flex-shrink-0 items-center justify-center px-6">
+                <BrandLogo provider={p.name} size={32} />
               </div>
             ))}
           </div>
@@ -188,10 +190,10 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-6 pb-16 lg:px-10">
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            { value: 42, suffix: "+", label: "Perks tracked", sub: "and growing weekly" },
-            { value: 17, suffix: "", label: "Providers", sub: "cards, apps & more" },
-            { value: 7, suffix: "", label: "Categories", sub: "travel to entertainment" },
-            { value: 160, suffix: "k", label: "Total value", sub: "in potential savings", prefix: "$" },
+            { value: 206, suffix: "+", label: "Perks tracked", sub: "and growing weekly" },
+            { value: 67, suffix: "", label: "Providers", sub: "cards, apps, restaurants & more" },
+            { value: 14, suffix: "", label: "Categories", sub: "travel to fast food" },
+            { value: 250, suffix: "k", label: "Total value", sub: "in potential savings", prefix: "$" },
           ].map((stat, i) => (
             <div
               key={stat.label}

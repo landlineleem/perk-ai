@@ -11,11 +11,20 @@ import SearchBar from "@/components/SearchBar";
 import CategoryFilter from "@/components/CategoryFilter";
 
 const providerTypes = [
-  { id: "all", label: "All Types" },
+  { id: "all", label: "All" },
   { id: "credit-card", label: "Credit Cards" },
-  { id: "bank", label: "Banks" },
+  { id: "restaurant", label: "Restaurants" },
+  { id: "airline", label: "Airlines" },
+  { id: "hotel", label: "Hotels" },
+  { id: "streaming", label: "Streaming" },
+  { id: "retail", label: "Retail" },
+  { id: "grocery", label: "Grocery" },
+  { id: "rideshare", label: "Rideshare" },
+  { id: "fintech", label: "Fintech" },
   { id: "subscription", label: "Subscriptions" },
   { id: "membership", label: "Memberships" },
+  { id: "bank", label: "Banks" },
+  { id: "fitness", label: "Fitness" },
 ];
 
 const sortOptions = [
