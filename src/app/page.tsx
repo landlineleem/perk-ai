@@ -355,9 +355,9 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row lg:px-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/logo-light.svg"
+            src="/images/logo.png"
             alt="Perk.AI"
-            className="h-5 w-auto"
+            className="h-5 w-auto rounded"
           />
           <p className="text-xs text-ink-muted">
             Not affiliated with any listed providers. For informational purposes only, not financial advice.

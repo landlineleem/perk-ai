@@ -22,9 +22,9 @@ export default function Navbar() {
         <Link href="/" className="flex items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/logo-light.svg"
+            src="/images/logo.png"
             alt="Perk.AI"
-            className="h-8 w-auto"
+            className="h-8 w-auto rounded-md"
           />
         </Link>
 
