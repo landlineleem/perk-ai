@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, Clock } from "lucide-react";
+import { providerLogos, providerCardImages } from "@/data/imageMap";
 
 interface Perk {
   id: string;
@@ -15,37 +16,22 @@ interface Perk {
   expiration: string | null;
 }
 
-const providerImages: Record<string, string> = {
-  "Amex Platinum": "/images/brands/amex.png",
-  "Amex Gold": "/images/brands/amex.png",
-  "Chase Sapphire Reserve": "/images/brands/chase.png",
-  "Chase Freedom Flex": "/images/brands/chase.png",
-  "Capital One Venture": "/images/brands/capitalone.png",
-  "Citi Credit Cards": "/images/brands/citi.png",
-  "Mercury Bank": "/images/brands/mercury.png",
-  "USAA": "/images/brands/usaa.png",
-  "Apple One": "/images/brands/apple.png",
-  "Amazon Prime": "/images/brands/amazon.png",
-  "Spotify Premium": "/images/brands/spotify.png",
-  "T-Mobile": "/images/brands/tmobile.png",
-  "Walmart+": "/images/brands/walmart.png",
-  "Costco": "/images/brands/costco.png",
-  "AAA": "/images/brands/aaa.png",
-  "Hilton Honors": "/images/brands/hilton.png",
-  "GitHub Student Pack": "/images/brands/github.png",
-};
+function BrandLogo({ provider, size = 24 }: { provider: string; size?: number }) {
+  const src = providerLogos[provider];
+  if (!src) return <span className="text-lg">{provider[0]}</span>;
 
-const providerCardImages: Record<string, string> = {
-  "Amex Platinum": "/images/cards/amex-platinum.png",
-  "Amex Gold": "/images/cards/amex-gold.png",
-  "Chase Sapphire Reserve": "/images/cards/chase-sapphire-reserve.png",
-  "Chase Freedom Flex": "/images/cards/chase-freedom-flex.png",
-  "Capital One Venture": "/images/cards/capital-one-venture.png",
-  "Citi Credit Cards": "/images/cards/citi-double-cash.jpg",
-};
+  if (src.endsWith(".svg")) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src={src} alt={provider} width={size} height={size} className="object-contain" />
+    );
+  }
+  return (
+    <Image src={src} alt={provider} width={size} height={size} className="rounded object-contain" />
+  );
+}
 
 export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: number }) {
-  const logoSrc = providerImages[perk.provider];
   const cardSrc = providerCardImages[perk.provider];
 
   const isExpiring =
@@ -76,17 +62,7 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
           {/* Provider row */}
           <div className="mb-3 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              {logoSrc ? (
-                <Image
-                  src={logoSrc}
-                  alt={perk.provider}
-                  width={24}
-                  height={24}
-                  className="rounded object-contain"
-                />
-              ) : (
-                <span className="text-lg">{perk.providerLogo}</span>
-              )}
+              <BrandLogo provider={perk.provider} />
               <span className="text-xs font-medium text-ink-muted">{perk.provider}</span>
             </div>
             <span className="text-[11px] font-semibold uppercase tracking-wider text-ink-muted">
@@ -122,3 +98,5 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
     </Link>
   );
 }
+
+export { BrandLogo };

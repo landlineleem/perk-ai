@@ -11,36 +11,8 @@ import {
   Tag,
 } from "lucide-react";
 import perksData from "@/data/perks.json";
-import PerkCard from "@/components/PerkCard";
-
-const providerImages: Record<string, string> = {
-  "Amex Platinum": "/images/brands/amex.png",
-  "Amex Gold": "/images/brands/amex.png",
-  "Chase Sapphire Reserve": "/images/brands/chase.png",
-  "Chase Freedom Flex": "/images/brands/chase.png",
-  "Capital One Venture": "/images/brands/capitalone.png",
-  "Citi Credit Cards": "/images/brands/citi.png",
-  "Mercury Bank": "/images/brands/mercury.png",
-  "USAA": "/images/brands/usaa.png",
-  "Apple One": "/images/brands/apple.png",
-  "Amazon Prime": "/images/brands/amazon.png",
-  "Spotify Premium": "/images/brands/spotify.png",
-  "T-Mobile": "/images/brands/tmobile.png",
-  "Walmart+": "/images/brands/walmart.png",
-  "Costco": "/images/brands/costco.png",
-  "AAA": "/images/brands/aaa.png",
-  "Hilton Honors": "/images/brands/hilton.png",
-  "GitHub Student Pack": "/images/brands/github.png",
-};
-
-const providerCardImages: Record<string, string> = {
-  "Amex Platinum": "/images/cards/amex-platinum.png",
-  "Amex Gold": "/images/cards/amex-gold.png",
-  "Chase Sapphire Reserve": "/images/cards/chase-sapphire-reserve.png",
-  "Chase Freedom Flex": "/images/cards/chase-freedom-flex.png",
-  "Capital One Venture": "/images/cards/capital-one-venture.png",
-  "Citi Credit Cards": "/images/cards/citi-double-cash.jpg",
-};
+import { providerCardImages } from "@/data/imageMap";
+import PerkCard, { BrandLogo } from "@/components/PerkCard";
 
 export default function PerkDetailPage({
   params,
@@ -83,7 +55,6 @@ export default function PerkDetailPage({
     );
   }
 
-  const logoSrc = providerImages[perk.provider];
   const cardSrc = providerCardImages[perk.provider];
 
   return (
@@ -104,15 +75,7 @@ export default function PerkDetailPage({
           <div className="grid items-center gap-10 pb-14 lg:grid-cols-[1fr_auto]">
             <div>
               <div className="mb-4 flex items-center gap-3">
-                {logoSrc && (
-                  <Image
-                    src={logoSrc}
-                    alt={perk.provider}
-                    width={32}
-                    height={32}
-                    className="rounded object-contain"
-                  />
-                )}
+                <BrandLogo provider={perk.provider} size={32} />
                 <div>
                   <div className="text-sm font-medium text-white/80">{perk.provider}</div>
                   <div className="text-xs capitalize text-white/30">

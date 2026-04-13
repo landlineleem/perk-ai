@@ -6,7 +6,8 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import perksData from "@/data/perks.json";
 import providersData from "@/data/providers.json";
-import PerkCard from "@/components/PerkCard";
+import { providerCardImages } from "@/data/imageMap";
+import PerkCard, { BrandLogo } from "@/components/PerkCard";
 import SearchBar from "@/components/SearchBar";
 import CategoryFilter from "@/components/CategoryFilter";
 
@@ -116,7 +117,7 @@ export default function Home() {
               {/* Back card */}
               <div className="absolute right-0 top-8 w-[340px] rotate-6 opacity-60">
                 <Image
-                  src="/images/cards/chase-sapphire-reserve.png"
+                  src="/images/cards/chase-sapphire-reserve.jpg"
                   alt="Chase Sapphire Reserve"
                   width={500}
                   height={315}
@@ -126,7 +127,7 @@ export default function Home() {
               {/* Middle card */}
               <div className="absolute right-12 top-0 w-[340px] rotate-2 opacity-80">
                 <Image
-                  src="/images/cards/amex-gold.png"
+                  src="/images/cards/amex-gold.jpg"
                   alt="Amex Gold"
                   width={500}
                   height={315}
@@ -136,7 +137,7 @@ export default function Home() {
               {/* Front card */}
               <div className="absolute right-24 top-12 w-[360px] -rotate-3">
                 <Image
-                  src="/images/cards/amex-platinum.png"
+                  src="/images/cards/amex-platinum.jpg"
                   alt="Amex Platinum"
                   width={500}
                   height={315}
@@ -161,14 +162,8 @@ export default function Home() {
         <div className="relative">
           <div className="marquee-track">
             {[...providersData, ...providersData].map((p, i) => (
-              <div key={`${p.id}-${i}`} className="flex flex-shrink-0 items-center justify-center px-8">
-                <Image
-                  src={p.logo}
-                  alt={p.name}
-                  width={40}
-                  height={40}
-                  className="opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300 object-contain"
-                />
+              <div key={`${p.id}-${i}`} className="flex flex-shrink-0 items-center justify-center px-8 opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                <BrandLogo provider={p.name} size={36} />
               </div>
             ))}
           </div>
@@ -311,13 +306,7 @@ export default function Home() {
                   )}
                   <div className="p-5">
                     <div className="flex items-center gap-2.5 mb-2">
-                      <Image
-                        src={card.logo}
-                        alt={card.name}
-                        width={20}
-                        height={20}
-                        className="rounded object-contain"
-                      />
+                      <BrandLogo provider={card.name} size={20} />
                       <h3 className="text-sm font-semibold text-ink">{card.name}</h3>
                     </div>
                     <div className="flex items-center justify-between">

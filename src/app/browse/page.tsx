@@ -5,6 +5,7 @@ import Image from "next/image";
 import { SlidersHorizontal } from "lucide-react";
 import perksData from "@/data/perks.json";
 import providersData from "@/data/providers.json";
+import { providerCardImages } from "@/data/imageMap";
 import PerkCard from "@/components/PerkCard";
 import SearchBar from "@/components/SearchBar";
 import CategoryFilter from "@/components/CategoryFilter";
@@ -89,9 +90,9 @@ export default function BrowsePage() {
             </div>
             {/* Mini card fan */}
             <div className="hidden lg:flex items-center gap-3 animate-slide-cards delay-200">
-              {providersData.filter(p => p.cardImage).slice(0, 3).map((p, i) => (
-                <div key={p.id} className="w-28 opacity-50 hover:opacity-100 transition-opacity" style={{ transform: `rotate(${(i - 1) * 5}deg)` }}>
-                  <Image src={p.cardImage!} alt={p.name} width={500} height={315} className="rounded-lg shadow-lg" />
+              {Object.entries(providerCardImages).slice(0, 3).map(([name, src], i) => (
+                <div key={name} className="w-28 opacity-50 hover:opacity-100 transition-opacity" style={{ transform: `rotate(${(i - 1) * 5}deg)` }}>
+                  <Image src={src} alt={name} width={500} height={315} className="rounded-lg shadow-lg" />
                 </div>
               ))}
             </div>

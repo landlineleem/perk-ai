@@ -5,7 +5,8 @@ import Image from "next/image";
 import { Search, Check, X } from "lucide-react";
 import perksData from "@/data/perks.json";
 import providersData from "@/data/providers.json";
-import PerkCard from "@/components/PerkCard";
+import { providerCardImages } from "@/data/imageMap";
+import PerkCard, { BrandLogo } from "@/components/PerkCard";
 
 function normalizeProvider(provider: string): string {
   return provider.toLowerCase().replace(/[\s\-]/g, "");
@@ -142,13 +143,7 @@ export default function MyPerksPage() {
                         isSelected ? "bg-primary-subtle" : "hover:bg-surface-alt"
                       }`}
                     >
-                      <Image
-                        src={provider.logo}
-                        alt={provider.name}
-                        width={28}
-                        height={28}
-                        className="rounded object-contain"
-                      />
+                      <BrandLogo provider={provider.name} size={28} />
                       <div className="flex-1 min-w-0">
                         <div className={`text-sm font-medium truncate ${isSelected ? "text-ink" : "text-ink-secondary"}`}>
                           {provider.name}
@@ -178,9 +173,9 @@ export default function MyPerksPage() {
             {selectedProviders.length === 0 ? (
               <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border py-24 text-center">
                 <div className="mb-6 flex -space-x-4">
-                  {providersData.filter(p => p.cardImage).slice(0, 3).map((p) => (
-                    <div key={p.id} className="w-24 rounded-lg overflow-hidden shadow-md border-2 border-surface">
-                      <Image src={p.cardImage!} alt={p.name} width={500} height={315} className="object-cover" />
+                  {Object.entries(providerCardImages).slice(0, 3).map(([name, src]) => (
+                    <div key={name} className="w-24 rounded-lg overflow-hidden shadow-md border-2 border-surface">
+                      <Image src={src} alt={name} width={500} height={315} className="object-cover" />
                     </div>
                   ))}
                 </div>
