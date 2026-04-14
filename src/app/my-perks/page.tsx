@@ -83,10 +83,9 @@ export default function MyPerksPage() {
     <div className="min-h-screen">
       {/* Header */}
       <div className="bg-dark text-white">
-        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
           <h1
-            className="mb-2 text-3xl tracking-tight md:text-4xl animate-fade-up"
-            style={{ fontFamily: "var(--font-serif)" }}
+            className="mb-2 text-4xl tracking-tight md:text-5xl font-heading font-medium animate-fade-up"
           >
             My Perks
           </h1>
@@ -100,8 +99,8 @@ export default function MyPerksPage() {
         <div className="grid gap-8 lg:grid-cols-[340px_1fr]">
           {/* Provider selector */}
           <div className="lg:sticky lg:top-20 lg:self-start">
-            <div className="rounded-2xl border border-border/70 bg-surface p-5">
-              <h3 className="mb-4 text-sm font-bold text-ink" style={{ fontFamily: "var(--font-heading)" }}>
+            <div className="rounded-[26px] border border-border/70 bg-surface p-6">
+              <h3 className="mb-4 text-sm font-bold text-ink font-heading">
                 What do you have?
               </h3>
 
@@ -112,7 +111,7 @@ export default function MyPerksPage() {
                   value={providerSearch}
                   onChange={(e) => setProviderSearch(e.target.value)}
                   placeholder="Search providers..."
-                  className="w-full rounded-xl border border-border bg-surface-alt py-2.5 pl-9 pr-3 text-sm text-ink placeholder-ink-faint outline-none focus:border-primary/40"
+                  className="w-full rounded-full border border-border bg-surface-alt py-2.5 pl-9 pr-3 text-sm text-ink placeholder-ink-faint outline-none focus:border-primary/40"
                 />
               </div>
 
@@ -138,7 +137,7 @@ export default function MyPerksPage() {
                     <button
                       key={provider.id}
                       onClick={() => toggleProvider(provider.id)}
-                      className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left transition-colors ${
+                      className={`flex w-full items-center gap-3 rounded-2xl px-3 py-3 text-left transition-colors ${
                         isSelected ? "bg-primary-subtle" : "hover:bg-surface-alt"
                       }`}
                     >
@@ -170,7 +169,7 @@ export default function MyPerksPage() {
           {/* Results */}
           <div>
             {selectedProviders.length === 0 ? (
-              <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border py-24 text-center">
+              <div className="flex flex-col items-center justify-center rounded-[26px] border-2 border-dashed border-border py-24 text-center">
                 <div className="mb-6 flex -space-x-4">
                   {Object.entries(providerCardImages).slice(0, 3).map(([name, src]) => (
                     <div key={name} className="w-24 rounded-lg overflow-hidden shadow-md border-2 border-surface">
@@ -179,8 +178,7 @@ export default function MyPerksPage() {
                   ))}
                 </div>
                 <h3
-                  className="mb-2 text-lg font-bold text-ink"
-                  style={{ fontFamily: "var(--font-heading)" }}
+                  className="mb-2 text-lg font-bold text-ink font-heading"
                 >
                   Your perks are waiting
                 </h3>
@@ -191,13 +189,12 @@ export default function MyPerksPage() {
             ) : (
               <>
                 {/* Value banner */}
-                <div className="mb-8 rounded-2xl bg-dark p-8 text-white animate-fade-up">
+                <div className="mb-8 rounded-[26px] bg-dark p-10 text-white animate-fade-up">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/30 mb-2">
                     Estimated annual perk value
                   </p>
                   <p
-                    className="text-4xl font-bold tabular-nums"
-                    style={{ fontFamily: "var(--font-heading)" }}
+                    className="text-5xl font-bold tabular-nums font-heading font-medium"
                   >
                     $<AnimatedValue value={totalValue} />
                     <span className="text-lg font-normal text-white/25 ml-1">+/year</span>
@@ -212,12 +209,11 @@ export default function MyPerksPage() {
                   <div key={cat} className="mb-10">
                     <div className="mb-4 flex items-center gap-3">
                       <h3
-                        className="text-xl font-bold"
-                        style={{ fontFamily: "var(--font-heading)" }}
+                        className="text-2xl font-bold font-heading font-medium"
                       >
                         {cat}
                       </h3>
-                      <span className="rounded-full bg-surface-alt px-2.5 py-0.5 text-xs font-semibold text-ink-muted">
+                      <span className="rounded-full bg-primary-subtle text-primary px-2.5 py-0.5 text-xs font-semibold">
                         {perks.length}
                       </span>
                     </div>

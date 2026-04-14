@@ -36,8 +36,7 @@ export default function PerkDetailPage({
     return (
       <div className="mx-auto flex min-h-[60vh] max-w-7xl flex-col items-center justify-center px-6 py-20 text-center">
         <h1
-          className="mb-2 text-2xl font-bold"
-          style={{ fontFamily: "var(--font-serif)" }}
+          className="mb-2 text-2xl font-bold font-heading font-medium"
         >
           Perk not found
         </h1>
@@ -46,7 +45,7 @@ export default function PerkDetailPage({
         </p>
         <Link
           href="/browse"
-          className="rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white"
+          className="rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white"
         >
           Browse all perks
         </Link>
@@ -71,7 +70,7 @@ export default function PerkDetailPage({
             </Link>
           </div>
 
-          <div className="grid items-center gap-10 pb-14 lg:grid-cols-[1fr_auto]">
+          <div className="grid items-center gap-10 pb-20 lg:grid-cols-[1fr_auto]">
             <div>
               <div className="mb-4 flex items-center gap-3">
                 <BrandLogo provider={perk.provider} size={32} />
@@ -84,8 +83,7 @@ export default function PerkDetailPage({
               </div>
 
               <h1
-                className="mb-4 text-3xl tracking-tight md:text-4xl animate-fade-up"
-                style={{ fontFamily: "var(--font-serif)" }}
+                className="mb-4 text-4xl tracking-tight md:text-5xl font-heading font-medium animate-fade-up"
               >
                 {perk.title}
               </h1>
@@ -132,8 +130,8 @@ export default function PerkDetailPage({
           {/* Main content */}
           <div>
             {/* Description */}
-            <div className="mb-8 rounded-2xl border border-border/70 bg-surface p-7">
-              <h2 className="mb-3 text-sm font-bold text-ink" style={{ fontFamily: "var(--font-heading)" }}>
+            <div className="mb-8 rounded-[26px] border border-border/70 bg-surface p-8">
+              <h2 className="mb-3 text-sm font-bold text-ink font-heading font-semibold">
                 About this perk
               </h2>
               <p className="text-[15px] leading-relaxed text-ink-secondary">
@@ -144,8 +142,7 @@ export default function PerkDetailPage({
             {/* How to claim */}
             <div className="mb-8">
               <h2
-                className="mb-5 text-xl font-bold"
-                style={{ fontFamily: "var(--font-heading)" }}
+                className="mb-5 text-xl font-bold font-heading font-semibold"
               >
                 How to claim
               </h2>
@@ -153,10 +150,10 @@ export default function PerkDetailPage({
                 {perk.claimSteps.map((step, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-4 rounded-xl border border-border/70 bg-surface p-5 animate-fade-up"
+                    className="flex items-start gap-4 rounded-2xl border border-border/70 bg-surface p-5 animate-fade-up"
                     style={{ animationDelay: `${i * 60}ms` }}
                   >
-                    <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-dark text-xs font-bold text-white">
+                    <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-primary text-xs font-bold text-white">
                       {i + 1}
                     </div>
                     <p className="text-sm leading-relaxed text-ink-secondary pt-0.5">
@@ -173,7 +170,7 @@ export default function PerkDetailPage({
               {perk.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-surface-alt px-3 py-1 text-xs font-medium text-ink-muted"
+                  className="rounded-full bg-primary-subtle text-primary px-3 py-1 text-xs font-medium"
                 >
                   #{tag}
                 </span>
@@ -183,12 +180,12 @@ export default function PerkDetailPage({
 
           {/* Sidebar */}
           <div className="lg:sticky lg:top-20 lg:self-start">
-            <div className="mb-6 overflow-hidden rounded-2xl border border-border/70 bg-surface">
+            <div className="mb-6 overflow-hidden rounded-[26px] border border-border/70 bg-surface">
               <div className="bg-dark p-6 text-center text-white">
                 <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/30">
                   Estimated value
                 </p>
-                <p className="text-3xl font-bold" style={{ fontFamily: "var(--font-heading)" }}>
+                <p className="text-3xl font-bold font-heading">
                   {perk.value}
                 </p>
               </div>
@@ -197,7 +194,7 @@ export default function PerkDetailPage({
                   href={`/api/claim/${perk.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-full items-center justify-center gap-2 rounded-full bg-primary py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light"
+                  className="flex w-full items-center justify-center gap-2 rounded-[26px] bg-primary py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light"
                 >
                   Claim this perk
                   <ExternalLink className="h-3.5 w-3.5" />
@@ -207,7 +204,7 @@ export default function PerkDetailPage({
 
             {relatedPerks.length > 0 && (
               <div>
-                <h3 className="mb-3 text-sm font-bold text-ink" style={{ fontFamily: "var(--font-heading)" }}>
+                <h3 className="mb-3 text-sm font-bold text-ink font-heading font-semibold">
                   Related perks
                 </h3>
                 <div className="space-y-3">

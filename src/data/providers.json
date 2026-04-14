@@ -50,7 +50,7 @@
   { "id": "home-depot", "name": "Home Depot", "type": "retail", "logo": "/images/brands/homedepot.png", "cardImage": null, "color": "#F96302" },
   { "id": "nike", "name": "Nike", "type": "retail", "logo": "/images/brands/nike.svg", "cardImage": null, "color": "#111111" },
   { "id": "adidas", "name": "Adidas", "type": "retail", "logo": "/images/brands/adidas.svg", "cardImage": null, "color": "#000000" },
-  { "id": "sephora", "name": "Sephora", "type": "retail", "logo": "/images/brands/sephora.jpg", "cardImage": null, "color": "#000000" },
+  { "id": "sephora", "name": "Sephora", "type": "retail", "logo": "/images/brands/sephora.png", "cardImage": null, "color": "#000000" },
   { "id": "rei", "name": "REI", "type": "retail", "logo": "/images/brands/rei.png", "cardImage": null, "color": "#2D5C34" },
 
   { "id": "costco", "name": "Costco", "type": "membership", "logo": "/images/brands/costco.png", "cardImage": null, "color": "#E31837" },

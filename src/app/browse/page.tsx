@@ -104,12 +104,11 @@ export default function BrowsePage() {
     <div className="min-h-screen">
       {/* Header with card images */}
       <div className="bg-dark text-white overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
           <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto]">
             <div>
               <h1
-                className="mb-2 text-3xl tracking-tight md:text-4xl animate-fade-up"
-                style={{ fontFamily: "var(--font-serif)" }}
+                className="mb-2 text-4xl tracking-tight md:text-5xl font-heading font-medium animate-fade-up"
               >
                 Browse all perks
               </h1>
@@ -145,7 +144,7 @@ export default function BrowsePage() {
               <select
                 value={providerType}
                 onChange={(e) => { setProviderType(e.target.value); setVisibleCount(PAGE_SIZE); }}
-                className="appearance-none rounded-xl border border-border bg-surface py-2.5 pl-4 pr-9 text-[13px] font-medium text-ink outline-none cursor-pointer focus:border-primary/50"
+                className="appearance-none rounded-full border border-border bg-surface py-2.5 pl-4 pr-9 text-[13px] font-medium text-ink outline-none cursor-pointer focus:border-primary/50"
               >
                 {providerTypes.map((pt) => (
                   <option key={pt.id} value={pt.id}>{pt.label}</option>
@@ -163,7 +162,7 @@ export default function BrowsePage() {
             )}
           </div>
 
-          <div className="flex items-center gap-2 rounded-xl border border-border bg-surface px-3 py-2">
+          <div className="flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-2">
             <SlidersHorizontal className="h-3.5 w-3.5 text-ink-muted" />
             <select
               value={sort}
@@ -179,7 +178,7 @@ export default function BrowsePage() {
 
         {visiblePerks.length > 0 ? (
           <>
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {visiblePerks.map((perk, i) => (
                 <PerkCard key={perk.id} perk={perk} index={i} />
               ))}
@@ -188,7 +187,7 @@ export default function BrowsePage() {
               <div className="mt-10 text-center">
                 <button
                   onClick={() => setVisibleCount((prev) => prev + PAGE_SIZE)}
-                  className="rounded-full border border-border bg-surface px-8 py-3 text-sm font-semibold text-ink transition-all hover:border-ink-muted hover:shadow-sm"
+                  className="rounded-full border border-border bg-surface px-8 py-3 text-sm font-semibold text-ink transition-all hover:border-primary/50 hover:shadow-sm"
                 >
                   Show more ({filteredPerks.length - visibleCount} remaining)
                 </button>
@@ -196,12 +195,12 @@ export default function BrowsePage() {
             )}
           </>
         ) : (
-          <div className="rounded-2xl border-2 border-dashed border-border bg-surface py-20 text-center">
+          <div className="rounded-[26px] border-2 border-dashed border-border bg-surface py-20 text-center">
             <p className="text-base font-medium text-ink-muted">No perks match your filters</p>
             <p className="mt-1 text-sm text-ink-faint">Try broadening your search</p>
             <button
               onClick={() => { setSearch(""); setCategory("all"); setProviderType("all"); setVisibleCount(PAGE_SIZE); }}
-              className="mt-5 rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white"
+              className="mt-5 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white"
             >
               Clear all filters
             </button>
