@@ -285,7 +285,7 @@ export default function Home() {
               >
                 <div className="card-hover overflow-hidden rounded-2xl bg-surface border border-border/70">
                   {card.cardImage && (
-                    <div className="relative h-44 bg-dark overflow-hidden">
+                    <div className="relative h-44 bg-[#1a1a2e] overflow-hidden">
                       <Image
                         src={card.cardImage}
                         alt={card.name}
