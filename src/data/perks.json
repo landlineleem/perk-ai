@@ -19,7 +19,11 @@
       "Book and pay incidental fees with your Platinum card",
       "Credits applied automatically within 2-4 weeks"
     ],
-    "tags": ["airline", "travel", "credit"],
+    "tags": [
+      "airline",
+      "travel",
+      "credit"
+    ],
     "popular": true,
     "dateAdded": "2024-01-15"
   },
@@ -43,7 +47,11 @@
       "Enjoy complimentary food, drinks, and amenities",
       "Guests can be added for $50 each or free with certain spend levels"
     ],
-    "tags": ["airport", "lounge", "travel"],
+    "tags": [
+      "airport",
+      "lounge",
+      "travel"
+    ],
     "popular": true,
     "dateAdded": "2024-01-15"
   },
@@ -67,7 +75,11 @@
       "$15/month from January–November, $35 in December",
       "Use for Uber rides or Uber Eats orders"
     ],
-    "tags": ["uber", "rideshare", "food"],
+    "tags": [
+      "uber",
+      "rideshare",
+      "food"
+    ],
     "popular": true,
     "dateAdded": "2024-02-01"
   },
@@ -91,7 +103,11 @@
       "$50 credit available Jan–Jun, another $50 Jul–Dec",
       "Statement credit applied within 6-8 weeks"
     ],
-    "tags": ["shopping", "fashion", "luxury"],
+    "tags": [
+      "shopping",
+      "fashion",
+      "luxury"
+    ],
     "popular": false,
     "dateAdded": "2024-01-15"
   },
@@ -115,7 +131,12 @@
       "Use CLEAR lanes at participating airports",
       "Statement credit covers the annual membership"
     ],
-    "tags": ["airport", "security", "biometric", "travel"],
+    "tags": [
+      "airport",
+      "security",
+      "biometric",
+      "travel"
+    ],
     "popular": true,
     "dateAdded": "2024-01-15"
   },
@@ -139,7 +160,12 @@
       "Up to $200 credit applied as statement credit",
       "Enjoy complimentary upgrades and late checkout"
     ],
-    "tags": ["hotel", "travel", "luxury", "credit"],
+    "tags": [
+      "hotel",
+      "travel",
+      "luxury",
+      "credit"
+    ],
     "popular": false,
     "dateAdded": "2024-01-15"
   },
@@ -162,7 +188,11 @@
       "Track rewards in the Amex app",
       "Transfer points to airline/hotel partners for best value"
     ],
-    "tags": ["dining", "points", "restaurants"],
+    "tags": [
+      "dining",
+      "points",
+      "restaurants"
+    ],
     "popular": true,
     "dateAdded": "2024-03-01"
   },
@@ -185,7 +215,11 @@
       "$10 in Uber Cash credited monthly",
       "Use on Uber Eats orders only"
     ],
-    "tags": ["uber", "food", "delivery"],
+    "tags": [
+      "uber",
+      "food",
+      "delivery"
+    ],
     "popular": false,
     "dateAdded": "2024-03-01"
   },
@@ -208,7 +242,11 @@
       "Track your spending in the Amex app",
       "Includes most grocery stores but not superstores"
     ],
-    "tags": ["grocery", "points", "supermarket"],
+    "tags": [
+      "grocery",
+      "points",
+      "supermarket"
+    ],
     "popular": true,
     "dateAdded": "2024-03-01"
   },
@@ -231,7 +269,12 @@
       "Spend at participating restaurants with your Gold card",
       "Up to $10/month credited back as statement credit"
     ],
-    "tags": ["dining", "credit", "restaurants", "food"],
+    "tags": [
+      "dining",
+      "credit",
+      "restaurants",
+      "food"
+    ],
     "popular": true,
     "dateAdded": "2024-03-01"
   },
@@ -255,7 +298,11 @@
       "Present your digital or physical card at any participating lounge",
       "Two complimentary guests per visit"
     ],
-    "tags": ["airport", "lounge", "travel"],
+    "tags": [
+      "airport",
+      "lounge",
+      "travel"
+    ],
     "popular": true,
     "dateAdded": "2024-01-20"
   },
@@ -278,7 +325,11 @@
       "Statement credit applied automatically",
       "Resets each card anniversary year"
     ],
-    "tags": ["travel", "credit", "hotels"],
+    "tags": [
+      "travel",
+      "credit",
+      "hotels"
+    ],
     "popular": true,
     "dateAdded": "2024-01-20"
   },
@@ -302,7 +353,11 @@
       "DashPass activates immediately",
       "Enjoy $0 delivery fees on eligible orders"
     ],
-    "tags": ["food", "delivery", "doordash"],
+    "tags": [
+      "food",
+      "delivery",
+      "doordash"
+    ],
     "popular": false,
     "dateAdded": "2024-02-15"
   },
@@ -325,7 +380,11 @@
       "Points earned automatically on every ride",
       "Track in Chase Ultimate Rewards portal"
     ],
-    "tags": ["rideshare", "points", "lyft"],
+    "tags": [
+      "rideshare",
+      "points",
+      "lyft"
+    ],
     "popular": false,
     "dateAdded": "2024-02-15"
   },
@@ -349,7 +408,12 @@
       "Complete your Global Entry interview",
       "Credit refreshes every 4 years"
     ],
-    "tags": ["travel", "airport", "global entry", "tsa"],
+    "tags": [
+      "travel",
+      "airport",
+      "global entry",
+      "tsa"
+    ],
     "popular": true,
     "dateAdded": "2024-01-20"
   },
@@ -373,7 +437,11 @@
       "Make purchases in bonus categories using your card",
       "Earn 5% on up to $1,500 in combined purchases"
     ],
-    "tags": ["cashback", "rotating", "categories"],
+    "tags": [
+      "cashback",
+      "rotating",
+      "categories"
+    ],
     "popular": true,
     "dateAdded": "2024-01-10"
   },
@@ -396,7 +464,11 @@
       "No activation required for these categories",
       "No cap on 3% category spending"
     ],
-    "tags": ["cashback", "dining", "drugstore"],
+    "tags": [
+      "cashback",
+      "dining",
+      "drugstore"
+    ],
     "popular": false,
     "dateAdded": "2024-01-10"
   },
@@ -420,7 +492,12 @@
       "Book using your Venture card for 5X miles",
       "Manage bookings in the Capital One app"
     ],
-    "tags": ["travel", "flights", "hotels", "miles"],
+    "tags": [
+      "travel",
+      "flights",
+      "hotels",
+      "miles"
+    ],
     "popular": false,
     "dateAdded": "2024-02-10"
   },
@@ -443,7 +520,12 @@
       "Statement credit applied within 1-2 billing cycles",
       "Credit available once every 4 years"
     ],
-    "tags": ["travel", "airport", "global entry", "tsa"],
+    "tags": [
+      "travel",
+      "airport",
+      "global entry",
+      "tsa"
+    ],
     "popular": false,
     "dateAdded": "2024-02-10"
   },
@@ -467,7 +549,12 @@
       "Link your loyalty program account",
       "Transfer miles in increments of 1,000"
     ],
-    "tags": ["miles", "transfer", "airlines", "hotels"],
+    "tags": [
+      "miles",
+      "transfer",
+      "airlines",
+      "hotels"
+    ],
     "popular": false,
     "dateAdded": "2024-02-10"
   },
@@ -490,7 +577,12 @@
       "Select presale or preferred tickets",
       "Complete purchase with any Citi credit or debit card"
     ],
-    "tags": ["concerts", "events", "tickets", "presale"],
+    "tags": [
+      "concerts",
+      "events",
+      "tickets",
+      "presale"
+    ],
     "popular": false,
     "dateAdded": "2024-02-15"
   },
@@ -514,7 +606,11 @@
       "If a lower price is found, file a claim for the difference",
       "Refund up to $200 per item"
     ],
-    "tags": ["price protection", "shopping", "savings"],
+    "tags": [
+      "price protection",
+      "shopping",
+      "savings"
+    ],
     "popular": false,
     "dateAdded": "2024-02-15"
   },
@@ -538,7 +634,12 @@
       "Complete the AWS Activate application form",
       "Credits applied to your AWS account within 7 days"
     ],
-    "tags": ["aws", "cloud", "startup", "software"],
+    "tags": [
+      "aws",
+      "cloud",
+      "startup",
+      "software"
+    ],
     "popular": true,
     "dateAdded": "2024-01-05"
   },
@@ -561,7 +662,11 @@
       "Connect your Stripe account",
       "Fee waiver applies automatically to first $20k volume"
     ],
-    "tags": ["stripe", "payments", "startup"],
+    "tags": [
+      "stripe",
+      "payments",
+      "startup"
+    ],
     "popular": false,
     "dateAdded": "2024-02-01"
   },
@@ -584,7 +689,11 @@
       "Create or link your Notion workspace",
       "Credits and free months applied automatically"
     ],
-    "tags": ["notion", "productivity", "startup"],
+    "tags": [
+      "notion",
+      "productivity",
+      "startup"
+    ],
     "popular": false,
     "dateAdded": "2024-02-10"
   },
@@ -608,7 +717,11 @@
       "Meet Brex qualification requirements",
       "Credits applied to your Brex account"
     ],
-    "tags": ["brex", "finance", "startup"],
+    "tags": [
+      "brex",
+      "finance",
+      "startup"
+    ],
     "popular": false,
     "dateAdded": "2024-03-01"
   },
@@ -631,7 +744,12 @@
       "Apply through HubSpot for Startups portal",
       "Discount applied to your HubSpot subscription"
     ],
-    "tags": ["crm", "marketing", "sales", "startup"],
+    "tags": [
+      "crm",
+      "marketing",
+      "sales",
+      "startup"
+    ],
     "popular": false,
     "dateAdded": "2024-02-10"
   },
@@ -655,7 +773,12 @@
       "Compare rates with your current insurance",
       "Bundle auto and home for additional savings"
     ],
-    "tags": ["insurance", "military", "auto", "home"],
+    "tags": [
+      "insurance",
+      "military",
+      "auto",
+      "home"
+    ],
     "popular": false,
     "dateAdded": "2024-03-10"
   },
@@ -678,7 +801,12 @@
       "No minimum balance required",
       "ATM fee refunds applied automatically each month"
     ],
-    "tags": ["banking", "military", "checking", "savings"],
+    "tags": [
+      "banking",
+      "military",
+      "checking",
+      "savings"
+    ],
     "popular": false,
     "dateAdded": "2024-03-10"
   },
@@ -701,7 +829,12 @@
       "Pay deposited early when government files arrive ahead of schedule",
       "Check the USAA app for deposit notifications"
     ],
-    "tags": ["banking", "military", "paycheck", "direct deposit"],
+    "tags": [
+      "banking",
+      "military",
+      "paycheck",
+      "direct deposit"
+    ],
     "popular": false,
     "dateAdded": "2024-03-10"
   },
@@ -725,7 +858,12 @@
       "Earn points on every purchase",
       "Redeem points for free menu items"
     ],
-    "tags": ["rewards", "points", "chicken", "fast food"],
+    "tags": [
+      "rewards",
+      "points",
+      "chicken",
+      "fast food"
+    ],
     "popular": true,
     "dateAdded": "2024-04-01"
   },
@@ -748,7 +886,11 @@
       "Receive your birthday reward during your birthday month",
       "Redeem in the app at any Chick-fil-A location"
     ],
-    "tags": ["birthday", "free food", "chicken"],
+    "tags": [
+      "birthday",
+      "free food",
+      "chicken"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -771,7 +913,11 @@
       "Check your rewards for the welcome offer",
       "Redeem at any Chick-fil-A location"
     ],
-    "tags": ["free food", "signup", "chicken"],
+    "tags": [
+      "free food",
+      "signup",
+      "chicken"
+    ],
     "popular": true,
     "dateAdded": "2024-04-01"
   },
@@ -795,7 +941,12 @@
       "Earn 100 points per dollar spent",
       "Redeem points for free menu items"
     ],
-    "tags": ["rewards", "points", "burgers", "fast food"],
+    "tags": [
+      "rewards",
+      "points",
+      "burgers",
+      "fast food"
+    ],
     "popular": true,
     "dateAdded": "2024-04-01"
   },
@@ -819,7 +970,12 @@
       "Order through the app for pickup or drive-thru",
       "New deals refresh daily and weekly"
     ],
-    "tags": ["deals", "coupons", "fast food", "savings"],
+    "tags": [
+      "deals",
+      "coupons",
+      "fast food",
+      "savings"
+    ],
     "popular": true,
     "dateAdded": "2024-04-01"
   },
@@ -842,7 +998,12 @@
       "Add it to your order with at least $1 purchase",
       "Place your order for pickup or drive-thru"
     ],
-    "tags": ["fries", "friday", "free food", "weekly"],
+    "tags": [
+      "fries",
+      "friday",
+      "free food",
+      "weekly"
+    ],
     "popular": true,
     "dateAdded": "2024-04-01"
   },
@@ -866,7 +1027,12 @@
       "Order and pay through the app",
       "Redeem Stars for free items"
     ],
-    "tags": ["coffee", "rewards", "points", "drinks"],
+    "tags": [
+      "coffee",
+      "rewards",
+      "points",
+      "drinks"
+    ],
     "popular": true,
     "dateAdded": "2024-04-01"
   },
@@ -890,7 +1056,11 @@
       "Redeem at any participating Starbucks location",
       "Valid for one day only"
     ],
-    "tags": ["birthday", "free drink", "coffee"],
+    "tags": [
+      "birthday",
+      "free drink",
+      "coffee"
+    ],
     "popular": true,
     "dateAdded": "2024-04-01"
   },
@@ -913,7 +1083,12 @@
       "Ask for a free refill during the same visit",
       "Show your Starbucks Rewards QR code"
     ],
-    "tags": ["coffee", "refills", "free", "savings"],
+    "tags": [
+      "coffee",
+      "refills",
+      "free",
+      "savings"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -937,7 +1112,12 @@
       "Earn 10 points per dollar",
       "Redeem points for free menu items"
     ],
-    "tags": ["rewards", "points", "burgers", "fast food"],
+    "tags": [
+      "rewards",
+      "points",
+      "burgers",
+      "fast food"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -960,7 +1140,12 @@
       "Add offers to your mobile order",
       "Redeem at pickup or drive-thru"
     ],
-    "tags": ["deals", "coupons", "fast food", "savings"],
+    "tags": [
+      "deals",
+      "coupons",
+      "fast food",
+      "savings"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -984,7 +1169,12 @@
       "Redeem 1,250 points for a free entrée",
       "Check for bonus point challenges and extra rewards"
     ],
-    "tags": ["rewards", "points", "mexican", "burritos"],
+    "tags": [
+      "rewards",
+      "points",
+      "mexican",
+      "burritos"
+    ],
     "popular": true,
     "dateAdded": "2024-04-01"
   },
@@ -1007,7 +1197,11 @@
       "Redeem in-store or through the app",
       "Must have made at least one purchase before birthday"
     ],
-    "tags": ["birthday", "free food", "burritos"],
+    "tags": [
+      "birthday",
+      "free food",
+      "burritos"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1031,7 +1225,11 @@
       "Complete challenges to earn bonus points",
       "Points added automatically to your balance"
     ],
-    "tags": ["challenges", "bonus points", "gamification"],
+    "tags": [
+      "challenges",
+      "bonus points",
+      "gamification"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1055,7 +1253,12 @@
       "Earn 10 points per dollar on app orders",
       "Redeem points for free menu items"
     ],
-    "tags": ["rewards", "points", "tacos", "fast food"],
+    "tags": [
+      "rewards",
+      "points",
+      "tacos",
+      "fast food"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1078,7 +1281,12 @@
       "Add the deal to your order",
       "Order through the app for pickup or drive-thru"
     ],
-    "tags": ["deals", "tacos", "tuesday", "fast food"],
+    "tags": [
+      "deals",
+      "tacos",
+      "tuesday",
+      "fast food"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1102,7 +1310,12 @@
       "Earn 10 Crowns per dollar spent",
       "Redeem Crowns for free menu items"
     ],
-    "tags": ["rewards", "points", "burgers", "fast food"],
+    "tags": [
+      "rewards",
+      "points",
+      "burgers",
+      "fast food"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1125,7 +1338,11 @@
       "Redeem your free birthday reward",
       "Valid at participating locations"
     ],
-    "tags": ["birthday", "free food", "whopper"],
+    "tags": [
+      "birthday",
+      "free food",
+      "whopper"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1149,7 +1366,12 @@
       "Earn tokens on every purchase",
       "Redeem tokens for free menu items"
     ],
-    "tags": ["rewards", "points", "sandwiches", "subs"],
+    "tags": [
+      "rewards",
+      "points",
+      "sandwiches",
+      "subs"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1172,7 +1394,12 @@
       "Add the deal to your order",
       "Order through the app for pickup"
     ],
-    "tags": ["deals", "bogo", "sandwiches", "coupons"],
+    "tags": [
+      "deals",
+      "bogo",
+      "sandwiches",
+      "coupons"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1196,7 +1423,12 @@
       "Redeem 200 points for a free drink",
       "Check for Boosted Status for extra point multipliers"
     ],
-    "tags": ["coffee", "donuts", "rewards", "points"],
+    "tags": [
+      "coffee",
+      "donuts",
+      "rewards",
+      "points"
+    ],
     "popular": true,
     "dateAdded": "2024-04-01"
   },
@@ -1219,7 +1451,11 @@
       "Redeem at any participating Dunkin' location",
       "Valid for a medium drink of any kind"
     ],
-    "tags": ["birthday", "free drink", "coffee"],
+    "tags": [
+      "birthday",
+      "free drink",
+      "coffee"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1243,7 +1479,12 @@
       "Earn 60 points for a free medium 2-topping pizza",
       "Redeem online or through the app"
     ],
-    "tags": ["pizza", "rewards", "points", "delivery"],
+    "tags": [
+      "pizza",
+      "rewards",
+      "points",
+      "delivery"
+    ],
     "popular": true,
     "dateAdded": "2024-04-01"
   },
@@ -1267,7 +1508,12 @@
       "Each item is $6.99",
       "Order for delivery or carryout"
     ],
-    "tags": ["deals", "pizza", "value", "combo"],
+    "tags": [
+      "deals",
+      "pizza",
+      "value",
+      "combo"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1291,7 +1537,12 @@
       "Earn 2 points per dollar spent",
       "Redeem 150 points for a free medium pizza"
     ],
-    "tags": ["pizza", "rewards", "points", "delivery"],
+    "tags": [
+      "pizza",
+      "rewards",
+      "points",
+      "delivery"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1314,7 +1565,12 @@
       "Order 2+ large 1-topping pizzas",
       "Pick up at your nearest location"
     ],
-    "tags": ["deals", "pizza", "carryout", "value"],
+    "tags": [
+      "deals",
+      "pizza",
+      "carryout",
+      "value"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1338,7 +1594,12 @@
       "Earn 10 points per dollar on app orders",
       "Redeem points for free menu items"
     ],
-    "tags": ["rewards", "points", "chicken", "fast food"],
+    "tags": [
+      "rewards",
+      "points",
+      "chicken",
+      "fast food"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1361,7 +1622,12 @@
       "Select your family meal deal",
       "Order through the app for pickup or delivery"
     ],
-    "tags": ["deals", "family", "chicken", "value"],
+    "tags": [
+      "deals",
+      "family",
+      "chicken",
+      "value"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1385,7 +1651,12 @@
       "Earn rewards on every visit",
       "Check for surprise rewards and member-only pricing"
     ],
-    "tags": ["rewards", "bakery", "cafe", "loyalty"],
+    "tags": [
+      "rewards",
+      "bakery",
+      "cafe",
+      "loyalty"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1408,7 +1679,12 @@
       "Order unlimited drinks every 2 hours",
       "Includes coffee, tea, lemonade, and fountain drinks"
     ],
-    "tags": ["drinks", "unlimited", "subscription", "coffee"],
+    "tags": [
+      "drinks",
+      "unlimited",
+      "subscription",
+      "coffee"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1432,7 +1708,12 @@
       "Earn points on every order",
       "Check for daily and weekly bonus offers"
     ],
-    "tags": ["rewards", "points", "drinks", "fast food"],
+    "tags": [
+      "rewards",
+      "points",
+      "drinks",
+      "fast food"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1455,7 +1736,12 @@
       "Half-price applied automatically",
       "Check the app for extended Happy Hour deals"
     ],
-    "tags": ["happy hour", "drinks", "half price", "daily"],
+    "tags": [
+      "happy hour",
+      "drinks",
+      "half price",
+      "daily"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1479,7 +1765,12 @@
       "Earn points on every purchase",
       "Redeem points for free wings and more"
     ],
-    "tags": ["rewards", "points", "wings", "fast food"],
+    "tags": [
+      "rewards",
+      "points",
+      "wings",
+      "fast food"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1502,7 +1793,12 @@
       "Order boneless wings at reduced pricing",
       "Available for pickup or delivery"
     ],
-    "tags": ["deals", "wings", "monday", "specials"],
+    "tags": [
+      "deals",
+      "wings",
+      "monday",
+      "specials"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -1526,7 +1822,12 @@
       "Redeem miles for flights, upgrades, and more",
       "Miles never expire"
     ],
-    "tags": ["airline", "miles", "loyalty", "flights"],
+    "tags": [
+      "airline",
+      "miles",
+      "loyalty",
+      "flights"
+    ],
     "popular": true,
     "dateAdded": "2024-04-15"
   },
@@ -1549,7 +1850,12 @@
       "Use iMessage, WhatsApp, or other messaging apps",
       "No login or SkyMiles number required for messaging"
     ],
-    "tags": ["wifi", "messaging", "inflight", "free"],
+    "tags": [
+      "wifi",
+      "messaging",
+      "inflight",
+      "free"
+    ],
     "popular": true,
     "dateAdded": "2024-04-15"
   },
@@ -1573,7 +1879,12 @@
       "Companions on same reservation also get free bag",
       "Saves $35 each way per person"
     ],
-    "tags": ["baggage", "checked bag", "savings", "airline"],
+    "tags": [
+      "baggage",
+      "checked bag",
+      "savings",
+      "airline"
+    ],
     "popular": true,
     "dateAdded": "2024-04-15"
   },
@@ -1596,7 +1907,12 @@
       "Present your boarding pass and membership at the entrance",
       "Enjoy premium food, drinks, and amenities"
     ],
-    "tags": ["lounge", "airport", "premium", "status"],
+    "tags": [
+      "lounge",
+      "airport",
+      "premium",
+      "status"
+    ],
     "popular": false,
     "dateAdded": "2024-04-15"
   },
@@ -1620,7 +1936,12 @@
       "Redeem for flights on United and Star Alliance partners",
       "Miles don't expire with account activity"
     ],
-    "tags": ["airline", "miles", "loyalty", "flights"],
+    "tags": [
+      "airline",
+      "miles",
+      "loyalty",
+      "flights"
+    ],
     "popular": true,
     "dateAdded": "2024-04-15"
   },
@@ -1643,7 +1964,12 @@
       "Sign in with your MileagePlus account",
       "Enjoy free high-speed internet on equipped aircraft"
     ],
-    "tags": ["wifi", "inflight", "free", "internet"],
+    "tags": [
+      "wifi",
+      "inflight",
+      "free",
+      "internet"
+    ],
     "popular": true,
     "dateAdded": "2024-04-15"
   },
@@ -1666,7 +1992,12 @@
       "Upgrade confirmed based on availability",
       "Higher status tiers get priority"
     ],
-    "tags": ["upgrade", "seating", "legroom", "status"],
+    "tags": [
+      "upgrade",
+      "seating",
+      "legroom",
+      "status"
+    ],
     "popular": false,
     "dateAdded": "2024-04-15"
   },
@@ -1690,7 +2021,12 @@
       "Redeem miles for flights, upgrades, and more",
       "Miles don't expire with account activity"
     ],
-    "tags": ["airline", "miles", "loyalty", "flights"],
+    "tags": [
+      "airline",
+      "miles",
+      "loyalty",
+      "flights"
+    ],
     "popular": true,
     "dateAdded": "2024-04-15"
   },
@@ -1713,7 +2049,12 @@
       "First checked bag fee waived at check-in",
       "Up to 4 companions on same reservation also qualify"
     ],
-    "tags": ["baggage", "checked bag", "savings", "airline"],
+    "tags": [
+      "baggage",
+      "checked bag",
+      "savings",
+      "airline"
+    ],
     "popular": false,
     "dateAdded": "2024-04-15"
   },
@@ -1736,7 +2077,12 @@
       "Or buy a day pass at the door",
       "Present your boarding pass and membership at entrance"
     ],
-    "tags": ["lounge", "airport", "premium", "status"],
+    "tags": [
+      "lounge",
+      "airport",
+      "premium",
+      "status"
+    ],
     "popular": false,
     "dateAdded": "2024-04-15"
   },
@@ -1760,7 +2106,12 @@
       "Redeem for any available seat with no blackout dates",
       "No change or cancellation fees"
     ],
-    "tags": ["airline", "points", "loyalty", "flights"],
+    "tags": [
+      "airline",
+      "points",
+      "loyalty",
+      "flights"
+    ],
     "popular": true,
     "dateAdded": "2024-04-15"
   },
@@ -1783,7 +2134,12 @@
       "Each bag up to 50 lbs at no charge",
       "No credit card or loyalty status required"
     ],
-    "tags": ["baggage", "free", "checked bags", "value"],
+    "tags": [
+      "baggage",
+      "free",
+      "checked bags",
+      "value"
+    ],
     "popular": true,
     "dateAdded": "2024-04-15"
   },
@@ -1807,7 +2163,12 @@
       "Companion flies free on every flight you take",
       "Valid through the end of the following calendar year"
     ],
-    "tags": ["companion", "free flights", "loyalty", "value"],
+    "tags": [
+      "companion",
+      "free flights",
+      "loyalty",
+      "value"
+    ],
     "popular": true,
     "dateAdded": "2024-04-15"
   },
@@ -1831,7 +2192,12 @@
       "Pool points with up to 7 family/friends",
       "Redeem for any available seat"
     ],
-    "tags": ["airline", "points", "loyalty", "flights"],
+    "tags": [
+      "airline",
+      "points",
+      "loyalty",
+      "flights"
+    ],
     "popular": false,
     "dateAdded": "2024-04-15"
   },
@@ -1854,7 +2220,12 @@
       "Click to connect — no payment needed",
       "Enjoy high-speed internet throughout your flight"
     ],
-    "tags": ["wifi", "free", "inflight", "internet"],
+    "tags": [
+      "wifi",
+      "free",
+      "inflight",
+      "internet"
+    ],
     "popular": true,
     "dateAdded": "2024-04-15"
   },
@@ -1877,7 +2248,12 @@
       "Enjoy seatback entertainment with 100+ live TV channels",
       "No purchase required"
     ],
-    "tags": ["snacks", "drinks", "free", "inflight"],
+    "tags": [
+      "snacks",
+      "drinks",
+      "free",
+      "inflight"
+    ],
     "popular": false,
     "dateAdded": "2024-04-15"
   },
@@ -1901,7 +2277,12 @@
       "Redeem points for free nights starting at 5,000 points",
       "Points never expire with account activity"
     ],
-    "tags": ["hotel", "points", "loyalty", "travel"],
+    "tags": [
+      "hotel",
+      "points",
+      "loyalty",
+      "travel"
+    ],
     "popular": true,
     "dateAdded": "2024-04-15"
   },
@@ -1924,7 +2305,12 @@
       "Mobile Key notification sent when room is ready",
       "Hold phone near door lock to unlock your room"
     ],
-    "tags": ["mobile", "check-in", "convenience", "hotel"],
+    "tags": [
+      "mobile",
+      "check-in",
+      "convenience",
+      "hotel"
+    ],
     "popular": false,
     "dateAdded": "2024-04-15"
   },
@@ -1947,7 +2333,12 @@
       "Redeem at properties up to 40,000 points/night",
       "Certificate valid for one year"
     ],
-    "tags": ["free night", "elite", "status", "hotel"],
+    "tags": [
+      "free night",
+      "elite",
+      "status",
+      "hotel"
+    ],
     "popular": false,
     "dateAdded": "2024-04-15"
   },
@@ -1971,7 +2362,12 @@
       "Redeem for free nights starting at 3,500 points",
       "Points expire after 24 months of inactivity"
     ],
-    "tags": ["hotel", "points", "loyalty", "travel"],
+    "tags": [
+      "hotel",
+      "points",
+      "loyalty",
+      "travel"
+    ],
     "popular": true,
     "dateAdded": "2024-04-15"
   },
@@ -1994,7 +2390,12 @@
       "Breakfast complimentary at all Hyatt properties",
       "Late checkout guaranteed until 4 PM"
     ],
-    "tags": ["suite", "upgrade", "elite", "status"],
+    "tags": [
+      "suite",
+      "upgrade",
+      "elite",
+      "status"
+    ],
     "popular": false,
     "dateAdded": "2024-04-15"
   },
@@ -2017,7 +2418,12 @@
       "Track milestone rewards in the app",
       "Redeem free night awards at any category"
     ],
-    "tags": ["free night", "milestone", "loyalty", "hotel"],
+    "tags": [
+      "free night",
+      "milestone",
+      "loyalty",
+      "hotel"
+    ],
     "popular": false,
     "dateAdded": "2024-04-15"
   },
@@ -2041,7 +2447,12 @@
       "Redeem for free nights starting at 10,000 points",
       "Points don't expire with account activity"
     ],
-    "tags": ["hotel", "points", "loyalty", "travel"],
+    "tags": [
+      "hotel",
+      "points",
+      "loyalty",
+      "travel"
+    ],
     "popular": false,
     "dateAdded": "2024-04-15"
   },
@@ -2064,422 +2475,12 @@
       "4th night points automatically refunded",
       "Works on stays of 4, 8, 12+ nights"
     ],
-    "tags": ["free night", "elite", "status", "savings"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "netflix-profiles",
-    "title": "Multiple Viewer Profiles",
-    "description": "Create up to 5 individual profiles with personalized recommendations on a single Netflix account.",
-    "fullDescription": "Netflix allows up to 5 viewer profiles per account, each with their own watch history, recommendations, and maturity settings. Set up a Kids profile with age-appropriate content controls. Each profile gets personalized My List and Continue Watching sections.",
-    "provider": "Netflix",
-    "providerType": "streaming",
-    "providerLogo": "🎬",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.netflix.com",
-    "claimSteps": [
-      "Open Netflix and go to Manage Profiles",
-      "Add up to 5 profiles per account",
-      "Customize each with an avatar and name",
-      "Set maturity ratings for Kids profiles"
+    "tags": [
+      "free night",
+      "elite",
+      "status",
+      "savings"
     ],
-    "tags": ["profiles", "streaming", "family", "personalization"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "netflix-downloads",
-    "title": "Offline Downloads",
-    "description": "Download movies and shows to your phone or tablet for offline viewing while traveling.",
-    "fullDescription": "Netflix subscribers can download select movies and TV shows to their mobile devices for offline viewing. Perfect for flights, commutes, or areas with poor connectivity. Downloads are available on iOS and Android devices with adjustable quality settings to manage storage.",
-    "provider": "Netflix",
-    "providerType": "streaming",
-    "providerLogo": "🎬",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.netflix.com",
-    "claimSteps": [
-      "Open the Netflix app on your mobile device",
-      "Find a title and tap the download icon",
-      "Choose download quality in app settings",
-      "Watch offline anytime without an internet connection"
-    ],
-    "tags": ["downloads", "offline", "mobile", "streaming"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "netflix-games",
-    "title": "Netflix Mobile Games",
-    "description": "Access a growing library of 80+ mobile games at no extra cost with your Netflix subscription.",
-    "fullDescription": "Netflix subscribers get free access to 80+ mobile games on iOS and Android with no ads, no in-app purchases, and no extra fees. Games include titles from popular franchises and original games. Download from the Netflix app or your device's app store using your Netflix account.",
-    "provider": "Netflix",
-    "providerType": "streaming",
-    "providerLogo": "🎬",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.netflix.com/games",
-    "claimSteps": [
-      "Open the Netflix app on your phone or tablet",
-      "Go to the Games tab",
-      "Download and play any game for free",
-      "No ads or in-app purchases"
-    ],
-    "tags": ["games", "mobile", "free", "entertainment"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "hulu-live-tv",
-    "title": "75+ Live TV Channels",
-    "description": "Watch 75+ live TV channels including sports, news, and entertainment with Hulu + Live TV.",
-    "fullDescription": "Hulu + Live TV subscribers get access to 75+ live channels including ESPN, ABC, NBC, Fox, CNN, HGTV, and more. Includes unlimited DVR storage to record shows and watch later. Also includes the full Hulu streaming library, Disney+, and ESPN+ in the bundle.",
-    "provider": "Hulu",
-    "providerType": "streaming",
-    "providerLogo": "📺",
-    "category": "Entertainment",
-    "value": "$76.99/month",
-    "valueCents": 7699,
-    "expiration": null,
-    "claimUrl": "https://www.hulu.com/live-tv",
-    "claimSteps": [
-      "Subscribe to Hulu + Live TV",
-      "Access 75+ live channels immediately",
-      "Set up DVR recordings for your favorite shows",
-      "Disney+ and ESPN+ included in the bundle"
-    ],
-    "tags": ["live tv", "sports", "news", "streaming"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "hulu-dvr",
-    "title": "Unlimited DVR Storage",
-    "description": "Record unlimited shows with cloud DVR and watch on your schedule — included with all Hulu + Live TV plans.",
-    "fullDescription": "All Hulu + Live TV plans include unlimited cloud DVR storage, letting you record as many live TV shows and events as you want. Recordings are stored for up to 9 months and can be fast-forwarded through commercials. Manage recordings from any device.",
-    "provider": "Hulu",
-    "providerType": "streaming",
-    "providerLogo": "📺",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.hulu.com",
-    "claimSteps": [
-      "Subscribe to Hulu + Live TV",
-      "Find a show or event in the live guide",
-      "Click the + icon to add it to My Stuff",
-      "All airings recorded automatically to your DVR",
-      "Watch and fast-forward through commercials"
-    ],
-    "tags": ["dvr", "recording", "live tv", "streaming"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "hulu-multiple-screens",
-    "title": "Watch on 2 Screens Simultaneously",
-    "description": "Stream Hulu on two devices at the same time with the base plan.",
-    "fullDescription": "Hulu's base plan allows simultaneous streaming on 2 screens, while the Hulu + Live TV plan allows 2 screens with an option to upgrade to unlimited screens for an additional fee. Share your account with household members who want to watch different content at the same time.",
-    "provider": "Hulu",
-    "providerType": "streaming",
-    "providerLogo": "📺",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.hulu.com",
-    "claimSteps": [
-      "Subscribe to any Hulu plan",
-      "Stream on up to 2 devices simultaneously",
-      "Upgrade to unlimited screens add-on if needed",
-      "Create separate profiles for household members"
-    ],
-    "tags": ["multi-screen", "sharing", "family", "streaming"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "disney-plus-groupwatch",
-    "title": "GroupWatch Party Feature",
-    "description": "Watch Disney+ together with up to 5 friends or family remotely using GroupWatch.",
-    "fullDescription": "Disney+ GroupWatch lets you watch movies and shows simultaneously with up to 5 other Disney+ subscribers who are in the same country. Everyone stays in sync and can send emoji reactions in real-time. Great for virtual movie nights with family and friends.",
-    "provider": "Disney+",
-    "providerType": "streaming",
-    "providerLogo": "🏰",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.disneyplus.com",
-    "claimSteps": [
-      "Open Disney+ and select a title",
-      "Click the GroupWatch icon",
-      "Invite up to 5 others via shared link",
-      "Everyone watches in sync with emoji reactions"
-    ],
-    "tags": ["watch party", "social", "family", "streaming"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "disney-plus-downloads",
-    "title": "Unlimited Mobile Downloads",
-    "description": "Download unlimited movies and shows for offline viewing on up to 10 mobile devices.",
-    "fullDescription": "Disney+ subscribers can download unlimited content on up to 10 mobile devices for offline viewing. This includes the full catalog of Disney, Pixar, Marvel, Star Wars, and National Geographic content. Downloads never expire as long as you maintain your subscription.",
-    "provider": "Disney+",
-    "providerType": "streaming",
-    "providerLogo": "🏰",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.disneyplus.com",
-    "claimSteps": [
-      "Open the Disney+ app on your device",
-      "Tap the download icon on any title",
-      "Content available offline immediately",
-      "Download on up to 10 devices"
-    ],
-    "tags": ["downloads", "offline", "mobile", "streaming"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "disney-plus-imax",
-    "title": "IMAX Enhanced Content",
-    "description": "Watch select Marvel and other films in IMAX Enhanced format with expanded aspect ratio.",
-    "fullDescription": "Disney+ offers select Marvel films and other titles in IMAX Enhanced format, giving you up to 26% more picture than standard widescreen. Experience films like Avengers: Endgame, Doctor Strange, and Shang-Chi the way they were meant to be seen in theaters, now on your TV.",
-    "provider": "Disney+",
-    "providerType": "streaming",
-    "providerLogo": "🏰",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.disneyplus.com",
-    "claimSteps": [
-      "Open Disney+ and browse the IMAX Enhanced collection",
-      "Look for the IMAX Enhanced badge on titles",
-      "Play on a compatible device for the expanded format",
-      "26% more picture on supported titles"
-    ],
-    "tags": ["imax", "marvel", "movies", "premium"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "hbo-max-same-day-releases",
-    "title": "Latest HBO Series & Films",
-    "description": "Stream all HBO original series, movies, and Max exclusives the day they premiere.",
-    "fullDescription": "Max (formerly HBO Max) subscribers get same-day access to all HBO original series and films, plus Max Originals. Watch critically acclaimed shows like The Last of Us, White Lotus, and Succession as they air, plus a deep library of Warner Bros. films and classic series.",
-    "provider": "HBO Max",
-    "providerType": "streaming",
-    "providerLogo": "🎬",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.max.com",
-    "claimSteps": [
-      "Subscribe to Max (any tier)",
-      "New HBO episodes available day of premiere",
-      "Stream on up to 3 devices simultaneously",
-      "Access the full HBO and Max library"
-    ],
-    "tags": ["hbo", "originals", "movies", "streaming"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "hbo-max-4k-dolby",
-    "title": "4K UHD with Dolby Atmos",
-    "description": "Stream select content in 4K UHD with Dolby Vision and Dolby Atmos on the Ultimate plan.",
-    "fullDescription": "Max Ultimate subscribers enjoy select content in 4K Ultra HD with HDR10, Dolby Vision, and Dolby Atmos surround sound. This includes major Warner Bros. films, HBO originals, and select library titles for the best possible home theater experience.",
-    "provider": "HBO Max",
-    "providerType": "streaming",
-    "providerLogo": "🎬",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.max.com",
-    "claimSteps": [
-      "Subscribe to Max Ultimate plan",
-      "Look for 4K UHD and Dolby badges on titles",
-      "Stream on a compatible 4K device",
-      "Enjoy Dolby Vision and Atmos where available"
-    ],
-    "tags": ["4k", "dolby", "premium", "quality"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "youtube-premium-adfree",
-    "title": "Ad-Free YouTube",
-    "description": "Watch all YouTube videos without any ads — ever — across all devices.",
-    "fullDescription": "YouTube Premium removes all advertisements from YouTube, including pre-roll, mid-roll, and banner ads across all your devices. This applies to the YouTube app, website, and YouTube on smart TVs and gaming consoles. One subscription covers all your logged-in devices.",
-    "provider": "YouTube Premium",
-    "providerType": "streaming",
-    "providerLogo": "📺",
-    "category": "Entertainment",
-    "value": "$13.99/month",
-    "valueCents": 1399,
-    "expiration": null,
-    "claimUrl": "https://www.youtube.com/premium",
-    "claimSteps": [
-      "Subscribe to YouTube Premium",
-      "Sign into YouTube on all your devices",
-      "All ads removed automatically",
-      "Works on web, mobile, TV, and gaming consoles"
-    ],
-    "tags": ["ad-free", "youtube", "video", "streaming"],
-    "popular": true,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "youtube-premium-music",
-    "title": "YouTube Music Premium Included",
-    "description": "Full YouTube Music Premium included — ad-free music, offline downloads, and background play.",
-    "fullDescription": "YouTube Premium includes YouTube Music Premium at no extra cost. Enjoy ad-free music streaming, offline downloads, background play (music keeps playing when you switch apps), and access to YouTube Music's full catalog of over 100 million songs and music videos.",
-    "provider": "YouTube Premium",
-    "providerType": "streaming",
-    "providerLogo": "📺",
-    "category": "Entertainment",
-    "value": "$10.99/month",
-    "valueCents": 1099,
-    "expiration": null,
-    "claimUrl": "https://www.youtube.com/premium",
-    "claimSteps": [
-      "Subscribe to YouTube Premium",
-      "Open the YouTube Music app",
-      "All Premium features unlocked automatically",
-      "Enjoy ad-free, offline, and background playback"
-    ],
-    "tags": ["music", "streaming", "ad-free", "downloads"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "youtube-premium-background",
-    "title": "Background & Offline Play",
-    "description": "Keep YouTube playing in the background and download videos for offline viewing.",
-    "fullDescription": "YouTube Premium lets you continue playing videos while using other apps or with your screen off — essential for podcasts and music. You can also download any video for offline viewing. Both features work across the YouTube and YouTube Music apps.",
-    "provider": "YouTube Premium",
-    "providerType": "streaming",
-    "providerLogo": "📺",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.youtube.com/premium",
-    "claimSteps": [
-      "Subscribe to YouTube Premium",
-      "Play a video and switch apps — it keeps playing",
-      "Tap the download button on any video for offline access",
-      "Works on both YouTube and YouTube Music"
-    ],
-    "tags": ["background play", "offline", "downloads", "mobile"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "paramount-plus-live-sports",
-    "title": "Live Sports Streaming",
-    "description": "Watch NFL, Champions League, March Madness, and PGA Tour live on Paramount+.",
-    "fullDescription": "Paramount+ Essential and above includes live sports streaming featuring NFL games on CBS, UEFA Champions League soccer, March Madness, PGA Tour golf, and NWSL. Access live local CBS station for NFL Sunday games and select playoff coverage.",
-    "provider": "Paramount+",
-    "providerType": "streaming",
-    "providerLogo": "📺",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.paramountplus.com",
-    "claimSteps": [
-      "Subscribe to Paramount+ (Essential or above)",
-      "Navigate to the Live TV or Sports section",
-      "Watch NFL, Champions League, and more live",
-      "Stream on up to 3 devices simultaneously"
-    ],
-    "tags": ["sports", "nfl", "soccer", "live"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "paramount-plus-local-cbs",
-    "title": "Live Local CBS Station",
-    "description": "Stream your local CBS station live for news, sports, and primetime shows.",
-    "fullDescription": "Paramount+ Essential subscribers can stream their local CBS station live, giving access to local news, CBS primetime shows as they air, NFL games, and special events. This is a cost-effective alternative to cable for CBS watchers.",
-    "provider": "Paramount+",
-    "providerType": "streaming",
-    "providerLogo": "📺",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.paramountplus.com",
-    "claimSteps": [
-      "Subscribe to Paramount+ Essential",
-      "Go to the Live TV tab",
-      "Your local CBS station streams automatically",
-      "Watch news, sports, and primetime live"
-    ],
-    "tags": ["live tv", "cbs", "local", "news"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "peacock-free-tier",
-    "title": "Free Streaming Tier",
-    "description": "Watch thousands of hours of movies, shows, and live sports on Peacock for free with ads.",
-    "fullDescription": "Peacock offers a free ad-supported tier with access to a limited selection of movies, shows, and live events. Watch select NBC shows, classic films, and news at no cost. Upgrade to Premium for the full library, live sports, and fewer ads.",
-    "provider": "Peacock",
-    "providerType": "streaming",
-    "providerLogo": "📺",
-    "category": "Entertainment",
-    "value": "Free",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.peacocktv.com",
-    "claimSteps": [
-      "Go to peacocktv.com and create a free account",
-      "Browse the free content library",
-      "Watch with ads at no charge",
-      "Upgrade to Premium anytime for full access"
-    ],
-    "tags": ["free", "streaming", "nbc", "movies"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "peacock-live-sports",
-    "title": "Exclusive Live Sports",
-    "description": "Watch Premier League, NFL Sunday Night Football, and Olympics exclusively on Peacock.",
-    "fullDescription": "Peacock Premium subscribers get exclusive live sports including Premier League soccer, NFL Sunday Night Football, select Big Ten college football games, and the Olympics. Peacock is the exclusive streaming home for many marquee sporting events not available elsewhere.",
-    "provider": "Peacock",
-    "providerType": "streaming",
-    "providerLogo": "📺",
-    "category": "Entertainment",
-    "value": "$7.99/month",
-    "valueCents": 799,
-    "expiration": null,
-    "claimUrl": "https://www.peacocktv.com",
-    "claimSteps": [
-      "Subscribe to Peacock Premium or Premium Plus",
-      "Navigate to the Sports tab",
-      "Watch live games and events",
-      "Set reminders for upcoming matches"
-    ],
-    "tags": ["sports", "nfl", "soccer", "olympics"],
     "popular": false,
     "dateAdded": "2024-04-15"
   },
@@ -2502,7 +2503,12 @@
       "Get free standard shipping on all orders",
       "Check the SNKRS app for early access drops"
     ],
-    "tags": ["rewards", "sneakers", "fashion", "member"],
+    "tags": [
+      "rewards",
+      "sneakers",
+      "fashion",
+      "member"
+    ],
     "popular": true,
     "dateAdded": "2024-04-20"
   },
@@ -2525,7 +2531,12 @@
       "Apply discount code at checkout",
       "Valid during your birthday month"
     ],
-    "tags": ["birthday", "discount", "sneakers", "shopping"],
+    "tags": [
+      "birthday",
+      "discount",
+      "sneakers",
+      "shopping"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2548,7 +2559,12 @@
       "Unlock higher tiers for better rewards",
       "Access member-only products and early launches"
     ],
-    "tags": ["rewards", "sneakers", "fashion", "member"],
+    "tags": [
+      "rewards",
+      "sneakers",
+      "fashion",
+      "member"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2571,7 +2587,12 @@
       "Receive your unique discount code",
       "Apply at checkout for 30% off full-price items"
     ],
-    "tags": ["student", "discount", "sneakers", "fashion"],
+    "tags": [
+      "student",
+      "discount",
+      "sneakers",
+      "fashion"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2595,7 +2616,12 @@
       "Clip personalized deals in the Target app",
       "Get 5% off on your birthday"
     ],
-    "tags": ["rewards", "cashback", "deals", "retail"],
+    "tags": [
+      "rewards",
+      "cashback",
+      "deals",
+      "retail"
+    ],
     "popular": true,
     "dateAdded": "2024-04-20"
   },
@@ -2618,7 +2644,12 @@
       "Free 2-day shipping on target.com orders",
       "30-day extended return window"
     ],
-    "tags": ["discount", "savings", "debit", "credit card"],
+    "tags": [
+      "discount",
+      "savings",
+      "debit",
+      "credit card"
+    ],
     "popular": true,
     "dateAdded": "2024-04-20"
   },
@@ -2641,7 +2672,12 @@
       "Or contact Guest Services within 14 days of purchase",
       "Price adjusted to match the competitor's current price"
     ],
-    "tags": ["price match", "savings", "guarantee", "shopping"],
+    "tags": [
+      "price match",
+      "savings",
+      "guarantee",
+      "shopping"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2665,7 +2701,12 @@
       "Enjoy free standard shipping on all orders",
       "Check for member-exclusive deals"
     ],
-    "tags": ["rewards", "electronics", "shopping", "tech"],
+    "tags": [
+      "rewards",
+      "electronics",
+      "shopping",
+      "tech"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2688,7 +2729,12 @@
       "Best Buy matches the price on identical items",
       "Request a price adjustment within 15 days of purchase"
     ],
-    "tags": ["price match", "electronics", "savings", "guarantee"],
+    "tags": [
+      "price match",
+      "electronics",
+      "savings",
+      "guarantee"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2711,7 +2757,12 @@
       "Earn Perks toward Paint Rewards",
       "Access exclusive offers and volume pricing"
     ],
-    "tags": ["rewards", "home improvement", "pro", "loyalty"],
+    "tags": [
+      "rewards",
+      "home improvement",
+      "pro",
+      "loyalty"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2735,7 +2786,12 @@
       "Rent by the hour, day, week, or month",
       "Return when done — no long-term commitment"
     ],
-    "tags": ["tools", "rental", "home improvement", "diy"],
+    "tags": [
+      "tools",
+      "rental",
+      "home improvement",
+      "diy"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2759,7 +2815,12 @@
       "Claim your free birthday gift in-store or online",
       "Access annual Beauty Insider Sale for up to 20% off"
     ],
-    "tags": ["beauty", "rewards", "birthday", "cosmetics"],
+    "tags": [
+      "beauty",
+      "rewards",
+      "birthday",
+      "cosmetics"
+    ],
     "popular": true,
     "dateAdded": "2024-04-20"
   },
@@ -2782,7 +2843,12 @@
       "Choose from rotating premium product samples",
       "Samples included with every order"
     ],
-    "tags": ["samples", "beauty", "free", "skincare"],
+    "tags": [
+      "samples",
+      "beauty",
+      "free",
+      "skincare"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2806,7 +2872,12 @@
       "Dividend issued annually as store credit",
       "Access member-only sales and events"
     ],
-    "tags": ["dividend", "outdoor", "membership", "cashback"],
+    "tags": [
+      "dividend",
+      "outdoor",
+      "membership",
+      "cashback"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2829,7 +2900,12 @@
       "Items rated by condition with transparent pricing",
       "Check local store for garage sale events"
     ],
-    "tags": ["used gear", "outdoor", "savings", "sustainable"],
+    "tags": [
+      "used gear",
+      "outdoor",
+      "savings",
+      "sustainable"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2853,7 +2929,12 @@
       "Redeem at Kroger fuel stations for up to $1/gallon off",
       "Buy gift cards for 2X fuel points"
     ],
-    "tags": ["fuel", "gas", "groceries", "rewards"],
+    "tags": [
+      "fuel",
+      "gas",
+      "groceries",
+      "rewards"
+    ],
     "popular": true,
     "dateAdded": "2024-04-20"
   },
@@ -2876,7 +2957,12 @@
       "Click to load coupons to your Plus Card",
       "Savings applied automatically at checkout"
     ],
-    "tags": ["coupons", "groceries", "savings", "digital"],
+    "tags": [
+      "coupons",
+      "groceries",
+      "savings",
+      "digital"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2900,7 +2986,12 @@
       "Save an extra 10% on sale items",
       "Check weekly Prime member deals in the app"
     ],
-    "tags": ["groceries", "prime", "organic", "savings"],
+    "tags": [
+      "groceries",
+      "prime",
+      "organic",
+      "savings"
+    ],
     "popular": true,
     "dateAdded": "2024-04-20"
   },
@@ -2924,7 +3015,12 @@
       "Select a free 2-hour delivery window",
       "Groceries delivered to your door"
     ],
-    "tags": ["delivery", "groceries", "prime", "convenience"],
+    "tags": [
+      "delivery",
+      "groceries",
+      "prime",
+      "convenience"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2947,7 +3043,12 @@
       "No coupon needed — rings up automatically",
       "New BOGO deals every Wednesday/Thursday"
     ],
-    "tags": ["bogo", "groceries", "deals", "savings"],
+    "tags": [
+      "bogo",
+      "groceries",
+      "deals",
+      "savings"
+    ],
     "popular": true,
     "dateAdded": "2024-04-20"
   },
@@ -2970,7 +3071,12 @@
       "Show your phone number at checkout",
       "Coupons applied automatically"
     ],
-    "tags": ["coupons", "groceries", "delivery", "savings"],
+    "tags": [
+      "coupons",
+      "groceries",
+      "delivery",
+      "savings"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -2993,7 +3099,12 @@
       "Ask a crew member to open any product to try",
       "No purchase required"
     ],
-    "tags": ["samples", "free", "groceries", "tasting"],
+    "tags": [
+      "samples",
+      "free",
+      "groceries",
+      "tasting"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -3016,7 +3127,12 @@
       "No receipt required",
       "Full refund provided, no questions asked"
     ],
-    "tags": ["returns", "refund", "guarantee", "groceries"],
+    "tags": [
+      "returns",
+      "refund",
+      "guarantee",
+      "groceries"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -3039,7 +3155,12 @@
       "Sign up for PE@PF training sessions",
       "Attend unlimited sessions at no extra cost"
     ],
-    "tags": ["fitness", "training", "gym", "workout"],
+    "tags": [
+      "fitness",
+      "training",
+      "gym",
+      "workout"
+    ],
     "popular": true,
     "dateAdded": "2024-04-20"
   },
@@ -3063,7 +3184,12 @@
       "Use massage chairs and hydro massage beds",
       "Access PF+ app for digital workouts"
     ],
-    "tags": ["gym", "guest", "massage", "fitness"],
+    "tags": [
+      "gym",
+      "guest",
+      "massage",
+      "fitness"
+    ],
     "popular": true,
     "dateAdded": "2024-04-20"
   },
@@ -3086,7 +3212,12 @@
       "Parent/guardian consent required",
       "Free access to any Planet Fitness location all summer"
     ],
-    "tags": ["teens", "summer", "free", "gym"],
+    "tags": [
+      "teens",
+      "summer",
+      "free",
+      "gym"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -3110,7 +3241,12 @@
       "Enjoy priority pickup and flexible cancellations",
       "Free delivery on Uber Eats orders over $15"
     ],
-    "tags": ["rideshare", "rewards", "savings", "rides"],
+    "tags": [
+      "rideshare",
+      "rewards",
+      "savings",
+      "rides"
+    ],
     "popular": true,
     "dateAdded": "2024-04-25"
   },
@@ -3133,7 +3269,12 @@
       "Orders of $15+ get $0 delivery fee",
       "Additional 5% off eligible orders"
     ],
-    "tags": ["delivery", "food", "savings", "uber eats"],
+    "tags": [
+      "delivery",
+      "food",
+      "savings",
+      "uber eats"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -3157,7 +3298,12 @@
       "Enjoy priority pickup and relaxed cancellations",
       "Get 3 free bike/scooter rides per month"
     ],
-    "tags": ["rideshare", "savings", "rides", "membership"],
+    "tags": [
+      "rideshare",
+      "savings",
+      "rides",
+      "membership"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -3181,7 +3327,12 @@
       "Ride to your destination",
       "End ride in the app when done"
     ],
-    "tags": ["bikes", "scooters", "micro-mobility", "transit"],
+    "tags": [
+      "bikes",
+      "scooters",
+      "micro-mobility",
+      "transit"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -3205,7 +3356,12 @@
       "Reduced service fees automatically applied",
       "Cancel anytime"
     ],
-    "tags": ["delivery", "food", "savings", "subscription"],
+    "tags": [
+      "delivery",
+      "food",
+      "savings",
+      "subscription"
+    ],
     "popular": true,
     "dateAdded": "2024-04-25"
   },
@@ -3228,7 +3384,12 @@
       "Place your order through the app",
       "Pick up at the restaurant — skip the delivery fee"
     ],
-    "tags": ["pickup", "savings", "food", "convenience"],
+    "tags": [
+      "pickup",
+      "savings",
+      "food",
+      "convenience"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -3252,7 +3413,12 @@
       "$0 delivery on orders of $12+",
       "5% back on pickup orders"
     ],
-    "tags": ["delivery", "food", "savings", "subscription"],
+    "tags": [
+      "delivery",
+      "food",
+      "savings",
+      "subscription"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -3275,7 +3441,12 @@
       "New user promotion applied automatically",
       "Place your first order with the discount"
     ],
-    "tags": ["new user", "discount", "first order", "food"],
+    "tags": [
+      "new user",
+      "discount",
+      "first order",
+      "food"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -3299,7 +3470,12 @@
       "Reduced service fees on all orders",
       "Cancel anytime"
     ],
-    "tags": ["delivery", "groceries", "savings", "subscription"],
+    "tags": [
+      "delivery",
+      "groceries",
+      "savings",
+      "subscription"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -3323,7 +3499,12 @@
       "Shop from multiple stores in one order",
       "Select a delivery window"
     ],
-    "tags": ["delivery", "groceries", "same-day", "convenience"],
+    "tags": [
+      "delivery",
+      "groceries",
+      "same-day",
+      "convenience"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -3347,7 +3528,12 @@
       "PayPal investigates and mediates",
       "Full refund including shipping if claim approved"
     ],
-    "tags": ["protection", "refund", "shopping", "security"],
+    "tags": [
+      "protection",
+      "refund",
+      "shopping",
+      "security"
+    ],
     "popular": true,
     "dateAdded": "2024-04-25"
   },
@@ -3371,7 +3557,12 @@
       "No interest or late fees",
       "Available on purchases $30-$1,500"
     ],
-    "tags": ["bnpl", "financing", "interest-free", "payments"],
+    "tags": [
+      "bnpl",
+      "financing",
+      "interest-free",
+      "payments"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -3395,7 +3586,12 @@
       "Split group expenses with multiple people",
       "Transfer to your bank for free (1-3 days) or instant ($0.25)"
     ],
-    "tags": ["payments", "splitting", "social", "free"],
+    "tags": [
+      "payments",
+      "splitting",
+      "social",
+      "free"
+    ],
     "popular": true,
     "dateAdded": "2024-04-25"
   },
@@ -3419,7 +3615,12 @@
       "Spend your Venmo balance anywhere",
       "Earn automatic cashback at select retailers"
     ],
-    "tags": ["debit card", "cashback", "spending", "rewards"],
+    "tags": [
+      "debit card",
+      "cashback",
+      "spending",
+      "rewards"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -3443,7 +3644,12 @@
       "Pay with your Cash Card at the merchant",
       "Discount applied instantly"
     ],
-    "tags": ["discounts", "cashback", "instant", "rewards"],
+    "tags": [
+      "discounts",
+      "cashback",
+      "instant",
+      "rewards"
+    ],
     "popular": true,
     "dateAdded": "2024-04-25"
   },
@@ -3466,7 +3672,12 @@
       "Every purchase rounds up to the next dollar",
       "Spare change automatically invested in Bitcoin"
     ],
-    "tags": ["bitcoin", "investing", "round ups", "crypto"],
+    "tags": [
+      "bitcoin",
+      "investing",
+      "round ups",
+      "crypto"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -3489,7 +3700,12 @@
       "Provide routing and account numbers to your employer",
       "Paycheck available up to 2 days early"
     ],
-    "tags": ["direct deposit", "paycheck", "early pay", "banking"],
+    "tags": [
+      "direct deposit",
+      "paycheck",
+      "early pay",
+      "banking"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -3512,7 +3728,11 @@
       "Sign in with your Apple ID",
       "Start streaming Apple Originals immediately"
     ],
-    "tags": ["streaming", "tv", "movies"],
+    "tags": [
+      "streaming",
+      "tv",
+      "movies"
+    ],
     "popular": true,
     "dateAdded": "2024-01-01"
   },
@@ -3535,7 +3755,11 @@
       "Sign in with your Apple ID",
       "Full Apple Music library available immediately"
     ],
-    "tags": ["music", "streaming", "audio"],
+    "tags": [
+      "music",
+      "streaming",
+      "audio"
+    ],
     "popular": true,
     "dateAdded": "2024-01-01"
   },
@@ -3558,7 +3782,11 @@
       "Navigate to the Arcade tab",
       "Download and play any Apple Arcade game"
     ],
-    "tags": ["gaming", "games", "mobile"],
+    "tags": [
+      "gaming",
+      "games",
+      "mobile"
+    ],
     "popular": false,
     "dateAdded": "2024-01-01"
   },
@@ -3581,7 +3809,11 @@
       "Manage storage in Settings → Apple ID → iCloud",
       "Enable Private Relay and Hide My Email in iCloud settings"
     ],
-    "tags": ["cloud", "storage", "privacy"],
+    "tags": [
+      "cloud",
+      "storage",
+      "privacy"
+    ],
     "popular": false,
     "dateAdded": "2024-01-01"
   },
@@ -3604,7 +3836,11 @@
       "Look for the Prime badge on eligible items",
       "Free two-day shipping applied automatically at checkout"
     ],
-    "tags": ["shipping", "delivery", "shopping"],
+    "tags": [
+      "shipping",
+      "delivery",
+      "shopping"
+    ],
     "popular": true,
     "dateAdded": "2024-01-01"
   },
@@ -3627,7 +3863,12 @@
       "Sign in with your Amazon account",
       "Start streaming immediately"
     ],
-    "tags": ["streaming", "tv", "movies", "video"],
+    "tags": [
+      "streaming",
+      "tv",
+      "movies",
+      "video"
+    ],
     "popular": true,
     "dateAdded": "2024-01-01"
   },
@@ -3650,7 +3891,11 @@
       "Start listening to music and podcasts",
       "Available on phone, tablet, Echo devices, and web"
     ],
-    "tags": ["music", "streaming", "audio"],
+    "tags": [
+      "music",
+      "streaming",
+      "audio"
+    ],
     "popular": false,
     "dateAdded": "2024-01-01"
   },
@@ -3673,7 +3918,12 @@
       "Enable auto-backup for unlimited photo storage",
       "Access photos from any device"
     ],
-    "tags": ["photos", "storage", "cloud", "backup"],
+    "tags": [
+      "photos",
+      "storage",
+      "cloud",
+      "backup"
+    ],
     "popular": false,
     "dateAdded": "2024-01-15"
   },
@@ -3696,78 +3946,14 @@
       "Claim free games and in-game loot each month",
       "Link your Twitch account for the free subscription"
     ],
-    "tags": ["gaming", "twitch", "free games", "loot"],
+    "tags": [
+      "gaming",
+      "twitch",
+      "free games",
+      "loot"
+    ],
     "popular": false,
     "dateAdded": "2024-01-15"
-  },
-  {
-    "id": "spotify-hulu",
-    "title": "Hulu Included with Spotify",
-    "description": "Ad-supported Hulu streaming included free with Spotify Premium Student plan.",
-    "fullDescription": "Spotify Premium Student subscribers get Hulu's ad-supported plan included at no additional cost. Stream thousands of shows and movies on Hulu while enjoying ad-free music on Spotify.",
-    "provider": "Spotify Premium",
-    "providerType": "subscription",
-    "providerLogo": "🎵",
-    "category": "Entertainment",
-    "value": "$7.99/month",
-    "valueCents": 799,
-    "expiration": null,
-    "claimUrl": "https://www.spotify.com/student",
-    "claimSteps": [
-      "Subscribe to Spotify Premium Student ($5.99/month)",
-      "Verify your student status through SheerID",
-      "Activate Hulu through your Spotify account settings",
-      "Stream on hulu.com or the Hulu app"
-    ],
-    "tags": ["streaming", "tv", "music", "student"],
-    "popular": false,
-    "dateAdded": "2024-03-15"
-  },
-  {
-    "id": "spotify-wrapped",
-    "title": "Spotify Wrapped & Personalization",
-    "description": "Get personalized playlists, Discover Weekly, and your annual Spotify Wrapped year-in-review.",
-    "fullDescription": "Spotify Premium offers deeply personalized listening with Discover Weekly (fresh picks every Monday), Release Radar (new music from artists you follow), Daily Mixes, and the viral Spotify Wrapped year-end summary showing your top artists, songs, and listening habits.",
-    "provider": "Spotify Premium",
-    "providerType": "subscription",
-    "providerLogo": "🎵",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.spotify.com",
-    "claimSteps": [
-      "Subscribe to Spotify Premium",
-      "Listen to music regularly to improve recommendations",
-      "Check Discover Weekly every Monday for new picks",
-      "View your Spotify Wrapped in December"
-    ],
-    "tags": ["personalization", "playlists", "music", "wrapped"],
-    "popular": false,
-    "dateAdded": "2024-03-15"
-  },
-  {
-    "id": "spotify-offline",
-    "title": "Offline Downloads",
-    "description": "Download up to 10,000 songs per device on up to 5 devices for offline listening.",
-    "fullDescription": "Spotify Premium lets you download up to 10,000 songs on up to 5 devices for offline listening. Perfect for flights, road trips, or areas with poor cell service. Downloads are in high quality and remain available as long as you go online at least once every 30 days.",
-    "provider": "Spotify Premium",
-    "providerType": "subscription",
-    "providerLogo": "🎵",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.spotify.com",
-    "claimSteps": [
-      "Open Spotify Premium on your device",
-      "Find a playlist, album, or podcast",
-      "Tap the download toggle",
-      "Listen offline without using data"
-    ],
-    "tags": ["offline", "downloads", "music", "mobile"],
-    "popular": false,
-    "dateAdded": "2024-03-15"
   },
   {
     "id": "t-mobile-netflix",
@@ -3789,7 +3975,11 @@
       "Select Netflix and link your Netflix account",
       "Netflix charges removed from your Netflix bill"
     ],
-    "tags": ["netflix", "streaming", "mobile"],
+    "tags": [
+      "netflix",
+      "streaming",
+      "mobile"
+    ],
     "popular": true,
     "dateAdded": "2024-02-01"
   },
@@ -3812,7 +4002,12 @@
       "Check the app every Tuesday for new offers",
       "Claim offers before they expire (usually by Monday)"
     ],
-    "tags": ["free", "weekly", "food", "deals"],
+    "tags": [
+      "free",
+      "weekly",
+      "food",
+      "deals"
+    ],
     "popular": false,
     "dateAdded": "2024-02-01"
   },
@@ -3835,7 +4030,12 @@
       "Turn on Caller ID for incoming call details",
       "Report scam numbers to improve the network"
     ],
-    "tags": ["security", "scam", "caller id", "protection"],
+    "tags": [
+      "security",
+      "scam",
+      "caller id",
+      "protection"
+    ],
     "popular": false,
     "dateAdded": "2024-02-01"
   },
@@ -3858,7 +4058,12 @@
       "Select delivery for eligible items",
       "Free shipping and delivery applied automatically"
     ],
-    "tags": ["delivery", "shipping", "grocery", "shopping"],
+    "tags": [
+      "delivery",
+      "shipping",
+      "grocery",
+      "shopping"
+    ],
     "popular": false,
     "dateAdded": "2024-02-25"
   },
@@ -3882,7 +4087,12 @@
       "Create or link your Paramount+ account",
       "Start streaming on paramountplus.com or the app"
     ],
-    "tags": ["streaming", "tv", "movies", "sports"],
+    "tags": [
+      "streaming",
+      "tv",
+      "movies",
+      "sports"
+    ],
     "popular": false,
     "dateAdded": "2024-02-25"
   },
@@ -3906,7 +4116,12 @@
       "Scan each item as you add it to your cart",
       "Pay in the app and show receipt at exit"
     ],
-    "tags": ["checkout", "convenience", "in-store", "mobile"],
+    "tags": [
+      "checkout",
+      "convenience",
+      "in-store",
+      "mobile"
+    ],
     "popular": false,
     "dateAdded": "2024-02-25"
   },
@@ -3930,7 +4145,12 @@
       "Book directly through Costco Travel",
       "Executive members earn 2% reward on purchases"
     ],
-    "tags": ["travel", "vacation", "hotels", "rental"],
+    "tags": [
+      "travel",
+      "vacation",
+      "hotels",
+      "rental"
+    ],
     "popular": true,
     "dateAdded": "2024-01-08"
   },
@@ -3953,7 +4173,11 @@
       "Discounted price applied automatically",
       "Pay with Visa credit/debit, debit, or cash"
     ],
-    "tags": ["gas", "fuel", "savings"],
+    "tags": [
+      "gas",
+      "fuel",
+      "savings"
+    ],
     "popular": true,
     "dateAdded": "2024-01-08"
   },
@@ -3976,7 +4200,11 @@
       "Membership not required for pharmacy in most states",
       "Ask about Costco Member Prescription Program for extra savings"
     ],
-    "tags": ["pharmacy", "health", "medication"],
+    "tags": [
+      "pharmacy",
+      "health",
+      "medication"
+    ],
     "popular": false,
     "dateAdded": "2024-02-20"
   },
@@ -3999,7 +4227,12 @@
       "Browse frames and lens options",
       "Pricing significantly below retail optical shops"
     ],
-    "tags": ["optical", "glasses", "health", "vision"],
+    "tags": [
+      "optical",
+      "glasses",
+      "health",
+      "vision"
+    ],
     "popular": false,
     "dateAdded": "2024-02-20"
   },
@@ -4023,7 +4256,12 @@
       "Service dispatched to your location",
       "Show membership card to the service provider"
     ],
-    "tags": ["roadside", "car", "emergency", "towing"],
+    "tags": [
+      "roadside",
+      "car",
+      "emergency",
+      "towing"
+    ],
     "popular": false,
     "dateAdded": "2024-03-01"
   },
@@ -4046,7 +4284,12 @@
       "Enter promo codes at checkout when shopping online",
       "Ask about AAA discounts at hotels and car rental counters"
     ],
-    "tags": ["discounts", "hotels", "restaurants", "retail"],
+    "tags": [
+      "discounts",
+      "hotels",
+      "restaurants",
+      "retail"
+    ],
     "popular": false,
     "dateAdded": "2024-03-01"
   },
@@ -4069,7 +4312,12 @@
       "Complete vehicle registration, titles, or renewals",
       "Skip the DMV lines — faster service at AAA offices"
     ],
-    "tags": ["dmv", "registration", "convenience", "auto"],
+    "tags": [
+      "dmv",
+      "registration",
+      "convenience",
+      "auto"
+    ],
     "popular": false,
     "dateAdded": "2024-03-01"
   },
@@ -4092,7 +4340,12 @@
       "Connect to WiFi at any Hilton property",
       "Select 'Hilton Honors' network and enter your room details"
     ],
-    "tags": ["wifi", "hotel", "travel", "free"],
+    "tags": [
+      "wifi",
+      "hotel",
+      "travel",
+      "free"
+    ],
     "popular": false,
     "dateAdded": "2024-03-05"
   },
@@ -4116,7 +4369,12 @@
       "Redeem for free nights or experiences",
       "Points don't expire with account activity"
     ],
-    "tags": ["hotel", "points", "loyalty", "travel"],
+    "tags": [
+      "hotel",
+      "points",
+      "loyalty",
+      "travel"
+    ],
     "popular": false,
     "dateAdded": "2024-03-05"
   },
@@ -4139,7 +4397,12 @@
       "Points for the 5th night automatically waived",
       "Works at any Hilton property worldwide"
     ],
-    "tags": ["free night", "awards", "savings", "hotel"],
+    "tags": [
+      "free night",
+      "awards",
+      "savings",
+      "hotel"
+    ],
     "popular": false,
     "dateAdded": "2024-03-05"
   },
@@ -4162,7 +4425,12 @@
       "Once approved, enable Copilot in your GitHub settings",
       "Install the Copilot extension in VS Code or your IDE"
     ],
-    "tags": ["ai", "coding", "developer", "student"],
+    "tags": [
+      "ai",
+      "coding",
+      "developer",
+      "student"
+    ],
     "popular": true,
     "dateAdded": "2024-01-20"
   },
@@ -4186,7 +4454,12 @@
       "Search for and register your desired domain",
       "Domain free for one year, then standard renewal pricing"
     ],
-    "tags": ["domain", "web", "developer", "student"],
+    "tags": [
+      "domain",
+      "web",
+      "developer",
+      "student"
+    ],
     "popular": false,
     "dateAdded": "2024-01-20"
   },
@@ -4210,7 +4483,12 @@
       "No credit card required",
       "$100 in credits available immediately"
     ],
-    "tags": ["cloud", "azure", "developer", "student"],
+    "tags": [
+      "cloud",
+      "azure",
+      "developer",
+      "student"
+    ],
     "popular": false,
     "dateAdded": "2024-01-20"
   },
@@ -4234,7 +4512,12 @@
       "See the upfront price and confirm",
       "Driver arrives early and waits at your location"
     ],
-    "tags": ["reserve", "schedule", "airport", "rides"],
+    "tags": [
+      "reserve",
+      "schedule",
+      "airport",
+      "rides"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -4257,7 +4540,12 @@
       "Select it for a discounted fare",
       "Wait the estimated extra time for pickup"
     ],
-    "tags": ["savings", "rideshare", "discount", "budget"],
+    "tags": [
+      "savings",
+      "rideshare",
+      "discount",
+      "budget"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -4280,7 +4568,12 @@
       "Shop from nearby stores",
       "Delivery as fast as 30 minutes"
     ],
-    "tags": ["grocery", "convenience", "delivery", "essentials"],
+    "tags": [
+      "grocery",
+      "convenience",
+      "delivery",
+      "essentials"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -4303,7 +4596,12 @@
       "Claim free food offers and exclusive deals",
       "New perks rotate regularly"
     ],
-    "tags": ["free food", "perks", "deals", "delivery"],
+    "tags": [
+      "free food",
+      "perks",
+      "deals",
+      "delivery"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -4327,125 +4625,14 @@
       "Tap 'Add All to Cart' to add ingredients",
       "Complete your order for delivery"
     ],
-    "tags": ["recipes", "meal planning", "groceries", "convenience"],
+    "tags": [
+      "recipes",
+      "meal planning",
+      "groceries",
+      "convenience"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
-  },
-  {
-    "id": "netflix-spatial-audio",
-    "title": "Spatial Audio Support",
-    "description": "Watch select Netflix titles with immersive spatial audio on supported devices and headphones.",
-    "fullDescription": "Netflix supports spatial audio on select titles when using compatible devices and headphones like AirPods Pro and AirPods Max. Spatial audio creates an immersive surround sound experience that tracks your head movement. Available on all subscription tiers at no extra cost.",
-    "provider": "Netflix",
-    "providerType": "streaming",
-    "providerLogo": "🎬",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.netflix.com",
-    "claimSteps": [
-      "Use compatible headphones (AirPods Pro, AirPods Max)",
-      "Play a title with spatial audio on a supported device",
-      "Spatial audio activates automatically",
-      "Look for the spatial audio badge on titles"
-    ],
-    "tags": ["spatial audio", "surround sound", "immersive", "streaming"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "disney-plus-sing-along",
-    "title": "Sing Along Mode",
-    "description": "Follow on-screen lyrics while watching your favorite Disney musical movies.",
-    "fullDescription": "Disney+ offers a Sing Along feature on select musical titles that displays real-time lyrics on screen. Available on classics like The Little Mermaid, Frozen, Moana, Encanto, and more. A bouncing icon follows the music so the whole family can sing along.",
-    "provider": "Disney+",
-    "providerType": "streaming",
-    "providerLogo": "🏰",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.disneyplus.com",
-    "claimSteps": [
-      "Open Disney+ and find a musical title",
-      "Look for the Sing Along version in available versions",
-      "Select it to see on-screen lyrics",
-      "Sing along with the bouncing icon guide"
-    ],
-    "tags": ["sing along", "musicals", "family", "karaoke"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "hbo-max-downloads",
-    "title": "Offline Downloads (Ad-Free Plans)",
-    "description": "Download movies and shows for offline viewing on up to 30 titles at once.",
-    "fullDescription": "Max Ad-Free and Ultimate subscribers can download up to 30 titles at a time on mobile devices for offline viewing. Downloads are available for 30 days and expire 48 hours after you start watching. Perfect for travel and commutes without reliable internet.",
-    "provider": "HBO Max",
-    "providerType": "streaming",
-    "providerLogo": "🎬",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.max.com",
-    "claimSteps": [
-      "Subscribe to Max Ad-Free or Ultimate",
-      "Open the Max app on your mobile device",
-      "Tap the download icon on any title",
-      "Download up to 30 titles at once",
-      "Watch offline for up to 30 days"
-    ],
-    "tags": ["downloads", "offline", "mobile", "streaming"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "peacock-next-day-nbc",
-    "title": "Next-Day NBC Shows",
-    "description": "Watch NBC primetime shows the day after they air on Peacock Premium.",
-    "fullDescription": "Peacock Premium subscribers can stream NBC primetime shows the day after they air live. Watch popular series like Chicago Fire, Law & Order, and The Voice without cable. Full seasons available for binge-watching alongside the Peacock Original and classic NBC library.",
-    "provider": "Peacock",
-    "providerType": "streaming",
-    "providerLogo": "📺",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.peacocktv.com",
-    "claimSteps": [
-      "Subscribe to Peacock Premium",
-      "Check the app the day after an NBC show airs",
-      "New episodes available next day",
-      "Stream full seasons of current and past NBC shows"
-    ],
-    "tags": ["nbc", "next day", "primetime", "streaming"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
-  },
-  {
-    "id": "paramount-plus-downloads",
-    "title": "Offline Downloads",
-    "description": "Download select shows and movies for offline viewing on your mobile device.",
-    "fullDescription": "Paramount+ subscribers can download select titles for offline viewing on mobile devices. Downloads are available on iOS and Android with storage managed in the app. Content remains available for up to 30 days or 48 hours after playback starts.",
-    "provider": "Paramount+",
-    "providerType": "streaming",
-    "providerLogo": "📺",
-    "category": "Entertainment",
-    "value": "Included",
-    "valueCents": 0,
-    "expiration": null,
-    "claimUrl": "https://www.paramountplus.com",
-    "claimSteps": [
-      "Open the Paramount+ app on your device",
-      "Find a title and tap the download icon",
-      "Watch offline when you don't have internet",
-      "Downloads available for up to 30 days"
-    ],
-    "tags": ["downloads", "offline", "mobile", "streaming"],
-    "popular": false,
-    "dateAdded": "2024-04-15"
   },
   {
     "id": "paypal-honey-coupons",
@@ -4466,7 +4653,12 @@
       "Honey automatically applies best coupon at checkout",
       "Earn Honey Gold rewards for extra savings"
     ],
-    "tags": ["coupons", "savings", "browser", "automatic"],
+    "tags": [
+      "coupons",
+      "savings",
+      "browser",
+      "automatic"
+    ],
     "popular": true,
     "dateAdded": "2024-04-25"
   },
@@ -4489,7 +4681,12 @@
       "Top category automatically earns 3% back",
       "Cashback deposited to your Venmo balance"
     ],
-    "tags": ["credit card", "cashback", "automatic", "rewards"],
+    "tags": [
+      "credit card",
+      "cashback",
+      "automatic",
+      "rewards"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -4513,7 +4710,12 @@
       "No commission fees on trades",
       "Set up recurring purchases for automatic investing"
     ],
-    "tags": ["stocks", "investing", "fractional", "free"],
+    "tags": [
+      "stocks",
+      "investing",
+      "fractional",
+      "free"
+    ],
     "popular": false,
     "dateAdded": "2024-04-25"
   },
@@ -4536,7 +4738,12 @@
       "Start a guided run or free run",
       "Track your progress and join challenges"
     ],
-    "tags": ["running", "fitness", "tracking", "free app"],
+    "tags": [
+      "running",
+      "fitness",
+      "tracking",
+      "free app"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -4559,7 +4766,12 @@
       "Start tracking your runs and activities",
       "Join challenges and follow training plans"
     ],
-    "tags": ["running", "fitness", "tracking", "free app"],
+    "tags": [
+      "running",
+      "fitness",
+      "tracking",
+      "free app"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -4582,7 +4794,12 @@
       "Staff inspects and confirms value",
       "Receive a Best Buy gift card on the spot"
     ],
-    "tags": ["trade-in", "electronics", "gift card", "recycle"],
+    "tags": [
+      "trade-in",
+      "electronics",
+      "gift card",
+      "recycle"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -4605,7 +4822,12 @@
       "Register for free",
       "Attend and learn hands-on skills"
     ],
-    "tags": ["workshops", "diy", "free", "home improvement"],
+    "tags": [
+      "workshops",
+      "diy",
+      "free",
+      "home improvement"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -4628,7 +4850,12 @@
       "Get foundation matching or skincare advice",
       "Book a mini makeover appointment in-store or online"
     ],
-    "tags": ["beauty", "makeover", "free", "consultation"],
+    "tags": [
+      "beauty",
+      "makeover",
+      "free",
+      "consultation"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -4651,7 +4878,12 @@
       "Load it to your Plus Card",
       "Redeem within 2 weeks at any Kroger store"
     ],
-    "tags": ["free", "friday", "groceries", "coupons"],
+    "tags": [
+      "free",
+      "friday",
+      "groceries",
+      "coupons"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -4674,7 +4906,12 @@
       "Prime members get additional discounts on sale items",
       "New deals every Wednesday"
     ],
-    "tags": ["sales", "organic", "weekly", "groceries"],
+    "tags": [
+      "sales",
+      "organic",
+      "weekly",
+      "groceries"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
   },
@@ -4697,7 +4934,12 @@
       "Free Doritos Locos Taco appears in your rewards",
       "Redeem at any participating location"
     ],
-    "tags": ["free food", "signup", "tacos", "welcome"],
+    "tags": [
+      "free food",
+      "signup",
+      "tacos",
+      "welcome"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -4720,7 +4962,12 @@
       "Receive a free Jr. Frosty each time",
       "Valid for the entire calendar year"
     ],
-    "tags": ["frosty", "free food", "key tag", "charity"],
+    "tags": [
+      "frosty",
+      "free food",
+      "key tag",
+      "charity"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -4743,7 +4990,12 @@
       "Earn 12 points per dollar (vs. standard 10)",
       "Boosted Status lasts for 3 months"
     ],
-    "tags": ["boosted", "double points", "status", "coffee"],
+    "tags": [
+      "boosted",
+      "double points",
+      "status",
+      "coffee"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -4766,7 +5018,12 @@
       "Emergency Pizza saved to your account",
       "Redeem within 30 days for a free medium 1-topping pizza"
     ],
-    "tags": ["free pizza", "promotion", "rewards", "emergency"],
+    "tags": [
+      "free pizza",
+      "promotion",
+      "rewards",
+      "emergency"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -4789,7 +5046,12 @@
       "Teacher awards Book It! certificate",
       "Redeem certificate at Pizza Hut for free Personal Pan Pizza"
     ],
-    "tags": ["kids", "reading", "free pizza", "education"],
+    "tags": [
+      "kids",
+      "reading",
+      "free pizza",
+      "education"
+    ],
     "popular": false,
     "dateAdded": "2024-04-01"
   },
@@ -4812,8 +5074,237 @@
       "5% off coupon loaded automatically",
       "Stackable with RedCard discount and other offers"
     ],
-    "tags": ["birthday", "discount", "shopping", "savings"],
+    "tags": [
+      "birthday",
+      "discount",
+      "shopping",
+      "savings"
+    ],
     "popular": false,
     "dateAdded": "2024-04-20"
+  },
+  {
+    "id": "netflix-subscription",
+    "title": "Netflix Streaming",
+    "description": "Stream thousands of movies, shows, and games with multiple profiles, offline downloads, and spatial audio.",
+    "fullDescription": "Netflix gives you access to a massive library of movies, TV shows, and Netflix Originals. Depending on your plan, you get up to 5 viewer profiles with personalized recommendations, offline downloads on mobile, Netflix mobile games, and spatial audio support. A complete entertainment package for the whole family.",
+    "provider": "Netflix",
+    "providerType": "streaming",
+    "providerLogo": "🎬",
+    "category": "Entertainment",
+    "value": "$6.99-22.99/mo",
+    "valueCents": 1599,
+    "expiration": null,
+    "claimUrl": "https://www.netflix.com",
+    "claimSteps": [
+      "Visit netflix.com and choose a plan",
+      "Create up to 5 profiles for your household",
+      "Download the app for offline viewing",
+      "Browse the games tab for included mobile games"
+    ],
+    "tags": [
+      "streaming",
+      "movies",
+      "tv shows",
+      "family"
+    ],
+    "popular": true,
+    "dateAdded": "2024-04-15"
+  },
+  {
+    "id": "hulu-subscription",
+    "title": "Hulu Streaming",
+    "description": "Stream on-demand shows and movies, with optional live TV including 75+ channels and unlimited DVR.",
+    "fullDescription": "Hulu offers a large on-demand library of current-season TV, movies, and Hulu Originals. Upgrade to Hulu + Live TV for 75+ live channels including ESPN, ABC, NBC, Fox, and CNN, plus unlimited DVR storage and Disney+ and ESPN+ bundled in. Stream on up to 2 screens simultaneously.",
+    "provider": "Hulu",
+    "providerType": "streaming",
+    "providerLogo": "📺",
+    "category": "Entertainment",
+    "value": "$7.99-76.99/mo",
+    "valueCents": 4249,
+    "expiration": null,
+    "claimUrl": "https://www.hulu.com",
+    "claimSteps": [
+      "Visit hulu.com and choose a plan",
+      "Stream on-demand content immediately",
+      "Upgrade to Live TV for 75+ channels",
+      "Disney+ and ESPN+ included with Live TV bundle"
+    ],
+    "tags": [
+      "streaming",
+      "live tv",
+      "sports",
+      "tv shows"
+    ],
+    "popular": true,
+    "dateAdded": "2024-04-15"
+  },
+  {
+    "id": "disney-plus-subscription",
+    "title": "Disney+ Streaming",
+    "description": "Stream Disney, Pixar, Marvel, Star Wars, and National Geographic with IMAX Enhanced content and offline downloads.",
+    "fullDescription": "Disney+ gives you access to the full Disney vault plus Pixar, Marvel, Star Wars, National Geographic, and exclusive originals. Features include IMAX Enhanced content for select Marvel films, unlimited mobile downloads, GroupWatch for watching with friends remotely, and Sing Along mode for Disney classics.",
+    "provider": "Disney+",
+    "providerType": "streaming",
+    "providerLogo": "🏰",
+    "category": "Entertainment",
+    "value": "$7.99-13.99/mo",
+    "valueCents": 1099,
+    "expiration": null,
+    "claimUrl": "https://www.disneyplus.com",
+    "claimSteps": [
+      "Visit disneyplus.com and choose a plan",
+      "Download content for offline viewing",
+      "Use GroupWatch to watch with friends remotely",
+      "Try IMAX Enhanced on supported Marvel titles"
+    ],
+    "tags": [
+      "streaming",
+      "disney",
+      "marvel",
+      "family"
+    ],
+    "popular": true,
+    "dateAdded": "2024-04-15"
+  },
+  {
+    "id": "hbo-max-subscription",
+    "title": "Max (HBO) Streaming",
+    "description": "Stream HBO originals, blockbuster films, and Max exclusives in up to 4K UHD with Dolby Atmos.",
+    "fullDescription": "Max (formerly HBO Max) gives you same-day access to all HBO original series and films, plus Max Originals and a deep Warner Bros. library. Premium tiers include 4K UHD with Dolby Atmos, offline downloads, and streaming on up to 4 devices simultaneously.",
+    "provider": "HBO Max",
+    "providerType": "streaming",
+    "providerLogo": "🎬",
+    "category": "Entertainment",
+    "value": "$9.99-16.99/mo",
+    "valueCents": 1349,
+    "expiration": null,
+    "claimUrl": "https://www.max.com",
+    "claimSteps": [
+      "Visit max.com and choose a plan",
+      "Stream new HBO episodes on premiere day",
+      "Upgrade for 4K UHD and Dolby Atmos",
+      "Download content for offline viewing on ad-free plans"
+    ],
+    "tags": [
+      "streaming",
+      "hbo",
+      "movies",
+      "originals"
+    ],
+    "popular": false,
+    "dateAdded": "2024-04-15"
+  },
+  {
+    "id": "youtube-premium-subscription",
+    "title": "YouTube Premium",
+    "description": "Ad-free YouTube with background play, offline downloads, and YouTube Music Premium included.",
+    "fullDescription": "YouTube Premium removes all ads from YouTube across devices, includes YouTube Music Premium for ad-free music streaming, and lets you play videos in the background or download them for offline viewing. One subscription covers YouTube, YouTube Music, and YouTube Kids.",
+    "provider": "YouTube Premium",
+    "providerType": "streaming",
+    "providerLogo": "▶️",
+    "category": "Entertainment",
+    "value": "$13.99/mo",
+    "valueCents": 1399,
+    "expiration": null,
+    "claimUrl": "https://www.youtube.com/premium",
+    "claimSteps": [
+      "Visit youtube.com/premium and subscribe",
+      "Enjoy ad-free videos immediately",
+      "Download the YouTube Music app for included music streaming",
+      "Enable background play in your app settings"
+    ],
+    "tags": [
+      "streaming",
+      "ad-free",
+      "music",
+      "video"
+    ],
+    "popular": false,
+    "dateAdded": "2024-04-15"
+  },
+  {
+    "id": "paramount-plus-subscription",
+    "title": "Paramount+ Streaming",
+    "description": "Stream live sports, CBS shows, and Paramount originals with your local CBS station and offline downloads.",
+    "fullDescription": "Paramount+ offers a library of Paramount movies, CBS shows, and originals, plus live sports including NFL, UEFA Champions League, and March Madness. Includes your local live CBS station and offline downloads on supported plans.",
+    "provider": "Paramount+",
+    "providerType": "streaming",
+    "providerLogo": "⭐",
+    "category": "Entertainment",
+    "value": "$5.99-11.99/mo",
+    "valueCents": 899,
+    "expiration": null,
+    "claimUrl": "https://www.paramountplus.com",
+    "claimSteps": [
+      "Visit paramountplus.com and choose a plan",
+      "Stream live sports and CBS shows",
+      "Access your local CBS station live",
+      "Download content for offline viewing"
+    ],
+    "tags": [
+      "streaming",
+      "sports",
+      "cbs",
+      "movies"
+    ],
+    "popular": false,
+    "dateAdded": "2024-04-15"
+  },
+  {
+    "id": "peacock-subscription",
+    "title": "Peacock Streaming",
+    "description": "Stream NBC shows, live sports, and originals — with a free tier available and next-day NBC episodes.",
+    "fullDescription": "Peacock offers a free ad-supported tier with limited content, plus premium tiers with full access to NBC shows (next-day after airing), exclusive live sports including Premier League and NFL, and Peacock Originals. Premium plans include offline downloads.",
+    "provider": "Peacock",
+    "providerType": "streaming",
+    "providerLogo": "🦚",
+    "category": "Entertainment",
+    "value": "Free-$11.99/mo",
+    "valueCents": 599,
+    "expiration": null,
+    "claimUrl": "https://www.peacocktv.com",
+    "claimSteps": [
+      "Visit peacocktv.com — start free or choose a plan",
+      "Watch next-day NBC shows on premium",
+      "Stream live Premier League and NFL games",
+      "Upgrade to remove ads and enable downloads"
+    ],
+    "tags": [
+      "streaming",
+      "nbc",
+      "sports",
+      "free tier"
+    ],
+    "popular": false,
+    "dateAdded": "2024-04-15"
+  },
+  {
+    "id": "spotify-premium-subscription",
+    "title": "Spotify Premium",
+    "description": "Ad-free music streaming with offline downloads, Hulu included on eligible plans, and personalized features.",
+    "fullDescription": "Spotify Premium gives you ad-free music and podcast streaming, offline downloads, and higher audio quality. Student and Duo plans include Hulu (ad-supported) at no extra cost. Features like Spotify Wrapped and AI-powered playlists provide deeply personalized music discovery.",
+    "provider": "Spotify Premium",
+    "providerType": "streaming",
+    "providerLogo": "🎵",
+    "category": "Entertainment",
+    "value": "$10.99-16.99/mo",
+    "valueCents": 1399,
+    "expiration": null,
+    "claimUrl": "https://www.spotify.com/premium",
+    "claimSteps": [
+      "Visit spotify.com/premium and choose a plan",
+      "Stream ad-free on any device",
+      "Download playlists for offline listening",
+      "Check if your plan includes Hulu"
+    ],
+    "tags": [
+      "music",
+      "streaming",
+      "podcasts",
+      "offline"
+    ],
+    "popular": true,
+    "dateAdded": "2024-04-15"
   }
 ]
