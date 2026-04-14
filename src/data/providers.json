@@ -70,7 +70,7 @@
   { "id": "grubhub", "name": "Grubhub", "type": "rideshare", "logo": "/images/brands/grubhub.png", "cardImage": null, "color": "#F63440" },
   { "id": "instacart", "name": "Instacart", "type": "rideshare", "logo": "/images/brands/instacart.svg", "cardImage": null, "color": "#43B02A" },
 
-  { "id": "paypal", "name": "PayPal", "type": "fintech", "logo": "/images/brands/paypal.svg", "cardImage": null, "color": "#003087" },
+  { "id": "paypal", "name": "PayPal", "type": "fintech", "logo": "/images/brands/paypal.png", "cardImage": null, "color": "#003087" },
   { "id": "venmo", "name": "Venmo", "type": "fintech", "logo": "/images/brands/venmo.svg", "cardImage": null, "color": "#3D95CE" },
   { "id": "cash-app", "name": "Cash App", "type": "fintech", "logo": "/images/brands/cashapp.svg", "cardImage": null, "color": "#00D632" },
 
