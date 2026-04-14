@@ -25,7 +25,7 @@
   { "id": "sonic", "name": "Sonic", "type": "restaurant", "logo": "/images/brands/sonic.svg", "cardImage": null, "color": "#FFD700" },
   { "id": "wingstop", "name": "Wingstop", "type": "restaurant", "logo": "/images/brands/wingstop.png", "cardImage": null, "color": "#00843D" },
 
-  { "id": "american-airlines", "name": "American Airlines", "type": "airline", "logo": "/images/brands/americanairlines.svg", "cardImage": null, "color": "#0078D2" },
+  { "id": "american-airlines", "name": "American Airlines", "type": "airline", "logo": "/images/brands/americanairlines.png", "cardImage": null, "color": "#0078D2" },
   { "id": "delta", "name": "Delta Air Lines", "type": "airline", "logo": "/images/brands/delta.png", "cardImage": null, "color": "#003366" },
   { "id": "united", "name": "United Airlines", "type": "airline", "logo": "/images/brands/united.svg", "cardImage": null, "color": "#002244" },
   { "id": "southwest", "name": "Southwest Airlines", "type": "airline", "logo": "/images/brands/southwest.png", "cardImage": null, "color": "#304CB2" },
