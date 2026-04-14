@@ -33,7 +33,7 @@
 
   { "id": "hilton-honors", "name": "Hilton Honors", "type": "hotel", "logo": "/images/brands/hilton.jpg", "cardImage": null, "color": "#104C97" },
   { "id": "marriott-bonvoy", "name": "Marriott Bonvoy", "type": "hotel", "logo": "/images/brands/marriott.svg", "cardImage": null, "color": "#A4343A" },
-  { "id": "world-of-hyatt", "name": "World of Hyatt", "type": "hotel", "logo": "/images/brands/hyatt.png", "cardImage": null, "color": "#D4A76A" },
+  { "id": "world-of-hyatt", "name": "World of Hyatt", "type": "hotel", "logo": "/images/brands/hyatt.jpg", "cardImage": null, "color": "#D4A76A" },
   { "id": "ihg-rewards", "name": "IHG Rewards", "type": "hotel", "logo": "/images/brands/ihg.png", "cardImage": null, "color": "#2D2926" },
 
   { "id": "netflix", "name": "Netflix", "type": "streaming", "logo": "/images/brands/netflix.svg", "cardImage": null, "color": "#E50914" },
