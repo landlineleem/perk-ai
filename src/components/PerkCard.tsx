@@ -57,7 +57,7 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
           </div>
 
           {/* Title */}
-          <h3 className="mb-1.5 text-base font-semibold leading-snug text-ink group-hover:text-primary transition-colors">
+          <h3 className="mb-1.5 text-base font-semibold leading-snug text-ink group-hover:text-primary-dark transition-colors">
             {perk.title}
           </h3>
           <p className="mb-4 text-[13px] leading-relaxed text-ink-muted line-clamp-2">
@@ -67,7 +67,7 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
           {/* Bottom */}
           <div className="flex items-center justify-between pt-3 border-t border-border/40">
             <div className="flex items-center gap-2.5">
-              <span className="text-base font-bold text-primary">{perk.value}</span>
+              <span className="text-base font-bold text-primary-dark">{perk.value}</span>
               {isExpiring && (
                 <span className="flex items-center gap-1 text-[11px] font-medium text-warning">
                   <Clock className="h-3 w-3" />
@@ -75,7 +75,7 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
                 </span>
               )}
             </div>
-            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary-subtle text-ink-muted transition-all group-hover:bg-primary group-hover:text-white">
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary-subtle text-ink-muted transition-all group-hover:bg-primary group-hover:text-dark">
               <ArrowUpRight className="h-3.5 w-3.5" />
             </div>
           </div>

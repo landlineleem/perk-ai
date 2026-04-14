@@ -36,7 +36,7 @@ export default function PerkDetailPage({
     return (
       <div className="mx-auto flex min-h-[60vh] max-w-7xl flex-col items-center justify-center px-6 py-20 text-center">
         <h1
-          className="mb-2 text-2xl font-bold font-heading font-medium"
+          className="mb-2 text-2xl font-bold font-heading font-semibold"
         >
           Perk not found
         </h1>
@@ -45,7 +45,7 @@ export default function PerkDetailPage({
         </p>
         <Link
           href="/browse"
-          className="rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white"
+          className="rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-dark"
         >
           Browse all perks
         </Link>
@@ -83,13 +83,13 @@ export default function PerkDetailPage({
               </div>
 
               <h1
-                className="mb-4 text-4xl tracking-tight md:text-5xl font-heading font-medium animate-fade-up"
+                className="mb-4 text-4xl tracking-tight md:text-5xl font-heading font-semibold animate-fade-up"
               >
                 {perk.title}
               </h1>
 
               <div className="flex flex-wrap items-center gap-2.5">
-                <span className="rounded-full bg-primary px-4 py-1.5 text-sm font-bold text-white">
+                <span className="rounded-full bg-primary px-4 py-1.5 text-sm font-bold text-dark">
                   {perk.value}
                 </span>
                 <span className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-medium text-white/60">
@@ -153,7 +153,7 @@ export default function PerkDetailPage({
                     className="flex items-start gap-4 rounded-2xl border border-border/70 bg-surface p-5 animate-fade-up"
                     style={{ animationDelay: `${i * 60}ms` }}
                   >
-                    <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-primary text-xs font-bold text-white">
+                    <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-primary text-xs font-bold text-dark">
                       {i + 1}
                     </div>
                     <p className="text-sm leading-relaxed text-ink-secondary pt-0.5">
@@ -170,7 +170,7 @@ export default function PerkDetailPage({
               {perk.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-primary-subtle text-primary px-3 py-1 text-xs font-medium"
+                  className="rounded-full bg-primary-subtle text-primary-dark px-3 py-1 text-xs font-medium"
                 >
                   #{tag}
                 </span>
@@ -194,7 +194,7 @@ export default function PerkDetailPage({
                   href={`/api/claim/${perk.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-full items-center justify-center gap-2 rounded-[26px] bg-primary py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light"
+                  className="flex w-full items-center justify-center gap-2 rounded-[26px] bg-primary py-3.5 text-sm font-semibold text-dark transition-colors hover:bg-primary-light"
                 >
                   Claim this perk
                   <ExternalLink className="h-3.5 w-3.5" />

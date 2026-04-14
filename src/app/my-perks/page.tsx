@@ -85,7 +85,7 @@ export default function MyPerksPage() {
       <div className="bg-dark text-white">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
           <h1
-            className="mb-2 text-4xl tracking-tight md:text-5xl font-heading font-medium animate-fade-up"
+            className="mb-2 text-4xl tracking-tight md:text-5xl font-heading font-semibold animate-fade-up"
           >
             My Perks
           </h1>
@@ -100,7 +100,7 @@ export default function MyPerksPage() {
           {/* Provider selector */}
           <div className="lg:sticky lg:top-20 lg:self-start">
             <div className="rounded-[26px] border border-border/70 bg-surface p-6">
-              <h3 className="mb-4 text-sm font-bold text-ink font-heading">
+              <h3 className="mb-4 text-sm font-bold text-ink font-heading font-semibold">
                 What do you have?
               </h3>
 
@@ -117,7 +117,7 @@ export default function MyPerksPage() {
 
               {selectedProviders.length > 0 && (
                 <div className="mb-3 flex items-center justify-between rounded-xl bg-primary-subtle px-3 py-2">
-                  <span className="text-xs font-semibold text-primary">
+                  <span className="text-xs font-semibold text-primary-dark">
                     {selectedProviders.length} selected
                   </span>
                   <button
@@ -153,7 +153,7 @@ export default function MyPerksPage() {
                       <div
                         className={`flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md border-2 transition-colors ${
                           isSelected
-                            ? "border-primary bg-primary text-white"
+                            ? "border-primary bg-primary text-dark"
                             : "border-border"
                         }`}
                       >
@@ -178,7 +178,7 @@ export default function MyPerksPage() {
                   ))}
                 </div>
                 <h3
-                  className="mb-2 text-lg font-bold text-ink font-heading"
+                  className="mb-2 text-lg font-bold text-ink font-heading font-semibold"
                 >
                   Your perks are waiting
                 </h3>
@@ -194,7 +194,7 @@ export default function MyPerksPage() {
                     Estimated annual perk value
                   </p>
                   <p
-                    className="text-5xl font-bold tabular-nums font-heading font-medium"
+                    className="text-5xl font-bold tabular-nums font-heading font-semibold"
                   >
                     $<AnimatedValue value={totalValue} />
                     <span className="text-lg font-normal text-white/25 ml-1">+/year</span>
@@ -209,11 +209,11 @@ export default function MyPerksPage() {
                   <div key={cat} className="mb-10">
                     <div className="mb-4 flex items-center gap-3">
                       <h3
-                        className="text-2xl font-bold font-heading font-medium"
+                        className="text-2xl font-bold font-heading font-semibold"
                       >
                         {cat}
                       </h3>
-                      <span className="rounded-full bg-primary-subtle text-primary px-2.5 py-0.5 text-xs font-semibold">
+                      <span className="rounded-full bg-primary-subtle text-primary-dark px-2.5 py-0.5 text-xs font-semibold">
                         {perks.length}
                       </span>
                     </div>
