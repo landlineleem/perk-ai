@@ -47,7 +47,7 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
       <div className="card-hover relative h-full overflow-hidden rounded-2xl bg-surface border border-border/70">
         {/* Card image strip at top if credit card */}
         {cardSrc && (
-          <div className="relative h-36 overflow-hidden bg-dark">
+          <div className="relative h-36 overflow-hidden bg-surface-alt">
             <Image
               src={cardSrc}
               alt={perk.provider}
