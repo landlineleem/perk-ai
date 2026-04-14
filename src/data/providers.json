@@ -54,7 +54,7 @@
   { "id": "rei", "name": "REI", "type": "retail", "logo": "/images/brands/rei.png", "cardImage": null, "color": "#2D5C34" },
 
   { "id": "costco", "name": "Costco", "type": "membership", "logo": "/images/brands/costco.png", "cardImage": null, "color": "#E31837" },
-  { "id": "aaa", "name": "AAA", "type": "membership", "logo": "/images/brands/aaa.png", "cardImage": null, "color": "#003893" },
+  { "id": "aaa", "name": "AAA", "type": "membership", "logo": "/images/brands/aaa.svg", "cardImage": null, "color": "#003893" },
   { "id": "github-student-pack", "name": "GitHub Student Pack", "type": "membership", "logo": "/images/brands/github.svg", "cardImage": null, "color": "#181717" },
 
   { "id": "kroger", "name": "Kroger", "type": "grocery", "logo": "/images/brands/kroger.jpg", "cardImage": null, "color": "#2B2D7B" },
