@@ -1,15 +1,13 @@
 "use client";
 
-import { useState, useMemo, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import perksData from "@/data/perks.json";
 import providersData from "@/data/providers.json";
-import { providerCardImages, uniqueBrands } from "@/data/imageMap";
-import PerkCard, { BrandLogo } from "@/components/PerkCard";
-import SearchBar from "@/components/SearchBar";
-import CategoryFilter from "@/components/CategoryFilter";
+import { uniqueBrands } from "@/data/imageMap";
+import { BrandLogo } from "@/components/PerkCard";
 
 function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: string }) {
   const [count, setCount] = useState(0);
@@ -47,28 +45,6 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 }
 
 export default function Home() {
-  const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("all");
-
-  const featuredPerks = useMemo(() => {
-    return perksData
-      .filter((p) => p.popular)
-      .filter((p) => {
-        if (category !== "all" && p.category !== category) return false;
-        if (search) {
-          const q = search.toLowerCase();
-          return (
-            p.title.toLowerCase().includes(q) ||
-            p.provider.toLowerCase().includes(q) ||
-            p.category.toLowerCase().includes(q) ||
-            p.description.toLowerCase().includes(q)
-          );
-        }
-        return true;
-      });
-  }, [search, category]);
-
-  const creditCardProviders = providersData.filter((p) => p.type === "credit-card");
 
   return (
     <div className="min-h-screen">
@@ -196,19 +172,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== FEATURED CARDS SHOWCASE ===== */}
+      {/* ===== PROVIDERS GRID ===== */}
       <section className="bg-surface-alt border-y border-border/60">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-          <div className="mb-3 flex items-end justify-between">
+          <div className="mb-8 flex items-end justify-between">
             <div>
               <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
-                Featured
+                Providers
               </p>
               <h2
                 className="text-3xl tracking-tight md:text-4xl"
                 style={{ fontFamily: "var(--font-serif)" }}
               >
-                Popular perks
+                Explore by provider
               </h2>
             </div>
             <Link
@@ -220,24 +196,33 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mb-6 mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <CategoryFilter selected={category} onChange={setCategory} />
-            <div className="w-full sm:w-64">
-              <SearchBar value={search} onChange={setSearch} placeholder="Search perks..." />
-            </div>
+          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            {providersData.map((provider, i) => {
+              const providerPerks = perksData.filter(
+                (p) => p.provider === provider.name
+              );
+              return (
+                <Link
+                  href={`/browse?provider=${provider.id}`}
+                  key={provider.id}
+                  className="group block animate-fade-up"
+                  style={{ animationDelay: `${i * 30}ms` }}
+                >
+                  <div className="card-hover flex flex-col items-center gap-3 rounded-2xl bg-surface border border-border/70 p-5 text-center">
+                    <BrandLogo provider={provider.name} size={36} />
+                    <div>
+                      <h3 className="text-sm font-semibold text-ink group-hover:text-primary transition-colors">
+                        {provider.name}
+                      </h3>
+                      <p className="text-[11px] text-ink-muted mt-0.5">
+                        {providerPerks.length} perk{providerPerks.length !== 1 ? "s" : ""}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
-
-          {featuredPerks.length > 0 ? (
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {featuredPerks.map((perk, i) => (
-                <PerkCard key={perk.id} perk={perk} index={i} />
-              ))}
-            </div>
-          ) : (
-            <div className="rounded-2xl border-2 border-dashed border-border py-16 text-center">
-              <p className="text-sm text-ink-muted">No perks found for your filters</p>
-            </div>
-          )}
 
           <div className="mt-8 text-center md:hidden">
             <Link
@@ -248,69 +233,6 @@ export default function Home() {
               <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* ===== CREDIT CARD SHOWCASE ===== */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-        <div className="mb-12 max-w-lg">
-          <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
-            Credit Cards
-          </p>
-          <h2
-            className="mb-3 text-3xl tracking-tight md:text-4xl"
-            style={{ fontFamily: "var(--font-serif)" }}
-          >
-            Premium cards, premium perks
-          </h2>
-          <p className="text-sm leading-relaxed text-ink-muted">
-            Your annual fee pays for more than you think. See what
-            you&apos;re entitled to from every card in your wallet.
-          </p>
-        </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {creditCardProviders.map((card, i) => {
-            const cardPerks = perksData.filter(
-              (p) => p.provider === card.name
-            );
-            const totalCents = cardPerks.reduce((sum, p) => sum + p.valueCents, 0);
-
-            return (
-              <Link
-                href={`/browse?provider=${card.id}`}
-                key={card.id}
-                className="group block animate-fade-up"
-                style={{ animationDelay: `${i * 80}ms` }}
-              >
-                <div className="card-hover overflow-hidden rounded-2xl bg-surface border border-border/70">
-                  {card.cardImage && (
-                    <div className="relative h-44 bg-dark overflow-hidden">
-                      <Image
-                        src={card.cardImage}
-                        alt={card.name}
-                        fill
-                        className="object-contain transition-transform duration-500 group-hover:scale-110"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      />
-                    </div>
-                  )}
-                  <div className="p-5">
-                    <div className="flex items-center gap-2.5 mb-2">
-                      <BrandLogo provider={card.name} size={20} />
-                      <h3 className="text-sm font-semibold text-ink">{card.name}</h3>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <p className="text-xs text-ink-muted">
-                        {cardPerks.length} perks · ${Math.round(totalCents / 100).toLocaleString()}+/yr value
-                      </p>
-                      <ArrowRight className="h-3.5 w-3.5 text-ink-muted transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
         </div>
       </section>
 
