@@ -7,7 +7,6 @@ import {
   ArrowLeft,
   ExternalLink,
   Clock,
-  CheckCircle2,
   Tag,
 } from "lucide-react";
 import perksData from "@/data/perks.json";
@@ -31,7 +30,7 @@ export default function PerkDetailPage({
           (p.provider === perk.provider || p.category === perk.category)
       )
       .slice(0, 3);
-  }, [perk, id]);
+  }, [perk]);
 
   if (!perk) {
     return (
@@ -195,18 +194,14 @@ export default function PerkDetailPage({
               </div>
               <div className="p-5">
                 <a
-                  href={perk.claimUrl}
+                  href={`/api/claim/${perk.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mb-3 flex w-full items-center justify-center gap-2 rounded-full bg-primary py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light"
+                  className="flex w-full items-center justify-center gap-2 rounded-full bg-primary py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light"
                 >
                   Claim this perk
                   <ExternalLink className="h-3.5 w-3.5" />
                 </a>
-                <div className="flex items-center justify-center gap-1.5 text-xs text-ink-muted">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-success" />
-                  Verified & active
-                </div>
               </div>
             </div>
 

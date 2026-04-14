@@ -55,15 +55,14 @@ export default function MyPerksPage() {
 
   const myPerks = useMemo(() => {
     if (selectedProviders.length === 0) return [];
-    const selectedNames = selectedProviders.map((id) => {
-      const provider = providersData.find((p) => p.id === id);
-      return provider ? normalizeProvider(provider.name) : "";
-    });
+    const selectedNames = new Set(
+      selectedProviders.map((id) => {
+        const provider = providersData.find((p) => p.id === id);
+        return provider ? normalizeProvider(provider.name) : "";
+      })
+    );
     return perksData.filter((perk) => {
-      const perkProvider = normalizeProvider(perk.provider);
-      return selectedNames.some(
-        (name) => perkProvider.includes(name) || name.includes(perkProvider)
-      );
+      return selectedNames.has(normalizeProvider(perk.provider));
     });
   }, [selectedProviders]);
 

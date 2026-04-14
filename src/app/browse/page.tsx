@@ -2,7 +2,8 @@
 
 import { useState, useMemo } from "react";
 import Image from "next/image";
-import { SlidersHorizontal } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { SlidersHorizontal, ChevronDown } from "lucide-react";
 import perksData from "@/data/perks.json";
 import providersData from "@/data/providers.json";
 import { providerCardImages } from "@/data/imageMap";
@@ -34,11 +35,27 @@ const sortOptions = [
   { id: "expiring", label: "Expiring Soon" },
 ];
 
+const PAGE_SIZE = 24;
+
 export default function BrowsePage() {
-  const [search, setSearch] = useState("");
+  const searchParams = useSearchParams();
+  const providerParam = searchParams.get("provider") || "";
+
+  const initialProviderType = useMemo(() => {
+    if (!providerParam) return "all";
+    const provider = providersData.find((p) => p.id === providerParam);
+    return provider ? provider.type : "all";
+  }, [providerParam]);
+
+  const [search, setSearch] = useState(() => {
+    if (!providerParam) return "";
+    const provider = providersData.find((p) => p.id === providerParam);
+    return provider ? provider.name : "";
+  });
   const [category, setCategory] = useState("all");
-  const [providerType, setProviderType] = useState("all");
+  const [providerType, setProviderType] = useState(initialProviderType);
   const [sort, setSort] = useState("popular");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const filteredPerks = useMemo(() => {
     let result = [...perksData];
@@ -80,6 +97,9 @@ export default function BrowsePage() {
     return result;
   }, [search, category, providerType, sort]);
 
+  const visiblePerks = filteredPerks.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredPerks.length;
+
   return (
     <div className="min-h-screen">
       {/* Header with card images */}
@@ -111,28 +131,36 @@ export default function BrowsePage() {
 
       <div className="mx-auto max-w-7xl px-6 py-8 lg:px-10">
         <div className="mb-6">
-          <SearchBar value={search} onChange={setSearch} />
+          <SearchBar value={search} onChange={(val) => { setSearch(val); setVisibleCount(PAGE_SIZE); }} />
         </div>
 
         <div className="mb-5">
-          <CategoryFilter selected={category} onChange={setCategory} />
+          <CategoryFilter selected={category} onChange={(val) => { setCategory(val); setVisibleCount(PAGE_SIZE); }} />
         </div>
 
         <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap gap-2">
-            {providerTypes.map((pt) => (
-              <button
-                key={pt.id}
-                onClick={() => setProviderType(pt.id)}
-                className={`rounded-full border px-4 py-2 text-[13px] font-medium transition-all ${
-                  providerType === pt.id
-                    ? "border-dark bg-dark text-white"
-                    : "border-border bg-surface text-ink-muted hover:text-ink hover:border-ink-muted"
-                }`}
+          {/* Provider type as dropdown instead of 14 buttons */}
+          <div className="flex items-center gap-3">
+            <div className="relative">
+              <select
+                value={providerType}
+                onChange={(e) => { setProviderType(e.target.value); setVisibleCount(PAGE_SIZE); }}
+                className="appearance-none rounded-xl border border-border bg-surface py-2.5 pl-4 pr-9 text-[13px] font-medium text-ink outline-none cursor-pointer focus:border-primary/50"
               >
-                {pt.label}
+                {providerTypes.map((pt) => (
+                  <option key={pt.id} value={pt.id}>{pt.label}</option>
+                ))}
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-ink-muted" />
+            </div>
+            {providerType !== "all" && (
+              <button
+                onClick={() => { setProviderType("all"); setVisibleCount(PAGE_SIZE); }}
+                className="text-xs font-medium text-ink-muted hover:text-ink transition-colors"
+              >
+                Clear
               </button>
-            ))}
+            )}
           </div>
 
           <div className="flex items-center gap-2 rounded-xl border border-border bg-surface px-3 py-2">
@@ -149,18 +177,30 @@ export default function BrowsePage() {
           </div>
         </div>
 
-        {filteredPerks.length > 0 ? (
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredPerks.map((perk, i) => (
-              <PerkCard key={perk.id} perk={perk} index={i} />
-            ))}
-          </div>
+        {visiblePerks.length > 0 ? (
+          <>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {visiblePerks.map((perk, i) => (
+                <PerkCard key={perk.id} perk={perk} index={i} />
+              ))}
+            </div>
+            {hasMore && (
+              <div className="mt-10 text-center">
+                <button
+                  onClick={() => setVisibleCount((prev) => prev + PAGE_SIZE)}
+                  className="rounded-full border border-border bg-surface px-8 py-3 text-sm font-semibold text-ink transition-all hover:border-ink-muted hover:shadow-sm"
+                >
+                  Show more ({filteredPerks.length - visibleCount} remaining)
+                </button>
+              </div>
+            )}
+          </>
         ) : (
           <div className="rounded-2xl border-2 border-dashed border-border bg-surface py-20 text-center">
             <p className="text-base font-medium text-ink-muted">No perks match your filters</p>
             <p className="mt-1 text-sm text-ink-faint">Try broadening your search</p>
             <button
-              onClick={() => { setSearch(""); setCategory("all"); setProviderType("all"); }}
+              onClick={() => { setSearch(""); setCategory("all"); setProviderType("all"); setVisibleCount(PAGE_SIZE); }}
               className="mt-5 rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white"
             >
               Clear all filters

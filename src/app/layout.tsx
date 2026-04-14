@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import IntroOverlay from "@/components/IntroOverlay";
 
 const inter = Inter({
   variable: "--font-body",
@@ -29,7 +28,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
       <body className="min-h-screen bg-cream text-ink antialiased">
-        <IntroOverlay />
         <Navbar />
         <main>{children}</main>
       </body>

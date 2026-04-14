@@ -172,26 +172,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== SEARCH + QUICK FILTERS ===== */}
-      <section className="mx-auto max-w-3xl px-6 py-14 text-center">
-        <h2
-          className="mb-3 text-3xl md:text-4xl tracking-tight animate-fade-up"
-          style={{ fontFamily: "var(--font-serif)" }}
-        >
-          What are you looking for?
-        </h2>
-        <p className="mb-8 text-sm text-ink-muted">
-          Search across {perksData.length} perks from {providersData.length} providers
-        </p>
-        <SearchBar value={search} onChange={setSearch} large />
-      </section>
-
       {/* ===== BENTO STATS ===== */}
-      <section className="mx-auto max-w-7xl px-6 pb-16 lg:px-10">
+      <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            { value: 206, suffix: "+", label: "Perks tracked", sub: "and growing weekly" },
-            { value: 67, suffix: "", label: "Providers", sub: "cards, apps, restaurants & more" },
+            { value: perksData.length, suffix: "+", label: "Perks tracked", sub: "and growing weekly" },
+            { value: providersData.length, suffix: "", label: "Providers", sub: "cards, apps, restaurants & more" },
             { value: 14, suffix: "", label: "Categories", sub: "travel to fast food" },
             { value: 250, suffix: "k", label: "Total value", sub: "in potential savings", prefix: "$" },
           ].map((stat, i) => (
@@ -234,8 +220,11 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mb-8 mt-6">
+          <div className="mb-6 mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <CategoryFilter selected={category} onChange={setCategory} />
+            <div className="w-full sm:w-64">
+              <SearchBar value={search} onChange={setSearch} placeholder="Search perks..." />
+            </div>
           </div>
 
           {featuredPerks.length > 0 ? (
@@ -352,16 +341,42 @@ export default function Home() {
 
       {/* ===== FOOTER ===== */}
       <footer className="border-t border-border/60">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row lg:px-10">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/logo.png"
-            alt="Perk.AI"
-            className="h-5 w-auto rounded"
-          />
-          <p className="text-xs text-ink-muted">
-            Not affiliated with any listed providers. For informational purposes only, not financial advice.
-          </p>
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10">
+          <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+            <div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/logo.png"
+                alt="Perk.AI"
+                className="mb-3 h-6 w-auto rounded"
+              />
+              <p className="max-w-sm text-xs leading-relaxed text-ink-muted">
+                Perk.ai helps you discover and track every benefit from your credit cards,
+                subscriptions, and memberships. We are not a financial advisor.
+              </p>
+            </div>
+            <div className="flex gap-10">
+              <div>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-ink">Product</p>
+                <ul className="space-y-1.5 text-xs text-ink-muted">
+                  <li><Link href="/browse" className="hover:text-ink transition-colors">Browse Perks</Link></li>
+                  <li><Link href="/my-perks" className="hover:text-ink transition-colors">My Perks</Link></li>
+                </ul>
+              </div>
+              <div>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-ink">Legal</p>
+                <ul className="space-y-1.5 text-xs text-ink-muted">
+                  <li><span className="cursor-default">Privacy Policy</span></li>
+                  <li><span className="cursor-default">Terms of Service</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-border/60 pt-5">
+            <p className="text-[11px] text-ink-faint">
+              &copy; {new Date().getFullYear()} Perk.ai. Not affiliated with any listed providers. All trademarks belong to their respective owners.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
