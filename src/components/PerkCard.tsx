@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, Clock } from "lucide-react";
-import { providerLogos, providerCardImages } from "@/data/imageMap";
+import { providerLogos } from "@/data/imageMap";
 
 interface Perk {
   id: string;
@@ -32,8 +32,6 @@ function BrandLogo({ provider, size = 24 }: { provider: string; size?: number })
 }
 
 export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: number }) {
-  const cardSrc = providerCardImages[perk.provider];
-
   const isExpiring =
     perk.expiration &&
     new Date(perk.expiration) < new Date(Date.now() + 90 * 24 * 60 * 60 * 1000);
@@ -45,18 +43,6 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
       style={{ animationDelay: `${index * 60}ms` }}
     >
       <div className="card-hover relative h-full overflow-hidden rounded-2xl bg-surface border border-border/70">
-        {/* Card image strip at top if credit card */}
-        {cardSrc && (
-          <div className="relative h-36 overflow-hidden bg-surface-alt">
-            <Image
-              src={cardSrc}
-              alt={perk.provider}
-              fill
-              className="object-contain transition-transform duration-500 group-hover:scale-105"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            />
-          </div>
-        )}
 
         <div className="p-5">
           {/* Provider row */}
