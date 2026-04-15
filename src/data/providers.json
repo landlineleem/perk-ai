@@ -101,7 +101,7 @@
   { "id": "lowes", "name": "Lowe's", "type": "retail", "logo": "/images/brands/lowes.png", "cardImage": null, "color": "#004990" },
   { "id": "nordstrom", "name": "Nordstrom", "type": "retail", "logo": "/images/brands/nordstrom.png", "cardImage": null, "color": "#000000" },
   { "id": "macys", "name": "Macy's", "type": "retail", "logo": "/images/brands/macys.png", "cardImage": null, "color": "#E21A2C" },
-  { "id": "ulta-beauty", "name": "Ulta Beauty", "type": "retail", "logo": "/images/brands/ulta.svg", "cardImage": null, "color": "#F57224" },
+  { "id": "ulta-beauty", "name": "Ulta Beauty", "type": "retail", "logo": "/images/brands/ulta.png", "cardImage": null, "color": "#F57224" },
 
   { "id": "safeway", "name": "Safeway", "type": "grocery", "logo": "/images/brands/safeway.png", "cardImage": null, "color": "#E8372C" },
   { "id": "albertsons", "name": "Albertsons", "type": "grocery", "logo": "/images/brands/albertsons.png", "cardImage": null, "color": "#0072CE" },
