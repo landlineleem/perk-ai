@@ -119,7 +119,7 @@
   { "id": "sofi", "name": "SoFi", "type": "fintech", "logo": "/images/brands/sofi.svg", "cardImage": null, "color": "#6BCDDB" },
 
   { "id": "chase-bank", "name": "Chase Bank", "type": "bank", "logo": "/images/brands/chase.svg", "cardImage": null, "color": "#003087" },
-  { "id": "bank-of-america", "name": "Bank of America", "type": "bank", "logo": "/images/brands/bankofamerica.svg", "cardImage": null, "color": "#012169" },
+  { "id": "bank-of-america", "name": "Bank of America", "type": "bank", "logo": "/images/brands/bankofamerica.png", "cardImage": null, "color": "#012169" },
   { "id": "wells-fargo", "name": "Wells Fargo", "type": "bank", "logo": "/images/brands/wellsfargo.svg", "cardImage": null, "color": "#D71E28" },
 
   { "id": "expedia", "name": "Expedia", "type": "subscription", "logo": "/images/brands/expedia.svg", "cardImage": null, "color": "#FBCE00" }
