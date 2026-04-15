@@ -250,9 +250,9 @@ Copy this to `src/data/providers.json`:
 
 The perks data is **188 perks across 5,310 lines of JSON**. It is too large to embed inline in a markdown file.
 
-**The complete file is included alongside this document as `perks-complete-data.json`.**
+**The complete file is included alongside this document as `perks-complete-data.md`** (JSON wrapped in a markdown code block).
 
-Copy it to `src/data/perks.json` in your project.
+Copy the JSON content to `src/data/perks.json` in your project.
 
 ### Perks Summary Statistics
 
@@ -422,9 +422,9 @@ const nextConfig = {
 
 1. **Copy the image files** — The `/public/images/` directory with all brand logos, card images, and site logos must be present. These are binary files that cannot be generated from this document.
 
-2. **Copy `perks-complete-data.json`** — This file (alongside this document in `/docs/`) contains the complete 188 perks. Copy it to `src/data/perks.json`.
+2. **Copy `perks-complete-data.md`** — This file (alongside this document in `/docs/`) contains the complete 188 perks inside a JSON code block. Copy the JSON content to `src/data/perks.json`.
 
-3. **Copy `providers-complete-data.json`** — This file contains all 81 providers. Copy it to `src/data/providers.json`.
+3. **Copy `providers-complete-data.md`** — This file contains all 81 providers inside a JSON code block. Copy the JSON content to `src/data/providers.json`.
 
 4. **Provider name matching is critical** — The `provider` field in each perk MUST exactly match the `name` field of a provider in `providers.json`. If they don't match, the logo won't display and the My Perks page won't correctly filter perks.
 

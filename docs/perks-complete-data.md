@@ -1,3 +1,8 @@
+# Complete Perks Data
+
+> Copy everything inside the JSON code block below to `src/data/perks.json`
+
+```json
 [
   {
     "id": "amex-platinum-airline-credit",
@@ -5308,3 +5313,4 @@
     "dateAdded": "2024-04-15"
   }
 ]
+```

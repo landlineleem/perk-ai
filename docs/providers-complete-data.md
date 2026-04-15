@@ -1,3 +1,8 @@
+# Complete Providers Data
+
+> Copy everything inside the JSON code block below to `src/data/providers.json`
+
+```json
 [
   { "id": "amex-platinum", "name": "Amex Platinum", "type": "credit-card", "logo": "/images/brands/amex.svg", "cardImage": "/images/cards/amex-platinum.jpg", "color": "#C4B590" },
   { "id": "amex-gold", "name": "Amex Gold", "type": "credit-card", "logo": "/images/brands/amex.svg", "cardImage": "/images/cards/amex-gold.jpg", "color": "#D4A843" },
@@ -79,3 +84,4 @@
   { "id": "t-mobile", "name": "T-Mobile", "type": "subscription", "logo": "/images/brands/tmobile.png", "cardImage": null, "color": "#E20074" },
   { "id": "walmart-plus", "name": "Walmart+", "type": "subscription", "logo": "/images/brands/walmart.png", "cardImage": null, "color": "#0071CE" }
 ]
+```
