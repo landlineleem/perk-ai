@@ -44,7 +44,36 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
   );
 }
 
+const providerTypeLabels: Record<string, string> = {
+  "credit-card": "Credit Cards",
+  "restaurant": "Restaurants",
+  "airline": "Airlines",
+  "hotel": "Hotels",
+  "streaming": "Streaming",
+  "retail": "Retail",
+  "grocery": "Grocery",
+  "rideshare": "Rideshare & Delivery",
+  "fintech": "Fintech",
+  "subscription": "Subscriptions",
+  "membership": "Memberships",
+  "bank": "Banks",
+  "fitness": "Fitness",
+};
+
+const typeOrder = [
+  "credit-card", "restaurant", "airline", "hotel", "streaming",
+  "subscription", "retail", "grocery", "rideshare", "membership",
+  "fintech", "bank", "fitness",
+];
+
 export default function Home() {
+  const groupedProviders = typeOrder
+    .map((type) => ({
+      type,
+      label: providerTypeLabels[type] || type,
+      providers: providersData.filter((p) => p.type === type),
+    }))
+    .filter((g) => g.providers.length > 0);
 
   return (
     <div className="min-h-screen">
@@ -172,10 +201,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== PROVIDERS GRID ===== */}
+      {/* ===== PROVIDERS GROUPED BY TYPE ===== */}
       <section className="bg-surface-alt border-y border-border/60">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-          <div className="mb-8 flex items-end justify-between">
+          <div className="mb-10 flex items-end justify-between">
             <div>
               <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
                 Providers
@@ -184,7 +213,7 @@ export default function Home() {
                 className="text-3xl tracking-tight md:text-4xl"
                 style={{ fontFamily: "var(--font-serif)" }}
               >
-                Explore by provider
+                Explore by category
               </h2>
             </div>
             <Link
@@ -196,40 +225,62 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-            {providersData.map((provider, i) => {
-              const providerPerks = perksData.filter(
-                (p) => p.provider === provider.name
+          <div className="space-y-10">
+            {groupedProviders.map((group) => {
+              const groupPerkCount = group.providers.reduce(
+                (sum, prov) => sum + perksData.filter((p) => p.provider === prov.name).length,
+                0
               );
               return (
-                <Link
-                  href={`/browse?provider=${provider.id}`}
-                  key={provider.id}
-                  className="group block animate-fade-up"
-                  style={{ animationDelay: `${i * 30}ms` }}
-                >
-                  <div className="card-hover flex flex-col items-center gap-3 rounded-2xl bg-surface border border-border/70 p-5 text-center">
-                    {provider.cardImage ? (
-                      <Image
-                        src={provider.cardImage}
-                        alt={provider.name}
-                        width={80}
-                        height={50}
-                        className="rounded object-contain"
-                      />
-                    ) : (
-                      <BrandLogo provider={provider.name} size={36} />
-                    )}
-                    <div>
-                      <h3 className="text-sm font-semibold text-ink group-hover:text-primary transition-colors">
-                        {provider.name}
-                      </h3>
-                      <p className="text-[11px] text-ink-muted mt-0.5">
-                        {providerPerks.length} perk{providerPerks.length !== 1 ? "s" : ""}
-                      </p>
-                    </div>
+                <div key={group.type}>
+                  <div className="mb-4 flex items-center gap-3">
+                    <h3
+                      className="text-lg font-bold text-ink"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      {group.label}
+                    </h3>
+                    <span className="rounded-full bg-surface px-2.5 py-0.5 text-[11px] font-semibold text-ink-muted border border-border/70">
+                      {groupPerkCount} perk{groupPerkCount !== 1 ? "s" : ""}
+                    </span>
                   </div>
-                </Link>
+                  <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                    {group.providers.map((provider) => {
+                      const providerPerks = perksData.filter(
+                        (p) => p.provider === provider.name
+                      );
+                      return (
+                        <Link
+                          href={`/browse?provider=${provider.id}`}
+                          key={provider.id}
+                          className="group block"
+                        >
+                          <div className="card-hover flex flex-col items-center gap-2.5 rounded-2xl bg-surface border border-border/70 p-4 text-center">
+                            {provider.cardImage ? (
+                              <Image
+                                src={provider.cardImage}
+                                alt={provider.name}
+                                width={72}
+                                height={45}
+                                className="rounded object-contain"
+                              />
+                            ) : (
+                              <BrandLogo provider={provider.name} size={32} />
+                            )}
+                            <div>
+                              <h4 className="text-[13px] font-semibold text-ink group-hover:text-primary transition-colors leading-tight">
+                                {provider.name}
+                              </h4>
+                              <p className="text-[11px] text-ink-muted mt-0.5">
+                                {providerPerks.length} perk{providerPerks.length !== 1 ? "s" : ""}
+                              </p>
+                            </div>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
               );
             })}
           </div>
