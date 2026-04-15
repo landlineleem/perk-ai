@@ -116,61 +116,106 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right — phone mockup with floating widgets (perk.com style) */}
-          <div className="relative hidden lg:block" style={{ height: 520 }}>
-            {/* Main phone — center */}
+          {/* Right — iPhone mockup with floating widgets (perk.com style) */}
+          <div className="relative hidden lg:block" style={{ height: 600 }}>
+            {/* Main phone — center, iPhone proportions */}
             <div className="absolute left-1/2 -translate-x-1/2 bottom-0 animate-hero-device">
-              <div className="hero-phone relative">
-                <div className="hero-phone-notch" />
-                <div className="hero-phone-screen">
-                  {/* App header */}
-                  <div className="bg-dark px-5 pt-9 pb-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="text-[10px] font-semibold text-white/30 uppercase tracking-wider">My Perks</div>
-                      <div className="h-6 w-6 rounded-full bg-white/10" />
+              <div className="relative" style={{ width: 320 }}>
+                {/* Phone bezel */}
+                <div className="rounded-[48px] bg-[#1a1a1a] p-[10px]" style={{ boxShadow: '0 0 0 1px rgba(255,255,255,0.08), 0 60px 120px -20px rgba(0,0,0,0.6), 0 30px 60px -15px rgba(0,0,0,0.35)' }}>
+                  {/* Notch */}
+                  <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[100px] h-[28px] bg-[#1a1a1a] rounded-b-[18px] z-20" />
+                  {/* Screen */}
+                  <div className="rounded-[40px] overflow-hidden" style={{ aspectRatio: '9 / 19.5' }}>
+                    {/* App header — dark */}
+                    <div className="bg-dark px-5 pt-10 pb-4">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-[11px] font-semibold text-white/40 uppercase tracking-wider">My Perks</div>
+                        <div className="flex items-center gap-2">
+                          <div className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center">
+                            <svg className="h-3.5 w-3.5 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-[10px] text-white/30 mb-1">Estimated annual value</div>
+                      <div className="text-[30px] font-bold text-white tracking-tight leading-none" style={{ fontFamily: "var(--font-display)" }}>$12,450</div>
+                      <div className="mt-3 flex gap-2">
+                        <div className="rounded-full bg-primary/20 px-3 py-1 text-[9px] font-semibold text-primary-light">5 providers</div>
+                        <div className="rounded-full bg-white/8 px-3 py-1 text-[9px] font-medium text-white/35">32 perks</div>
+                      </div>
                     </div>
-                    <div className="text-[10px] text-white/35 mb-0.5">Estimated annual value</div>
-                    <div className="text-[26px] font-bold text-white tracking-tight" style={{ fontFamily: "var(--font-display)" }}>$12,450</div>
-                    <div className="mt-2 flex gap-2">
-                      <div className="rounded-full bg-primary/20 px-2.5 py-1 text-[8px] font-semibold text-primary-light">5 providers</div>
-                      <div className="rounded-full bg-white/10 px-2.5 py-1 text-[8px] font-medium text-white/40">32 perks</div>
-                    </div>
-                  </div>
-                  {/* Perk list */}
-                  <div className="px-3 py-3 space-y-1.5 bg-[#F6F6F2]">
-                    <div className="text-[8px] font-semibold text-ink-muted uppercase tracking-wider px-1 mb-1">Travel</div>
-                    {perksData.filter(p => p.popular && p.category === "Travel").slice(0, 2).map(perk => (
-                      <div key={perk.id} className="flex items-center gap-2 rounded-[10px] bg-white p-2.5">
-                        <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-surface-alt">
-                          <BrandLogo provider={perk.provider} size={16} />
+
+                    {/* Perk list — one per category, with card image for Amex Gold */}
+                    <div className="bg-[#F5F5F1] px-3.5 py-3 space-y-1.5 flex-1">
+                      {/* Featured: Amex Gold with card image */}
+                      <div className="rounded-2xl bg-white p-3 border border-[#E8E6DE]">
+                        <div className="flex items-center gap-2 mb-2">
+                          <BrandLogo provider="Amex Gold" size={16} />
+                          <span className="text-[9px] font-semibold text-ink-muted">Amex Gold</span>
+                          <span className="ml-auto text-[9px] font-bold text-primary">4X points</span>
+                        </div>
+                        <div className="rounded-lg overflow-hidden mb-2">
+                          <Image src="/images/cards/amex-gold.jpg" alt="Amex Gold" width={400} height={252} className="w-full object-cover" />
+                        </div>
+                        <div className="text-[10px] font-semibold text-ink leading-tight">4X Points on Dining</div>
+                        <div className="text-[8px] text-ink-muted mt-0.5">Earn 4X at restaurants worldwide</div>
+                      </div>
+
+                      {/* Chick-fil-A */}
+                      <div className="flex items-center gap-2.5 rounded-xl bg-white p-2.5 border border-[#E8E6DE]">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-alt flex-shrink-0">
+                          <BrandLogo provider="Chick-fil-A" size={18} />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-[10px] font-semibold text-ink truncate leading-tight">{perk.title}</div>
-                          <div className="text-[8px] text-ink-muted mt-0.5">{perk.provider}</div>
+                          <div className="text-[10px] font-semibold text-ink truncate">Free Chick-fil-A Rewards</div>
+                          <div className="text-[8px] text-ink-muted">Chick-fil-A</div>
                         </div>
-                        <div className="text-[10px] font-bold text-primary">{perk.value}</div>
+                        <div className="text-[10px] font-bold text-primary">Free</div>
                       </div>
-                    ))}
-                    <div className="text-[8px] font-semibold text-ink-muted uppercase tracking-wider px-1 mt-2 mb-1">Food &amp; Dining</div>
-                    {perksData.filter(p => p.popular && p.category === "Food").slice(0, 2).map(perk => (
-                      <div key={perk.id} className="flex items-center gap-2 rounded-[10px] bg-white p-2.5">
-                        <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-surface-alt">
-                          <BrandLogo provider={perk.provider} size={16} />
+
+                      {/* Netflix */}
+                      <div className="flex items-center gap-2.5 rounded-xl bg-white p-2.5 border border-[#E8E6DE]">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-alt flex-shrink-0">
+                          <BrandLogo provider="Netflix" size={18} />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-[10px] font-semibold text-ink truncate leading-tight">{perk.title}</div>
-                          <div className="text-[8px] text-ink-muted mt-0.5">{perk.provider}</div>
+                          <div className="text-[10px] font-semibold text-ink truncate">Netflix Standard w/ Ads</div>
+                          <div className="text-[8px] text-ink-muted">Netflix</div>
                         </div>
-                        <div className="text-[10px] font-bold text-primary">{perk.value}</div>
+                        <div className="text-[10px] font-bold text-primary">$6.99/mo</div>
                       </div>
-                    ))}
+
+                      {/* Nike */}
+                      <div className="flex items-center gap-2.5 rounded-xl bg-white p-2.5 border border-[#E8E6DE]">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-alt flex-shrink-0">
+                          <BrandLogo provider="Nike" size={18} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-[10px] font-semibold text-ink truncate">Nike Member Rewards</div>
+                          <div className="text-[8px] text-ink-muted">Nike</div>
+                        </div>
+                        <div className="text-[10px] font-bold text-primary">Free</div>
+                      </div>
+
+                      {/* Costco */}
+                      <div className="flex items-center gap-2.5 rounded-xl bg-white p-2.5 border border-[#E8E6DE]">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-alt flex-shrink-0">
+                          <BrandLogo provider="Costco" size={18} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-[10px] font-semibold text-ink truncate">2% Executive Rewards</div>
+                          <div className="text-[8px] text-ink-muted">Costco</div>
+                        </div>
+                        <div className="text-[10px] font-bold text-primary">2% back</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Floating widget — top left: total savings */}
-            <div className="absolute left-0 top-[5%] animate-hero-widget delay-1000" style={{ animationFillMode: 'both' }}>
+            <div className="absolute left-[-8%] top-[3%] animate-hero-widget delay-1000" style={{ animationFillMode: 'both' }}>
               <div className="hero-widget animate-gentle-float flex items-center gap-3">
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-subtle">
                   <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -182,13 +227,13 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Floating widget — top right: provider count */}
-            <div className="absolute right-0 top-[12%] animate-hero-widget delay-1300" style={{ animationFillMode: 'both' }}>
+            {/* Floating widget — top right: provider logos */}
+            <div className="absolute right-[-5%] top-[10%] animate-hero-widget delay-1300" style={{ animationFillMode: 'both' }}>
               <div className="hero-widget animate-gentle-float flex items-center gap-3" style={{ animationDelay: '1s' }}>
                 <div className="flex -space-x-1.5">
-                  {perksData.filter(p => p.popular).slice(0, 3).map(p => (
-                    <div key={p.id} className="flex h-7 w-7 items-center justify-center rounded-full bg-surface-alt border-2 border-white">
-                      <BrandLogo provider={p.provider} size={14} />
+                  {["Starbucks", "Netflix", "Nike"].map(name => (
+                    <div key={name} className="flex h-7 w-7 items-center justify-center rounded-full bg-surface-alt border-2 border-white">
+                      <BrandLogo provider={name} size={14} />
                     </div>
                   ))}
                 </div>
@@ -199,8 +244,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Floating widget — bottom left: perk alert */}
-            <div className="absolute left-[-5%] bottom-[18%] animate-hero-widget delay-1500" style={{ animationFillMode: 'both' }}>
+            {/* Floating widget — mid left: perk alert */}
+            <div className="absolute left-[-12%] top-[50%] animate-hero-widget delay-1500" style={{ animationFillMode: 'both' }}>
               <div className="hero-widget animate-gentle-float flex items-center gap-3" style={{ animationDelay: '2s' }}>
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gold-subtle">
                   <svg className="h-4 w-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
@@ -212,8 +257,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Floating widget — bottom right: category */}
-            <div className="absolute right-[-2%] bottom-[25%] animate-hero-widget delay-1800" style={{ animationFillMode: 'both' }}>
+            {/* Floating widget — mid right: categories */}
+            <div className="absolute right-[-8%] top-[55%] animate-hero-widget delay-1800" style={{ animationFillMode: 'both' }}>
               <div className="hero-widget animate-gentle-float flex items-center gap-2.5" style={{ animationDelay: '3s' }}>
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-subtle">
                   <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
