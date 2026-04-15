@@ -39,7 +39,7 @@ body {
   color: white;
 }
 
-/* Page animations */
+/* ======= ANIMATIONS ======= */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
@@ -60,28 +60,50 @@ body {
   to { transform: translateX(-50%); }
 }
 
-@keyframes marquee-slow {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+/* Hero device entrance — perk.com style cubic bezier */
+@keyframes heroDeviceIn {
+  from { opacity: 0; transform: translateY(60px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Hero floating widget entrance */
+@keyframes heroWidgetIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Subtle continuous float for widgets */
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 .animate-fade-up { animation: fadeUp 0.5s ease-out both; }
 .animate-fade-in { animation: fadeIn 0.4s ease-out both; }
 .animate-slide-cards { animation: slideCards 0.8s ease-out both; }
+.animate-hero-device { animation: heroDeviceIn 2.5s cubic-bezier(0.985, 0.005, 0.425, 1) both; }
+.animate-hero-widget { animation: heroWidgetIn 1s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-gentle-float { animation: gentleFloat 5s ease-in-out infinite; }
 
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
 .delay-400 { animation-delay: 400ms; }
 .delay-500 { animation-delay: 500ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-1000 { animation-delay: 1000ms; }
+.delay-1300 { animation-delay: 1300ms; }
+.delay-1500 { animation-delay: 1500ms; }
+.delay-1800 { animation-delay: 1800ms; }
+.delay-2000 { animation-delay: 2000ms; }
 
-/* Scrollbar */
+/* ======= SCROLLBAR ======= */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #C4C4BC; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #7A7A72; }
 
-/* Card hover with subtle tilt */
+/* ======= CARD HOVER ======= */
 .card-hover {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -90,7 +112,7 @@ body {
   box-shadow: 0 12px 40px rgba(0,0,0,0.08);
 }
 
-/* Marquee for scrolling logos */
+/* ======= MARQUEE ======= */
 .marquee-track {
   display: flex;
   animation: marquee 60s linear infinite;
@@ -98,6 +120,48 @@ body {
 }
 .marquee-track:hover {
   animation-play-state: paused;
+}
+
+/* ======= HERO DEVICE ======= */
+.hero-phone {
+  width: 280px;
+  border-radius: 40px;
+  background: #1a1a1a;
+  padding: 10px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.06),
+    0 50px 100px -20px rgba(0,0,0,0.5),
+    0 25px 50px -15px rgba(0,0,0,0.3);
+}
+
+.hero-phone-screen {
+  border-radius: 32px;
+  overflow: hidden;
+  background: #FAFAF7;
+}
+
+.hero-phone-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 24px;
+  background: #1a1a1a;
+  border-radius: 0 0 16px 16px;
+  z-index: 10;
+}
+
+/* Floating widget cards around the phone */
+.hero-widget {
+  background: white;
+  border-radius: 16px;
+  padding: 12px 16px;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.04),
+    0 8px 30px rgba(0,0,0,0.08),
+    0 2px 8px rgba(0,0,0,0.04);
+  filter: drop-shadow(0 0 20px rgba(0,0,0,0.04));
 }
 
 /* Image cards perspective */
