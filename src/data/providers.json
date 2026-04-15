@@ -105,7 +105,7 @@
 
   { "id": "safeway", "name": "Safeway", "type": "grocery", "logo": "/images/brands/safeway.png", "cardImage": null, "color": "#E8372C" },
   { "id": "albertsons", "name": "Albertsons", "type": "grocery", "logo": "/images/brands/albertsons.png", "cardImage": null, "color": "#0072CE" },
-  { "id": "heb", "name": "H-E-B", "type": "grocery", "logo": "/images/brands/heb.svg", "cardImage": null, "color": "#EE1C25" },
+  { "id": "heb", "name": "H-E-B", "type": "grocery", "logo": "/images/brands/heb.png", "cardImage": null, "color": "#EE1C25" },
 
   { "id": "equinox", "name": "Equinox", "type": "fitness", "logo": "/images/brands/equinox.png", "cardImage": null, "color": "#000000" },
   { "id": "orangetheory", "name": "Orangetheory", "type": "fitness", "logo": "/images/brands/orangetheory.webp", "cardImage": null, "color": "#F36F21" },
