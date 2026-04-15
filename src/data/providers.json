@@ -84,7 +84,7 @@
   { "id": "chase-sapphire-preferred", "name": "Chase Sapphire Preferred", "type": "credit-card", "logo": "/images/brands/chase.svg", "cardImage": null, "color": "#003087" },
   { "id": "wells-fargo-active-cash", "name": "Wells Fargo Active Cash", "type": "credit-card", "logo": "/images/brands/wellsfargo.png", "cardImage": null, "color": "#D71E28" },
 
-  { "id": "sams-club", "name": "Sam's Club", "type": "membership", "logo": "/images/brands/samsclub.svg", "cardImage": null, "color": "#0060A9" },
+  { "id": "sams-club", "name": "Sam's Club", "type": "membership", "logo": "/images/brands/samsclub.webp", "cardImage": null, "color": "#0060A9" },
   { "id": "bjs-wholesale", "name": "BJ's Wholesale", "type": "membership", "logo": "/images/brands/bjs.svg", "cardImage": null, "color": "#D31145" },
 
   { "id": "alaska-airlines", "name": "Alaska Airlines", "type": "airline", "logo": "/images/brands/alaskaairlines.svg", "cardImage": null, "color": "#01426A" },
