@@ -5306,5 +5306,121 @@
     ],
     "popular": true,
     "dateAdded": "2024-04-15"
+  },
+  {
+    "id": "lifetime-guest-passes",
+    "title": "Guest Passes",
+    "description": "Bring friends and family to experience Life Time with complimentary guest passes included with your membership.",
+    "fullDescription": "Life Time members receive complimentary guest passes each month, allowing friends and family to experience the club. Guests get full access to the fitness floor, pools, and group fitness classes. The number of passes varies by membership tier, with higher tiers receiving more monthly passes.",
+    "provider": "Life Time",
+    "providerType": "fitness",
+    "providerLogo": "🏋️",
+    "category": "Health",
+    "value": "Included",
+    "valueCents": 5000,
+    "expiration": null,
+    "claimUrl": "https://www.lifetime.life",
+    "claimSteps": [
+      "Log in to the Life Time member portal or app",
+      "Navigate to Guest Passes under your membership",
+      "Generate a guest pass for your friend or family member",
+      "Your guest presents the pass at the front desk",
+      "Guest enjoys full club access for the day"
+    ],
+    "tags": ["fitness", "gym", "guest", "health"],
+    "popular": true,
+    "dateAdded": "2024-04-15"
+  },
+  {
+    "id": "lifetime-pool-access",
+    "title": "Indoor & Outdoor Pool Access",
+    "description": "Full access to resort-style indoor and outdoor pools, waterslides, and whirlpools at Life Time locations.",
+    "fullDescription": "Life Time memberships include access to resort-style aquatic facilities at most locations. This includes indoor and outdoor pools, lap pools, waterslides, whirlpools, and kids' splash pads. Some locations feature rooftop pools and beach club-style amenities. Pool access is included with all membership tiers.",
+    "provider": "Life Time",
+    "providerType": "fitness",
+    "providerLogo": "🏋️",
+    "category": "Health",
+    "value": "Included",
+    "valueCents": 10000,
+    "expiration": null,
+    "claimUrl": "https://www.lifetime.life",
+    "claimSteps": [
+      "Visit any Life Time location with pool facilities",
+      "Check in with your membership at the front desk",
+      "Access indoor and outdoor pools during operating hours",
+      "Towel service is typically included"
+    ],
+    "tags": ["fitness", "pool", "swimming", "health"],
+    "popular": true,
+    "dateAdded": "2024-04-15"
+  },
+  {
+    "id": "lifetime-group-fitness",
+    "title": "Unlimited Group Fitness Classes",
+    "description": "Access to 100+ weekly group fitness classes including yoga, cycling, HIIT, pilates, and more.",
+    "fullDescription": "Life Time offers over 100 group fitness classes per week at most locations, all included with your membership. Classes range from yoga, pilates, and barre to high-intensity interval training, indoor cycling, and strength training. Classes are led by certified instructors and many locations offer signature programming like GTX, Alpha, and EDG.",
+    "provider": "Life Time",
+    "providerType": "fitness",
+    "providerLogo": "🏋️",
+    "category": "Health",
+    "value": "Included",
+    "valueCents": 15000,
+    "expiration": null,
+    "claimUrl": "https://www.lifetime.life",
+    "claimSteps": [
+      "Open the Life Time app",
+      "Browse the class schedule at your location",
+      "Reserve your spot in a class",
+      "Check in at the studio before class starts"
+    ],
+    "tags": ["fitness", "classes", "yoga", "cycling", "health"],
+    "popular": true,
+    "dateAdded": "2024-04-15"
+  },
+  {
+    "id": "lifetime-kids-activities",
+    "title": "Kids Academy & Child Care",
+    "description": "Complimentary child care while you work out, plus kids' programming including sports, arts, and swim lessons.",
+    "fullDescription": "Life Time's Kids Academy provides supervised child care for members' children while they use the club. Beyond basic child care, Life Time offers structured kids' programming including youth sports leagues, swim lessons, rock climbing, arts and crafts, and summer camps. Child care hours are generous, and the Kids Academy spaces are purpose-built with age-appropriate activities.",
+    "provider": "Life Time",
+    "providerType": "fitness",
+    "providerLogo": "🏋️",
+    "category": "Health",
+    "value": "Included",
+    "valueCents": 20000,
+    "expiration": null,
+    "claimUrl": "https://www.lifetime.life",
+    "claimSteps": [
+      "Register your children through the Life Time app or front desk",
+      "Drop off your kids at the Kids Academy when you arrive",
+      "Children are supervised in age-appropriate activities",
+      "Pick up your kids after your workout"
+    ],
+    "tags": ["fitness", "kids", "childcare", "family", "health"],
+    "popular": false,
+    "dateAdded": "2024-04-15"
+  },
+  {
+    "id": "lifetime-spa-discount",
+    "title": "LifeSpa Member Discounts",
+    "description": "Exclusive member pricing on salon and spa services including haircuts, massages, and facials at in-club LifeSpa locations.",
+    "fullDescription": "Life Time members receive discounted pricing on all LifeSpa services at in-club salon and spa locations. Services include haircuts, coloring, massages, facials, manicures, pedicures, and skin treatments. Member discounts typically range from 10-20% off standard pricing, and members can book appointments through the Life Time app.",
+    "provider": "Life Time",
+    "providerType": "fitness",
+    "providerLogo": "🏋️",
+    "category": "Health",
+    "value": "10-20% off",
+    "valueCents": 5000,
+    "expiration": null,
+    "claimUrl": "https://www.lifetime.life",
+    "claimSteps": [
+      "Open the Life Time app or visit the LifeSpa desk",
+      "Browse available spa and salon services",
+      "Book an appointment — member pricing is applied automatically",
+      "Enjoy your service at the in-club LifeSpa"
+    ],
+    "tags": ["fitness", "spa", "salon", "wellness", "health"],
+    "popular": false,
+    "dateAdded": "2024-04-15"
   }
 ]
