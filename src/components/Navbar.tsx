@@ -14,6 +14,7 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/browse", label: "Browse Perks" },
     { href: "/my-perks", label: "My Perks" },
+    { href: "/advisor", label: "Advisor" },
   ];
 
   return (

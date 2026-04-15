@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import ChatWidget from "@/components/ChatWidget";
 
 const inter = Inter({
   variable: "--font-body",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-cream text-ink antialiased">
         <Navbar />
         <main>{children}</main>
+        <ChatWidget />
       </body>
     </html>
   );
