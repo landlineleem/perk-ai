@@ -329,7 +329,7 @@ export default function Home() {
             <div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/logo-new.svg"
+                src="/images/logo-new.png"
                 alt="Perk.AI"
                 className="mb-3 h-6 w-auto"
               />
