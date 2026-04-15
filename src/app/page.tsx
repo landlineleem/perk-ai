@@ -77,136 +77,90 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* ===== HERO — asymmetric layout with card imagery ===== */}
+      {/* ===== HERO — centered layout like perk.com ===== */}
       <section className="relative overflow-hidden bg-dark text-white">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1fr_1fr] lg:px-10">
-          {/* Left — copy */}
-          <div className="relative z-10 max-w-xl">
-            <p
-              className="mb-5 text-sm font-medium tracking-widest uppercase text-primary-light animate-fade-up"
-            >
-              Stop leaving money on the table
-            </p>
+        <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 md:pt-24 md:pb-12 lg:px-10">
 
+          {/* Title — top, centered */}
+          <div className="text-center animate-fade-up">
             <h1
-              className="mb-6 text-[3.2rem] leading-[1.08] tracking-tight md:text-[4.2rem] animate-fade-up delay-100"
+              className="text-[2.8rem] md:text-[4.5rem] lg:text-[5.5rem] leading-[1.02] tracking-tight font-bold"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Every perk you <span className="text-primary-light">deserve</span> to know
+              Discover the perks<br />you&apos;re <span className="text-primary-light">missing out on</span>
             </h1>
-
-            <p className="mb-10 text-base leading-relaxed text-white/50 max-w-md animate-fade-up delay-200">
-              Your credit cards, subscriptions, and memberships hold thousands in
-              hidden value. We surface every benefit so nothing goes to waste.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-4 animate-fade-up delay-300">
-              <Link
-                href="/my-perks"
-                className="rounded-full bg-primary px-7 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-primary-light"
-              >
-                Unlock My Perks
-              </Link>
-              <Link
-                href="/browse"
-                className="rounded-full border border-white/20 px-7 py-3.5 text-[15px] font-medium text-white/70 transition-all hover:border-white/40 hover:text-white"
-              >
-                Browse All
-              </Link>
-            </div>
           </div>
 
-          {/* Right — iPhone mockup with floating widgets (perk.com style) */}
-          <div className="relative hidden lg:block" style={{ height: 600 }}>
-            {/* Main phone — center, iPhone proportions */}
+          {/* Phone + floating widgets — center */}
+          <div className="relative mx-auto mt-12 md:mt-16" style={{ maxWidth: 680, height: 560 }}>
+            {/* Main phone */}
             <div className="absolute left-1/2 -translate-x-1/2 bottom-0 animate-hero-device">
-              <div className="relative" style={{ width: 320 }}>
-                {/* Phone bezel */}
-                <div className="rounded-[48px] bg-[#1a1a1a] p-[10px]" style={{ boxShadow: '0 0 0 1px rgba(255,255,255,0.08), 0 60px 120px -20px rgba(0,0,0,0.6), 0 30px 60px -15px rgba(0,0,0,0.35)' }}>
-                  {/* Notch */}
-                  <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[100px] h-[28px] bg-[#1a1a1a] rounded-b-[18px] z-20" />
-                  {/* Screen */}
-                  <div className="rounded-[40px] overflow-hidden" style={{ aspectRatio: '9 / 19.5' }}>
-                    {/* App header — dark */}
-                    <div className="bg-dark px-5 pt-10 pb-4">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="text-[11px] font-semibold text-white/40 uppercase tracking-wider">My Perks</div>
-                        <div className="flex items-center gap-2">
-                          <div className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center">
-                            <svg className="h-3.5 w-3.5 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                          </div>
-                        </div>
+              <div className="relative" style={{ width: 300 }}>
+                <div className="rounded-[44px] bg-[#1a1a1a] p-[10px]" style={{ boxShadow: '0 0 0 1px rgba(255,255,255,0.08), 0 60px 120px -20px rgba(0,0,0,0.6), 0 30px 60px -15px rgba(0,0,0,0.35)' }}>
+                  <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[90px] h-[26px] bg-[#1a1a1a] rounded-b-[16px] z-20" />
+                  <div className="rounded-[36px] overflow-hidden" style={{ aspectRatio: '9 / 19.5' }}>
+                    {/* App header */}
+                    <div className="bg-dark px-5 pt-9 pb-4">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="text-[10px] font-semibold text-white/40 uppercase tracking-wider">My Perks</div>
+                        <div className="h-6 w-6 rounded-full bg-white/10" />
                       </div>
-                      <div className="text-[10px] text-white/30 mb-1">Estimated annual value</div>
-                      <div className="text-[30px] font-bold text-white tracking-tight leading-none" style={{ fontFamily: "var(--font-display)" }}>$12,450</div>
-                      <div className="mt-3 flex gap-2">
-                        <div className="rounded-full bg-primary/20 px-3 py-1 text-[9px] font-semibold text-primary-light">5 providers</div>
-                        <div className="rounded-full bg-white/8 px-3 py-1 text-[9px] font-medium text-white/35">32 perks</div>
+                      <div className="text-[9px] text-white/30 mb-1">Estimated annual value</div>
+                      <div className="text-[28px] font-bold text-white tracking-tight leading-none" style={{ fontFamily: "var(--font-display)" }}>$12,450</div>
+                      <div className="mt-2 flex gap-1.5">
+                        <div className="rounded-full bg-primary/20 px-2.5 py-0.5 text-[8px] font-semibold text-primary-light">5 providers</div>
+                        <div className="rounded-full bg-white/8 px-2.5 py-0.5 text-[8px] font-medium text-white/35">32 perks</div>
                       </div>
                     </div>
-
-                    {/* Perk list — one per category, with card image for Amex Gold */}
-                    <div className="bg-[#F5F5F1] px-3.5 py-3 space-y-1.5 flex-1">
-                      {/* Featured: Amex Gold with card image */}
-                      <div className="rounded-2xl bg-white p-3 border border-[#E8E6DE]">
-                        <div className="flex items-center gap-2 mb-2">
-                          <BrandLogo provider="Amex Gold" size={16} />
-                          <span className="text-[9px] font-semibold text-ink-muted">Amex Gold</span>
-                          <span className="ml-auto text-[9px] font-bold text-primary">4X points</span>
+                    {/* Perk list */}
+                    <div className="bg-[#F5F5F1] px-3 py-2.5 space-y-1.5">
+                      {/* Amex Gold featured */}
+                      <div className="rounded-xl bg-white p-2.5 border border-[#E8E6DE]">
+                        <div className="flex items-center gap-1.5 mb-1.5">
+                          <BrandLogo provider="Amex Gold" size={14} />
+                          <span className="text-[8px] font-semibold text-ink-muted">Amex Gold</span>
+                          <span className="ml-auto text-[8px] font-bold text-primary">4X points</span>
                         </div>
-                        <div className="rounded-lg overflow-hidden mb-2">
+                        <div className="rounded-lg overflow-hidden mb-1.5">
                           <Image src="/images/cards/amex-gold.jpg" alt="Amex Gold" width={400} height={252} className="w-full object-cover" />
                         </div>
-                        <div className="text-[10px] font-semibold text-ink leading-tight">4X Points on Dining</div>
-                        <div className="text-[8px] text-ink-muted mt-0.5">Earn 4X at restaurants worldwide</div>
+                        <div className="text-[9px] font-semibold text-ink leading-tight">4X Points on Dining</div>
                       </div>
-
                       {/* Chick-fil-A */}
-                      <div className="flex items-center gap-2.5 rounded-xl bg-white p-2.5 border border-[#E8E6DE]">
-                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-alt flex-shrink-0">
-                          <BrandLogo provider="Chick-fil-A" size={18} />
-                        </div>
+                      <div className="flex items-center gap-2 rounded-lg bg-white p-2 border border-[#E8E6DE]">
+                        <div className="flex h-7 w-7 items-center justify-center rounded-md bg-surface-alt flex-shrink-0"><BrandLogo provider="Chick-fil-A" size={16} /></div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-[10px] font-semibold text-ink truncate">Free Chick-fil-A Rewards</div>
-                          <div className="text-[8px] text-ink-muted">Chick-fil-A</div>
+                          <div className="text-[9px] font-semibold text-ink truncate">Free Rewards</div>
+                          <div className="text-[7px] text-ink-muted">Chick-fil-A</div>
                         </div>
-                        <div className="text-[10px] font-bold text-primary">Free</div>
+                        <div className="text-[9px] font-bold text-primary">Free</div>
                       </div>
-
                       {/* Amazon Prime */}
-                      <div className="flex items-center gap-2.5 rounded-xl bg-white p-2.5 border border-[#E8E6DE]">
-                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-alt flex-shrink-0">
-                          <BrandLogo provider="Amazon Prime" size={18} />
-                        </div>
+                      <div className="flex items-center gap-2 rounded-lg bg-white p-2 border border-[#E8E6DE]">
+                        <div className="flex h-7 w-7 items-center justify-center rounded-md bg-surface-alt flex-shrink-0"><BrandLogo provider="Amazon Prime" size={16} /></div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-[10px] font-semibold text-ink truncate">Free Prime Delivery</div>
-                          <div className="text-[8px] text-ink-muted">Amazon Prime</div>
+                          <div className="text-[9px] font-semibold text-ink truncate">Free 2-Day Shipping</div>
+                          <div className="text-[7px] text-ink-muted">Amazon Prime</div>
                         </div>
-                        <div className="text-[10px] font-bold text-primary">$139/yr</div>
+                        <div className="text-[9px] font-bold text-primary">Included</div>
                       </div>
-
                       {/* Planet Fitness */}
-                      <div className="flex items-center gap-2.5 rounded-xl bg-white p-2.5 border border-[#E8E6DE]">
-                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-alt flex-shrink-0">
-                          <BrandLogo provider="Planet Fitness" size={18} />
-                        </div>
+                      <div className="flex items-center gap-2 rounded-lg bg-white p-2 border border-[#E8E6DE]">
+                        <div className="flex h-7 w-7 items-center justify-center rounded-md bg-surface-alt flex-shrink-0"><BrandLogo provider="Planet Fitness" size={16} /></div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-[10px] font-semibold text-ink truncate">Free Fitness Training</div>
-                          <div className="text-[8px] text-ink-muted">Planet Fitness</div>
+                          <div className="text-[9px] font-semibold text-ink truncate">Free Fitness Training</div>
+                          <div className="text-[7px] text-ink-muted">Planet Fitness</div>
                         </div>
-                        <div className="text-[10px] font-bold text-primary">Included</div>
+                        <div className="text-[9px] font-bold text-primary">Included</div>
                       </div>
-
                       {/* Costco */}
-                      <div className="flex items-center gap-2.5 rounded-xl bg-white p-2.5 border border-[#E8E6DE]">
-                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-alt flex-shrink-0">
-                          <BrandLogo provider="Costco" size={18} />
-                        </div>
+                      <div className="flex items-center gap-2 rounded-lg bg-white p-2 border border-[#E8E6DE]">
+                        <div className="flex h-7 w-7 items-center justify-center rounded-md bg-surface-alt flex-shrink-0"><BrandLogo provider="Costco" size={16} /></div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-[10px] font-semibold text-ink truncate">2% Executive Rewards</div>
-                          <div className="text-[8px] text-ink-muted">Costco</div>
+                          <div className="text-[9px] font-semibold text-ink truncate">2% Executive Rewards</div>
+                          <div className="text-[7px] text-ink-muted">Costco</div>
                         </div>
-                        <div className="text-[10px] font-bold text-primary">2% back</div>
+                        <div className="text-[9px] font-bold text-primary">2% back</div>
                       </div>
                     </div>
                   </div>
@@ -214,8 +168,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Floating widget — top left: total savings */}
-            <div className="absolute left-[-8%] top-[3%] animate-hero-widget delay-1000" style={{ animationFillMode: 'both' }}>
+            {/* Floating widgets */}
+            <div className="absolute left-0 top-[5%] animate-hero-widget delay-1000 hidden md:block" style={{ animationFillMode: 'both' }}>
               <div className="hero-widget animate-gentle-float flex items-center gap-3">
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-subtle">
                   <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -227,8 +181,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Floating widget — top right: provider logos */}
-            <div className="absolute right-[-5%] top-[10%] animate-hero-widget delay-1300" style={{ animationFillMode: 'both' }}>
+            <div className="absolute right-0 top-[12%] animate-hero-widget delay-1300 hidden md:block" style={{ animationFillMode: 'both' }}>
               <div className="hero-widget animate-gentle-float flex items-center gap-3" style={{ animationDelay: '1s' }}>
                 <div className="flex -space-x-1.5">
                   {["Starbucks", "Netflix", "Nike"].map(name => (
@@ -244,8 +197,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Floating widget — mid left: perk alert */}
-            <div className="absolute left-[-12%] top-[50%] animate-hero-widget delay-1500" style={{ animationFillMode: 'both' }}>
+            <div className="absolute left-[-2%] top-[50%] animate-hero-widget delay-1500 hidden md:block" style={{ animationFillMode: 'both' }}>
               <div className="hero-widget animate-gentle-float flex items-center gap-3" style={{ animationDelay: '2s' }}>
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gold-subtle">
                   <svg className="h-4 w-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
@@ -257,8 +209,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Floating widget — mid right: categories */}
-            <div className="absolute right-[-8%] top-[55%] animate-hero-widget delay-1800" style={{ animationFillMode: 'both' }}>
+            <div className="absolute right-0 top-[55%] animate-hero-widget delay-1800 hidden md:block" style={{ animationFillMode: 'both' }}>
               <div className="hero-widget animate-gentle-float flex items-center gap-2.5" style={{ animationDelay: '3s' }}>
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-subtle">
                   <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
@@ -270,11 +221,33 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Subtitle + CTAs — below phone, centered */}
+          <div className="relative z-10 text-center mt-8 md:mt-12">
+            <p className="text-base md:text-lg leading-relaxed text-white/40 max-w-lg mx-auto mb-8 animate-fade-up delay-300">
+              Your credit cards, subscriptions, and memberships hold thousands in
+              hidden value. We surface every benefit so nothing goes to waste.
+            </p>
+
+            <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-up delay-400">
+              <Link
+                href="/my-perks"
+                className="rounded-full bg-primary px-7 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-primary-light"
+              >
+                Unlock My Perks
+              </Link>
+              <Link
+                href="/browse"
+                className="rounded-full border border-white/20 px-7 py-3.5 text-[15px] font-medium text-white/70 transition-all hover:border-white/40 hover:text-white"
+              >
+                Browse All
+              </Link>
+            </div>
+          </div>
         </div>
 
-        {/* Ambient gradients */}
-        <div className="pointer-events-none absolute top-0 right-0 h-full w-1/2 bg-gradient-to-l from-primary/5 to-transparent" />
-        <div className="pointer-events-none absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-cream to-transparent" />
+        {/* Bottom fade to cream */}
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream to-transparent" />
       </section>
 
       {/* ===== PROVIDER LOGOS MARQUEE ===== */}
