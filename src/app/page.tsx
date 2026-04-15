@@ -6,7 +6,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import perksData from "@/data/perks.json";
 import providersData from "@/data/providers.json";
-import { uniqueBrands } from "@/data/imageMap";
+import { uniqueBrands, providerCardImages } from "@/data/imageMap";
 import { BrandLogo } from "@/components/PerkCard";
 
 function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: string }) {
@@ -256,7 +256,17 @@ export default function Home() {
                           className="group block"
                         >
                           <div className="card-hover flex flex-col items-center gap-2.5 rounded-2xl bg-surface border border-border/70 p-4 text-center">
-                            <BrandLogo provider={provider.name} size={32} />
+                            {provider.cardImage && provider.id !== "mercury-bank" ? (
+                              <Image
+                                src={provider.cardImage}
+                                alt={provider.name}
+                                width={72}
+                                height={45}
+                                className="rounded object-contain"
+                              />
+                            ) : (
+                              <BrandLogo provider={provider.name} size={32} />
+                            )}
                             <div>
                               <h4 className="text-[13px] font-semibold text-ink group-hover:text-primary transition-colors leading-tight">
                                 {provider.name}
