@@ -42,9 +42,9 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
       className="group block animate-fade-up"
       style={{ animationDelay: `${index * 60}ms` }}
     >
-      <div className="card-hover relative h-full overflow-hidden rounded-[26px] bg-surface border border-border/70 shadow-[0px_2px_8px_rgba(0,0,0,0.04)]">
+      <div className="card-hover relative h-full overflow-hidden rounded-2xl bg-surface border border-border/70">
 
-        <div className="p-6">
+        <div className="p-5">
           {/* Provider row */}
           <div className="mb-3 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
@@ -57,7 +57,7 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
           </div>
 
           {/* Title */}
-          <h3 className="mb-1.5 text-base font-semibold leading-snug text-ink group-hover:text-primary transition-colors">
+          <h3 className="mb-1.5 text-[15px] font-semibold leading-snug text-ink group-hover:text-primary transition-colors">
             {perk.title}
           </h3>
           <p className="mb-4 text-[13px] leading-relaxed text-ink-muted line-clamp-2">
@@ -65,7 +65,7 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
           </p>
 
           {/* Bottom */}
-          <div className="flex items-center justify-between pt-3 border-t border-border/40">
+          <div className="flex items-center justify-between pt-3 border-t border-border/50">
             <div className="flex items-center gap-2.5">
               <span className="text-base font-bold text-primary">{perk.value}</span>
               {isExpiring && (
@@ -75,7 +75,7 @@ export default function PerkCard({ perk, index = 0 }: { perk: Perk; index?: numb
                 </span>
               )}
             </div>
-            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary-subtle text-ink-muted transition-all group-hover:bg-primary group-hover:text-white">
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-surface-alt text-ink-muted transition-all group-hover:bg-primary group-hover:text-white">
               <ArrowUpRight className="h-3.5 w-3.5" />
             </div>
           </div>

@@ -23,8 +23,8 @@ export default function SearchBar({
         placeholder={placeholder}
         className={`w-full border border-border bg-surface text-ink placeholder-ink-faint outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/10 ${
           large
-            ? "rounded-full py-4 pl-12 pr-6 text-base shadow-lg shadow-black/5 shadow-[0px_2px_8px_rgba(0,0,0,0.04)]"
-            : "rounded-full py-3 pl-11 pr-4 text-sm shadow-[0px_2px_8px_rgba(0,0,0,0.04)]"
+            ? "rounded-full py-4 pl-12 pr-6 text-base shadow-lg shadow-black/5"
+            : "rounded-xl py-3 pl-11 pr-4 text-sm"
         }`}
       />
     </div>
