@@ -36,7 +36,7 @@
   { "id": "world-of-hyatt", "name": "World of Hyatt", "type": "hotel", "logo": "/images/brands/hyatt.png", "cardImage": null, "color": "#D4A76A" },
   { "id": "ihg-rewards", "name": "IHG Rewards", "type": "hotel", "logo": "/images/brands/ihg.png", "cardImage": null, "color": "#2D2926" },
 
-  { "id": "netflix", "name": "Netflix", "type": "streaming", "logo": "/images/brands/netflix.png", "cardImage": "/images/cards/netflix.jpg", "color": "#E50914" },
+  { "id": "netflix", "name": "Netflix", "type": "streaming", "logo": "/images/brands/netflix.svg", "cardImage": "/images/cards/netflix.jpg", "color": "#E50914" },
   { "id": "spotify-premium", "name": "Spotify Premium", "type": "subscription", "logo": "/images/brands/spotify.svg", "cardImage": null, "color": "#1DB954" },
   { "id": "disney-plus", "name": "Disney+", "type": "streaming", "logo": "/images/brands/disneyplus.png", "cardImage": null, "color": "#113CCF" },
   { "id": "hbo-max", "name": "HBO Max", "type": "streaming", "logo": "/images/brands/hbomax.png", "cardImage": null, "color": "#5822B4" },
