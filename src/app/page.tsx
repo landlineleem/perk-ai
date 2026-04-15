@@ -256,7 +256,7 @@ export default function Home() {
                           className="group block"
                         >
                           <div className="card-hover flex flex-col items-center gap-2.5 rounded-2xl bg-surface border border-border/70 p-4 text-center">
-                            {provider.cardImage && provider.id !== "mercury-bank" ? (
+                            {provider.cardImage && provider.type === "credit-card" ? (
                               <Image
                                 src={provider.cardImage}
                                 alt={provider.name}
