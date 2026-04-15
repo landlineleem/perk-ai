@@ -112,7 +112,7 @@
   { "id": "peloton", "name": "Peloton", "type": "fitness", "logo": "/images/brands/peloton.png", "cardImage": null, "color": "#000000" },
 
   { "id": "verizon", "name": "Verizon", "type": "subscription", "logo": "/images/brands/verizon.svg", "cardImage": null, "color": "#CD040B" },
-  { "id": "att", "name": "AT&T", "type": "subscription", "logo": "/images/brands/att.svg", "cardImage": null, "color": "#009FDB" },
+  { "id": "att", "name": "AT&T", "type": "subscription", "logo": "/images/brands/att.png", "cardImage": null, "color": "#009FDB" },
   { "id": "xfinity", "name": "Xfinity", "type": "subscription", "logo": "/images/brands/xfinity.svg", "cardImage": null, "color": "#000000" },
 
   { "id": "robinhood", "name": "Robinhood", "type": "fintech", "logo": "/images/brands/robinhood.png", "cardImage": null, "color": "#00C805" },
