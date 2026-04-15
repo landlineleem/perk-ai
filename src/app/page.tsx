@@ -173,28 +173,28 @@ export default function Home() {
                         <div className="text-[10px] font-bold text-primary">Free</div>
                       </div>
 
-                      {/* Netflix */}
+                      {/* Amazon Prime */}
                       <div className="flex items-center gap-2.5 rounded-xl bg-white p-2.5 border border-[#E8E6DE]">
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-alt flex-shrink-0">
-                          <BrandLogo provider="Netflix" size={18} />
+                          <BrandLogo provider="Amazon Prime" size={18} />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-[10px] font-semibold text-ink truncate">Netflix Standard w/ Ads</div>
-                          <div className="text-[8px] text-ink-muted">Netflix</div>
+                          <div className="text-[10px] font-semibold text-ink truncate">Free Prime Delivery</div>
+                          <div className="text-[8px] text-ink-muted">Amazon Prime</div>
                         </div>
-                        <div className="text-[10px] font-bold text-primary">$6.99/mo</div>
+                        <div className="text-[10px] font-bold text-primary">$139/yr</div>
                       </div>
 
-                      {/* Nike */}
+                      {/* Planet Fitness */}
                       <div className="flex items-center gap-2.5 rounded-xl bg-white p-2.5 border border-[#E8E6DE]">
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-alt flex-shrink-0">
-                          <BrandLogo provider="Nike" size={18} />
+                          <BrandLogo provider="Planet Fitness" size={18} />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-[10px] font-semibold text-ink truncate">Nike Member Rewards</div>
-                          <div className="text-[8px] text-ink-muted">Nike</div>
+                          <div className="text-[10px] font-semibold text-ink truncate">Free Fitness Training</div>
+                          <div className="text-[8px] text-ink-muted">Planet Fitness</div>
                         </div>
-                        <div className="text-[10px] font-bold text-primary">Free</div>
+                        <div className="text-[10px] font-bold text-primary">Included</div>
                       </div>
 
                       {/* Costco */}
