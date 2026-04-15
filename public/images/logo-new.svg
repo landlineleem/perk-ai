@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 100" fill="none">
   <defs>
     <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;display=swap');</style>
   </defs>
@@ -17,10 +17,6 @@
     <path d="M0,-28 C8,-22 10,-10 0,0" transform="rotate(300)"/>
     <path d="M0,-28 C8,-22 10,-10 0,0" transform="rotate(330)"/>
   </g>
-  <!-- PERK -->
-  <text x="85" y="76" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="80" letter-spacing="-1" fill="#0A0F1C">PERK</text>
-  <!-- . in teal -->
-  <text x="365" y="76" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="80" letter-spacing="-1" fill="#0D6E5E">.</text>
-  <!-- AI -->
-  <text x="390" y="76" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="80" letter-spacing="-1" fill="#0A0F1C">AI</text>
+  <!-- PERK.AI as one tight unit -->
+  <text x="85" y="76" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="80" letter-spacing="-1" fill="#0A0F1C">PERK<tspan fill="#0D6E5E">.</tspan>AI</text>
 </svg>
