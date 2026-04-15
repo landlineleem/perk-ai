@@ -82,7 +82,7 @@
   { "id": "discover-it", "name": "Discover It", "type": "credit-card", "logo": "/images/brands/discover.svg", "cardImage": null, "color": "#FF6600" },
   { "id": "amex-blue-cash", "name": "Amex Blue Cash", "type": "credit-card", "logo": "/images/brands/amex.svg", "cardImage": null, "color": "#006FCF" },
   { "id": "chase-sapphire-preferred", "name": "Chase Sapphire Preferred", "type": "credit-card", "logo": "/images/brands/chase.svg", "cardImage": null, "color": "#003087" },
-  { "id": "wells-fargo-active-cash", "name": "Wells Fargo Active Cash", "type": "credit-card", "logo": "/images/brands/wellsfargo.svg", "cardImage": null, "color": "#D71E28" },
+  { "id": "wells-fargo-active-cash", "name": "Wells Fargo Active Cash", "type": "credit-card", "logo": "/images/brands/wellsfargo.png", "cardImage": null, "color": "#D71E28" },
 
   { "id": "sams-club", "name": "Sam's Club", "type": "membership", "logo": "/images/brands/samsclub.svg", "cardImage": null, "color": "#0060A9" },
   { "id": "bjs-wholesale", "name": "BJ's Wholesale", "type": "membership", "logo": "/images/brands/bjs.svg", "cardImage": null, "color": "#D31145" },
@@ -120,7 +120,7 @@
 
   { "id": "chase-bank", "name": "Chase Bank", "type": "bank", "logo": "/images/brands/chase.svg", "cardImage": null, "color": "#003087" },
   { "id": "bank-of-america", "name": "Bank of America", "type": "bank", "logo": "/images/brands/bankofamerica.png", "cardImage": null, "color": "#012169" },
-  { "id": "wells-fargo", "name": "Wells Fargo", "type": "bank", "logo": "/images/brands/wellsfargo.svg", "cardImage": null, "color": "#D71E28" },
+  { "id": "wells-fargo", "name": "Wells Fargo", "type": "bank", "logo": "/images/brands/wellsfargo.png", "cardImage": null, "color": "#D71E28" },
 
   { "id": "expedia", "name": "Expedia", "type": "subscription", "logo": "/images/brands/expedia.svg", "cardImage": null, "color": "#FBCE00" }
 ]
