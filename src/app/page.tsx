@@ -116,40 +116,35 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right — stacked credit card images */}
-          <div className="relative hidden lg:block animate-slide-cards delay-300">
-            <div className="card-stack relative h-[420px]">
-              {/* Back card */}
-              <div className="absolute right-0 top-8 w-[340px] rotate-6 opacity-60">
-                <Image
-                  src="/images/cards/chase-sapphire-reserve.jpg"
-                  alt="Chase Sapphire Reserve"
-                  width={500}
-                  height={315}
-                  className="rounded-xl shadow-2xl shadow-black/40"
-                />
+          {/* Right — phone mockup showing the app */}
+          <div className="relative hidden lg:flex justify-center animate-fade-up delay-300">
+            <div className="relative w-[300px]">
+              {/* Phone frame */}
+              <div className="rounded-[44px] bg-[#1a1a1a] p-3 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)]">
+                <div className="rounded-[34px] overflow-hidden bg-cream">
+                  {/* Status bar */}
+                  <div className="bg-dark px-5 pt-4 pb-3">
+                    <div className="text-[11px] text-white/40 font-medium">Your annual perk value</div>
+                    <div className="text-[28px] font-bold text-white" style={{ fontFamily: "var(--font-heading)" }}>$12,450</div>
+                    <div className="text-[10px] text-white/25 mt-0.5">across 5 providers</div>
+                  </div>
+                  {/* Perk cards */}
+                  <div className="px-3 py-3 space-y-2">
+                    {perksData.filter(p => p.popular).slice(0, 5).map(perk => (
+                      <div key={perk.id} className="flex items-center gap-2.5 rounded-xl bg-surface p-3 border border-border/50">
+                        <BrandLogo provider={perk.provider} size={22} />
+                        <div className="flex-1 min-w-0">
+                          <div className="text-[11px] font-semibold text-ink truncate">{perk.title}</div>
+                          <div className="text-[9px] text-ink-muted">{perk.provider}</div>
+                        </div>
+                        <div className="text-[11px] font-bold text-primary">{perk.value}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-              {/* Middle card */}
-              <div className="absolute right-12 top-0 w-[340px] rotate-2 opacity-80">
-                <Image
-                  src="/images/cards/amex-gold.jpg"
-                  alt="Amex Gold"
-                  width={500}
-                  height={315}
-                  className="rounded-xl shadow-2xl shadow-black/30"
-                />
-              </div>
-              {/* Front card */}
-              <div className="absolute right-24 top-12 w-[360px] -rotate-3">
-                <Image
-                  src="/images/cards/amex-platinum.jpg"
-                  alt="Amex Platinum"
-                  width={500}
-                  height={315}
-                  className="rounded-xl shadow-2xl shadow-black/50"
-                  priority
-                />
-              </div>
+              {/* Notch */}
+              <div className="absolute top-3 left-1/2 -translate-x-1/2 w-[100px] h-[26px] bg-[#1a1a1a] rounded-b-2xl z-10" />
             </div>
           </div>
         </div>
