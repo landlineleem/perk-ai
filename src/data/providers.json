@@ -88,7 +88,7 @@
   { "id": "bjs-wholesale", "name": "BJ's Wholesale", "type": "membership", "logo": "/images/brands/bjs.png", "cardImage": null, "color": "#D31145" },
 
   { "id": "alaska-airlines", "name": "Alaska Airlines", "type": "airline", "logo": "/images/brands/alaskaairlines.png", "cardImage": null, "color": "#01426A" },
-  { "id": "spirit-airlines", "name": "Spirit Airlines", "type": "airline", "logo": "/images/brands/spiritairlines.svg", "cardImage": null, "color": "#FFD200" },
+  { "id": "spirit-airlines", "name": "Spirit Airlines", "type": "airline", "logo": "/images/brands/spiritairlines.png", "cardImage": null, "color": "#FFD200" },
   { "id": "frontier-airlines", "name": "Frontier Airlines", "type": "airline", "logo": "/images/brands/frontierairlines.png", "cardImage": null, "color": "#003B2A" },
 
   { "id": "best-western", "name": "Best Western", "type": "hotel", "logo": "/images/brands/bestwestern.png", "cardImage": null, "color": "#003B71" },
