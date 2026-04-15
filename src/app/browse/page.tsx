@@ -73,7 +73,7 @@ export default function BrowsePage() {
               <div>
                 <h1
                   className="text-3xl tracking-tight md:text-4xl animate-fade-up"
-                  style={{ fontFamily: "var(--font-serif)" }}
+                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   {selectedProviderData.name}
                 </h1>
@@ -159,7 +159,7 @@ export default function BrowsePage() {
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
           <h1
             className="mb-2 text-3xl tracking-tight md:text-4xl animate-fade-up"
-            style={{ fontFamily: "var(--font-serif)" }}
+            style={{ fontFamily: "var(--font-display)" }}
           >
             Discover perks
           </h1>
@@ -237,7 +237,7 @@ export default function BrowsePage() {
                           </div>
                           <h2
                             className="mb-3 text-2xl tracking-tight md:text-3xl group-hover:text-primary-light transition-colors"
-                            style={{ fontFamily: "var(--font-serif)" }}
+                            style={{ fontFamily: "var(--font-display)" }}
                           >
                             {featuredPerk.title}
                           </h2>
@@ -272,7 +272,7 @@ export default function BrowsePage() {
                   </div>
                   <h2
                     className="text-2xl tracking-tight md:text-3xl"
-                    style={{ fontFamily: "var(--font-serif)" }}
+                    style={{ fontFamily: "var(--font-display)" }}
                   >
                     Worth the most
                   </h2>
@@ -297,7 +297,7 @@ export default function BrowsePage() {
                   </div>
                   <h2
                     className="text-2xl tracking-tight md:text-3xl"
-                    style={{ fontFamily: "var(--font-serif)" }}
+                    style={{ fontFamily: "var(--font-display)" }}
                   >
                     Most popular perks
                   </h2>
@@ -322,7 +322,7 @@ export default function BrowsePage() {
                   </div>
                   <h2
                     className="text-2xl tracking-tight md:text-3xl"
-                    style={{ fontFamily: "var(--font-serif)" }}
+                    style={{ fontFamily: "var(--font-display)" }}
                   >
                     Newest perks
                   </h2>
@@ -343,7 +343,7 @@ export default function BrowsePage() {
                 </p>
                 <h2
                   className="text-2xl tracking-tight md:text-3xl"
-                  style={{ fontFamily: "var(--font-serif)" }}
+                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   Browse by category
                 </h2>

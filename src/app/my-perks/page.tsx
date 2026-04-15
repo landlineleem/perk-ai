@@ -86,7 +86,7 @@ export default function MyPerksPage() {
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
           <h1
             className="mb-2 text-3xl tracking-tight md:text-4xl animate-fade-up"
-            style={{ fontFamily: "var(--font-serif)" }}
+            style={{ fontFamily: "var(--font-display)" }}
           >
             My Perks
           </h1>

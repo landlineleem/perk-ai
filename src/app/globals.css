@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -22,7 +22,7 @@
   --color-warning: #BF6A02;
   --color-danger: #CF222E;
   --font-heading: 'DM Sans', sans-serif;
-  --font-serif: 'Instrument Serif', serif;
+  --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
 }
 

@@ -37,7 +37,7 @@ export default function PerkDetailPage({
       <div className="mx-auto flex min-h-[60vh] max-w-7xl flex-col items-center justify-center px-6 py-20 text-center">
         <h1
           className="mb-2 text-2xl font-bold"
-          style={{ fontFamily: "var(--font-serif)" }}
+          style={{ fontFamily: "var(--font-display)" }}
         >
           Perk not found
         </h1>
@@ -85,7 +85,7 @@ export default function PerkDetailPage({
 
               <h1
                 className="mb-4 text-3xl tracking-tight md:text-4xl animate-fade-up"
-                style={{ fontFamily: "var(--font-serif)" }}
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 {perk.title}
               </h1>

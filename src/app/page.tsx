@@ -90,9 +90,9 @@ export default function Home() {
 
             <h1
               className="mb-6 text-[3.2rem] leading-[1.08] tracking-tight md:text-[4.2rem] animate-fade-up delay-100"
-              style={{ fontFamily: "var(--font-serif)" }}
+              style={{ fontFamily: "var(--font-display)" }}
             >
-              Every perk you <em className="text-primary-light">deserve</em> to know
+              Every perk you <span className="text-primary-light">deserve</span> to know
             </h1>
 
             <p className="mb-10 text-base leading-relaxed text-white/50 max-w-md animate-fade-up delay-200">
@@ -211,7 +211,7 @@ export default function Home() {
               </p>
               <h2
                 className="text-3xl tracking-tight md:text-4xl"
-                style={{ fontFamily: "var(--font-serif)" }}
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 Explore by category
               </h2>
@@ -303,9 +303,9 @@ export default function Home() {
           <div className="mx-auto max-w-2xl text-center">
             <h2
               className="mb-4 text-3xl tracking-tight md:text-5xl"
-              style={{ fontFamily: "var(--font-serif)" }}
+              style={{ fontFamily: "var(--font-display)" }}
             >
-              See what you&apos;re <em className="text-primary-light">actually</em> paying for
+              See what you&apos;re <span className="text-primary-light">actually</span> paying for
             </h2>
             <p className="mx-auto mb-10 max-w-md text-sm leading-relaxed text-white/40">
               Select your cards, subscriptions, and memberships. We&apos;ll show you
