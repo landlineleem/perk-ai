@@ -104,7 +104,7 @@
   { "id": "ulta-beauty", "name": "Ulta Beauty", "type": "retail", "logo": "/images/brands/ulta.svg", "cardImage": null, "color": "#F57224" },
 
   { "id": "safeway", "name": "Safeway", "type": "grocery", "logo": "/images/brands/safeway.png", "cardImage": null, "color": "#E8372C" },
-  { "id": "albertsons", "name": "Albertsons", "type": "grocery", "logo": "/images/brands/albertsons.svg", "cardImage": null, "color": "#0072CE" },
+  { "id": "albertsons", "name": "Albertsons", "type": "grocery", "logo": "/images/brands/albertsons.png", "cardImage": null, "color": "#0072CE" },
   { "id": "heb", "name": "H-E-B", "type": "grocery", "logo": "/images/brands/heb.svg", "cardImage": null, "color": "#EE1C25" },
 
   { "id": "equinox", "name": "Equinox", "type": "fitness", "logo": "/images/brands/equinox.png", "cardImage": null, "color": "#000000" },
