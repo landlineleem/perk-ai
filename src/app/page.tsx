@@ -86,7 +86,7 @@ export default function Home() {
               className="mb-6 text-[2.8rem] leading-[1.08] tracking-tight md:text-[3.8rem] animate-fade-up font-bold"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Every card. Every subscription. Every perk. <span className="text-primary-light">One dashboard.</span>
+              Every card.<br />Every subscription.<br />Every perk.<br /><span className="text-primary-light">One dashboard.</span>
             </h1>
 
             <p className="mb-10 text-base leading-relaxed text-white/50 max-w-md animate-fade-up delay-100">
