@@ -138,12 +138,12 @@ export default function Home() {
                         <div className="flex items-center gap-1.5 mb-1.5">
                           <BrandLogo provider="Amex Gold" size={14} />
                           <span className="text-[8px] font-semibold text-ink-muted">Amex Gold</span>
-                          <span className="ml-auto text-[8px] font-bold text-primary">4X points</span>
+                          <span className="ml-auto text-[8px] font-bold text-primary">$120/yr</span>
                         </div>
                         <div className="rounded-lg overflow-hidden mb-1.5">
                           <Image src="/images/cards/amex-gold.jpg" alt="Amex Gold" width={400} height={252} className="w-full object-cover" />
                         </div>
-                        <div className="text-[9px] font-semibold text-ink leading-tight">4X Points on Dining</div>
+                        <div className="text-[9px] font-semibold text-ink leading-tight">$120 Dining Credit</div>
                       </div>
                       {/* Chick-fil-A */}
                       <div className="flex items-center gap-2 rounded-lg bg-white p-2 border border-[#E8E6DE]">
