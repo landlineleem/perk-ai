@@ -77,22 +77,41 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* ===== HERO — centered layout like perk.com ===== */}
+      {/* ===== HERO — side by side ===== */}
       <section className="relative overflow-hidden bg-dark text-white">
-        <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 md:pt-24 md:pb-12 lg:px-10">
-
-          {/* Title — top, centered */}
-          <div className="text-center animate-fade-up">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1fr_1fr] lg:px-10">
+          {/* Left — copy */}
+          <div className="relative z-10 max-w-xl">
             <h1
-              className="text-[2.8rem] md:text-[4.5rem] lg:text-[5.5rem] leading-[1.02] tracking-tight font-bold"
+              className="mb-6 text-[2.8rem] leading-[1.08] tracking-tight md:text-[3.8rem] animate-fade-up font-bold"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Every card. Every subscription.<br />Every perk. <span className="text-primary-light">One dashboard.</span>
+              Every card. Every subscription. Every perk. <span className="text-primary-light">One dashboard.</span>
             </h1>
+
+            <p className="mb-10 text-base leading-relaxed text-white/50 max-w-md animate-fade-up delay-100">
+              Your credit cards, subscriptions, and memberships hold thousands in
+              hidden value. We surface every benefit so nothing goes to waste.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-4 animate-fade-up delay-200">
+              <Link
+                href="/my-perks"
+                className="rounded-full bg-primary px-7 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-primary-light"
+              >
+                Unlock My Perks
+              </Link>
+              <Link
+                href="/browse"
+                className="rounded-full border border-white/20 px-7 py-3.5 text-[15px] font-medium text-white/70 transition-all hover:border-white/40 hover:text-white"
+              >
+                Browse All
+              </Link>
+            </div>
           </div>
 
-          {/* Phone + floating widgets — center */}
-          <div className="relative mx-auto mt-12 md:mt-16" style={{ maxWidth: 680, height: 560 }}>
+          {/* Right — phone mockup with floating widgets */}
+          <div className="relative hidden lg:block" style={{ height: 600 }}>
             {/* Main phone */}
             <div className="absolute left-1/2 -translate-x-1/2 bottom-0 animate-hero-device">
               <div className="relative" style={{ width: 300 }}>
@@ -169,7 +188,7 @@ export default function Home() {
             </div>
 
             {/* Floating widgets */}
-            <div className="absolute left-0 top-[5%] animate-hero-widget delay-1000 hidden md:block" style={{ animationFillMode: 'both' }}>
+            <div className="absolute left-[-8%] top-[3%] animate-hero-widget delay-1000" style={{ animationFillMode: 'both' }}>
               <div className="hero-widget animate-gentle-float flex items-center gap-3">
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-subtle">
                   <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -181,7 +200,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="absolute right-0 top-[12%] animate-hero-widget delay-1300 hidden md:block" style={{ animationFillMode: 'both' }}>
+            <div className="absolute right-[-5%] top-[10%] animate-hero-widget delay-1300" style={{ animationFillMode: 'both' }}>
               <div className="hero-widget animate-gentle-float flex items-center gap-3" style={{ animationDelay: '1s' }}>
                 <div className="flex -space-x-1.5">
                   {["Starbucks", "Netflix", "Nike"].map(name => (
@@ -197,7 +216,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="absolute left-[-2%] top-[50%] animate-hero-widget delay-1500 hidden md:block" style={{ animationFillMode: 'both' }}>
+            <div className="absolute left-[-12%] top-[50%] animate-hero-widget delay-1500" style={{ animationFillMode: 'both' }}>
               <div className="hero-widget animate-gentle-float flex items-center gap-3" style={{ animationDelay: '2s' }}>
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gold-subtle">
                   <svg className="h-4 w-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
@@ -209,7 +228,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="absolute right-0 top-[55%] animate-hero-widget delay-1800 hidden md:block" style={{ animationFillMode: 'both' }}>
+            <div className="absolute right-[-8%] top-[55%] animate-hero-widget delay-1800" style={{ animationFillMode: 'both' }}>
               <div className="hero-widget animate-gentle-float flex items-center gap-2.5" style={{ animationDelay: '3s' }}>
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-subtle">
                   <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
@@ -219,29 +238,6 @@ export default function Home() {
                   <div className="text-[9px] text-ink-muted">Travel to streaming</div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Subtitle + CTAs — below phone, centered */}
-          <div className="relative z-10 text-center mt-8 md:mt-12">
-            <p className="text-base md:text-lg leading-relaxed text-white/40 max-w-lg mx-auto mb-8 animate-fade-up delay-300">
-              Your credit cards, subscriptions, and memberships hold thousands in
-              hidden value. We surface every benefit so nothing goes to waste.
-            </p>
-
-            <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-up delay-400">
-              <Link
-                href="/my-perks"
-                className="rounded-full bg-primary px-7 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-primary-light"
-              >
-                Unlock My Perks
-              </Link>
-              <Link
-                href="/browse"
-                className="rounded-full border border-white/20 px-7 py-3.5 text-[15px] font-medium text-white/70 transition-all hover:border-white/40 hover:text-white"
-              >
-                Browse All
-              </Link>
             </div>
           </div>
         </div>
