@@ -87,7 +87,7 @@ export default function Home() {
               className="text-[2.8rem] md:text-[4.5rem] lg:text-[5.5rem] leading-[1.02] tracking-tight font-bold"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Discover the perks<br />you&apos;re <span className="text-primary-light">missing out on</span>
+              Every card. Every subscription.<br />Every perk. <span className="text-primary-light">One dashboard.</span>
             </h1>
           </div>
 
