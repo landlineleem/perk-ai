@@ -113,7 +113,7 @@
 
   { "id": "verizon", "name": "Verizon", "type": "subscription", "logo": "/images/brands/verizon.svg", "cardImage": null, "color": "#CD040B" },
   { "id": "att", "name": "AT&T", "type": "subscription", "logo": "/images/brands/att.png", "cardImage": null, "color": "#009FDB" },
-  { "id": "xfinity", "name": "Xfinity", "type": "subscription", "logo": "/images/brands/xfinity.svg", "cardImage": null, "color": "#000000" },
+  { "id": "xfinity", "name": "Xfinity", "type": "subscription", "logo": "/images/brands/xfinity.png", "cardImage": null, "color": "#000000" },
 
   { "id": "robinhood", "name": "Robinhood", "type": "fintech", "logo": "/images/brands/robinhood.png", "cardImage": null, "color": "#00C805" },
   { "id": "sofi", "name": "SoFi", "type": "fintech", "logo": "/images/brands/sofi.png", "cardImage": null, "color": "#6BCDDB" },
