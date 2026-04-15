@@ -329,9 +329,9 @@ export default function Home() {
             <div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/logo.png"
+                src="/images/logo-new.svg"
                 alt="Perk.AI"
-                className="mb-3 h-6 w-auto rounded"
+                className="mb-3 h-6 w-auto"
               />
               <p className="max-w-sm text-xs leading-relaxed text-ink-muted">
                 Perk.ai helps you discover and track every benefit from your credit cards,
