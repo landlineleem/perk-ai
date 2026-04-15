@@ -81,7 +81,7 @@
 
   { "id": "discover-it", "name": "Discover It", "type": "credit-card", "logo": "/images/brands/discover.svg", "cardImage": "/images/cards/discover-it.png", "color": "#FF6600" },
   { "id": "amex-blue-cash", "name": "Amex Blue Cash", "type": "credit-card", "logo": "/images/brands/amex.svg", "cardImage": "/images/cards/amex-blue-cash.png", "color": "#006FCF" },
-  { "id": "chase-sapphire-preferred", "name": "Chase Sapphire Preferred", "type": "credit-card", "logo": "/images/brands/chase.svg", "cardImage": null, "color": "#003087" },
+  { "id": "chase-sapphire-preferred", "name": "Chase Sapphire Preferred", "type": "credit-card", "logo": "/images/brands/chase.svg", "cardImage": "/images/cards/chase-sapphire-preferred.png", "color": "#003087" },
   { "id": "wells-fargo-active-cash", "name": "Wells Fargo Active Cash", "type": "credit-card", "logo": "/images/brands/wellsfargo.png", "cardImage": null, "color": "#D71E28" },
 
   { "id": "sams-club", "name": "Sam's Club", "type": "membership", "logo": "/images/brands/samsclub.webp", "cardImage": null, "color": "#0060A9" },
