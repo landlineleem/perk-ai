@@ -2,8 +2,10 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { ArrowRight, TrendingUp, Clock, Star, Flame, Search } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { ArrowRight, ArrowLeft, TrendingUp, Clock, Star, Flame, Search } from "lucide-react";
 import perksData from "@/data/perks.json";
+import providersData from "@/data/providers.json";
 import PerkCard, { BrandLogo } from "@/components/PerkCard";
 import SearchBar from "@/components/SearchBar";
 import CategoryFilter from "@/components/CategoryFilter";
@@ -19,9 +21,88 @@ const categories = [
   { id: "Health", label: "Health" },
 ];
 
+const providerTypeLabels: Record<string, string> = {
+  "credit-card": "Credit Cards",
+  "restaurant": "Restaurants",
+  "airline": "Airlines",
+  "hotel": "Hotels",
+  "streaming": "Streaming",
+  "retail": "Retail",
+  "grocery": "Grocery",
+  "rideshare": "Rideshare & Delivery",
+  "fintech": "Fintech",
+  "subscription": "Subscriptions",
+  "membership": "Memberships",
+  "bank": "Banks",
+  "fitness": "Fitness",
+};
+
 export default function BrowsePage() {
+  const searchParams = useSearchParams();
+  const providerParam = searchParams.get("provider") || "";
+
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("all");
+
+  // If a provider is specified via URL param, show its perks
+  const selectedProviderData = providerParam
+    ? providersData.find((p) => p.id === providerParam)
+    : null;
+
+  const providerPerks = useMemo(() => {
+    if (!selectedProviderData) return [];
+    return perksData.filter((p) => p.provider === selectedProviderData.name);
+  }, [selectedProviderData]);
+
+  if (selectedProviderData) {
+    return (
+      <div className="min-h-screen">
+        <div className="bg-dark text-white">
+          <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
+            <Link
+              href="/browse"
+              className="group mb-6 inline-flex items-center gap-1.5 text-sm text-white/40 transition-colors hover:text-white/70"
+            >
+              <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-0.5" />
+              Discover perks
+            </Link>
+            <div className="flex items-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/10">
+                <BrandLogo provider={selectedProviderData.name} size={36} />
+              </div>
+              <div>
+                <h1
+                  className="text-3xl tracking-tight md:text-4xl animate-fade-up"
+                  style={{ fontFamily: "var(--font-serif)" }}
+                >
+                  {selectedProviderData.name}
+                </h1>
+                <p className="text-sm text-white/40 animate-fade-up delay-100">
+                  <span className="text-white/70 font-medium">{providerPerks.length} perk{providerPerks.length !== 1 ? "s" : ""}</span>
+                  {" "}&middot;{" "}
+                  {providerTypeLabels[selectedProviderData.type] || selectedProviderData.type}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-7xl px-6 py-8 lg:px-10">
+          {providerPerks.length > 0 ? (
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {providerPerks.map((perk, i) => (
+                <PerkCard key={perk.id} perk={perk} index={i} />
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-2xl border-2 border-dashed border-border bg-surface py-20 text-center">
+              <p className="text-base font-medium text-ink-muted">No perks found for this provider</p>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   // Curated sections
   const featuredPerk = perksData.find((p) => p.id === "amex-platinum-lounge")!;
