@@ -6,7 +6,7 @@
   { "id": "capital-one-venture", "name": "Capital One Venture", "type": "credit-card", "logo": "/images/brands/capitalone.png", "cardImage": "/images/cards/capital-one-venture.jpg", "color": "#D03027" },
   { "id": "citi-credit-cards", "name": "Citi Credit Cards", "type": "credit-card", "logo": "/images/brands/citi.png", "cardImage": "/images/cards/citi-double-cash.png", "color": "#003DA5" },
 
-  { "id": "mercury-bank", "name": "Mercury Bank", "type": "bank", "logo": "/images/brands/mercury.png", "cardImage": null, "color": "#5856D6" },
+  { "id": "mercury-bank", "name": "Mercury Bank", "type": "bank", "logo": "/images/brands/mercury.png", "cardImage": "/images/cards/mercury.png", "color": "#5856D6" },
   { "id": "usaa", "name": "USAA", "type": "bank", "logo": "/images/brands/usaa.png", "cardImage": null, "color": "#1B3A5C" },
 
   { "id": "mcdonalds", "name": "McDonald's", "type": "restaurant", "logo": "/images/brands/mcdonalds.svg", "cardImage": null, "color": "#FFC72C" },
