@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
-      <body className="min-h-screen bg-cream text-ink antialiased overflow-x-hidden">
+      <body className="min-h-screen bg-cream text-ink antialiased">
         <Navbar />
         <main>{children}</main>
       </body>

@@ -108,7 +108,7 @@ export default function BrowsePage() {
           <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto]">
             <div>
               <h1
-                className="mb-2 text-4xl tracking-tight md:text-5xl font-heading font-semibold animate-fade-up"
+                className="mb-2 text-4xl tracking-tight md:text-5xl font-heading font-medium animate-fade-up"
               >
                 Browse all perks
               </h1>
@@ -200,7 +200,7 @@ export default function BrowsePage() {
             <p className="mt-1 text-sm text-ink-faint">Try broadening your search</p>
             <button
               onClick={() => { setSearch(""); setCategory("all"); setProviderType("all"); setVisibleCount(PAGE_SIZE); }}
-              className="mt-5 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-dark"
+              className="mt-5 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white"
             >
               Clear all filters
             </button>

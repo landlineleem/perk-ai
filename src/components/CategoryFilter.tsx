@@ -26,7 +26,7 @@ export default function CategoryFilter({
           onClick={() => onChange(cat.id)}
           className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all ${
             selected === cat.id
-              ? "bg-primary text-dark"
+              ? "bg-primary text-white"
               : "bg-surface-alt text-ink-muted hover:text-ink hover:bg-border/60"
           }`}
         >
