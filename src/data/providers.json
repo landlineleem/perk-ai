@@ -80,7 +80,7 @@
   { "id": "walmart-plus", "name": "Walmart+", "type": "subscription", "logo": "/images/brands/walmart.png", "cardImage": null, "color": "#0071CE" },
 
   { "id": "discover-it", "name": "Discover It", "type": "credit-card", "logo": "/images/brands/discover.svg", "cardImage": "/images/cards/discover-it.png", "color": "#FF6600" },
-  { "id": "amex-blue-cash", "name": "Amex Blue Cash", "type": "credit-card", "logo": "/images/brands/amex.svg", "cardImage": null, "color": "#006FCF" },
+  { "id": "amex-blue-cash", "name": "Amex Blue Cash", "type": "credit-card", "logo": "/images/brands/amex.svg", "cardImage": "/images/cards/amex-blue-cash.png", "color": "#006FCF" },
   { "id": "chase-sapphire-preferred", "name": "Chase Sapphire Preferred", "type": "credit-card", "logo": "/images/brands/chase.svg", "cardImage": null, "color": "#003087" },
   { "id": "wells-fargo-active-cash", "name": "Wells Fargo Active Cash", "type": "credit-card", "logo": "/images/brands/wellsfargo.png", "cardImage": null, "color": "#D71E28" },
 
