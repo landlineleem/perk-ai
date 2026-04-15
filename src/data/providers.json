@@ -91,7 +91,7 @@
   { "id": "spirit-airlines", "name": "Spirit Airlines", "type": "airline", "logo": "/images/brands/spiritairlines.svg", "cardImage": null, "color": "#FFD200" },
   { "id": "frontier-airlines", "name": "Frontier Airlines", "type": "airline", "logo": "/images/brands/frontierairlines.svg", "cardImage": null, "color": "#003B2A" },
 
-  { "id": "best-western", "name": "Best Western", "type": "hotel", "logo": "/images/brands/bestwestern.svg", "cardImage": null, "color": "#003B71" },
+  { "id": "best-western", "name": "Best Western", "type": "hotel", "logo": "/images/brands/bestwestern.png", "cardImage": null, "color": "#003B71" },
   { "id": "wyndham-rewards", "name": "Wyndham Rewards", "type": "hotel", "logo": "/images/brands/wyndham.svg", "cardImage": null, "color": "#00205B" },
 
   { "id": "apple-tv-plus", "name": "Apple TV+", "type": "streaming", "logo": "/images/brands/apple.svg", "cardImage": null, "color": "#000000" },
