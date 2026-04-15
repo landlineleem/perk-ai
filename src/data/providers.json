@@ -77,5 +77,50 @@
   { "id": "apple-one", "name": "Apple One", "type": "subscription", "logo": "/images/brands/apple.svg", "cardImage": null, "color": "#000000" },
   { "id": "amazon-prime", "name": "Amazon Prime", "type": "subscription", "logo": "/images/brands/amazon.png", "cardImage": null, "color": "#FF9900" },
   { "id": "t-mobile", "name": "T-Mobile", "type": "subscription", "logo": "/images/brands/tmobile.png", "cardImage": null, "color": "#E20074" },
-  { "id": "walmart-plus", "name": "Walmart+", "type": "subscription", "logo": "/images/brands/walmart.png", "cardImage": null, "color": "#0071CE" }
+  { "id": "walmart-plus", "name": "Walmart+", "type": "subscription", "logo": "/images/brands/walmart.png", "cardImage": null, "color": "#0071CE" },
+
+  { "id": "discover-it", "name": "Discover It", "type": "credit-card", "logo": "/images/brands/discover.svg", "cardImage": null, "color": "#FF6600" },
+  { "id": "amex-blue-cash", "name": "Amex Blue Cash", "type": "credit-card", "logo": "/images/brands/amex.svg", "cardImage": null, "color": "#006FCF" },
+  { "id": "chase-sapphire-preferred", "name": "Chase Sapphire Preferred", "type": "credit-card", "logo": "/images/brands/chase.svg", "cardImage": null, "color": "#003087" },
+  { "id": "wells-fargo-active-cash", "name": "Wells Fargo Active Cash", "type": "credit-card", "logo": "/images/brands/wellsfargo.svg", "cardImage": null, "color": "#D71E28" },
+
+  { "id": "sams-club", "name": "Sam's Club", "type": "membership", "logo": "/images/brands/samsclub.svg", "cardImage": null, "color": "#0060A9" },
+  { "id": "bjs-wholesale", "name": "BJ's Wholesale", "type": "membership", "logo": "/images/brands/bjs.svg", "cardImage": null, "color": "#D31145" },
+
+  { "id": "alaska-airlines", "name": "Alaska Airlines", "type": "airline", "logo": "/images/brands/alaskaairlines.svg", "cardImage": null, "color": "#01426A" },
+  { "id": "spirit-airlines", "name": "Spirit Airlines", "type": "airline", "logo": "/images/brands/spiritairlines.svg", "cardImage": null, "color": "#FFD200" },
+  { "id": "frontier-airlines", "name": "Frontier Airlines", "type": "airline", "logo": "/images/brands/frontierairlines.svg", "cardImage": null, "color": "#003B2A" },
+
+  { "id": "best-western", "name": "Best Western", "type": "hotel", "logo": "/images/brands/bestwestern.svg", "cardImage": null, "color": "#003B71" },
+  { "id": "wyndham-rewards", "name": "Wyndham Rewards", "type": "hotel", "logo": "/images/brands/wyndham.svg", "cardImage": null, "color": "#00205B" },
+
+  { "id": "apple-tv-plus", "name": "Apple TV+", "type": "streaming", "logo": "/images/brands/apple.svg", "cardImage": null, "color": "#000000" },
+  { "id": "amazon-prime-video", "name": "Prime Video", "type": "streaming", "logo": "/images/brands/amazon.png", "cardImage": null, "color": "#00A8E1" },
+  { "id": "crunchyroll", "name": "Crunchyroll", "type": "streaming", "logo": "/images/brands/crunchyroll.svg", "cardImage": null, "color": "#F47521" },
+
+  { "id": "lowes", "name": "Lowe's", "type": "retail", "logo": "/images/brands/lowes.svg", "cardImage": null, "color": "#004990" },
+  { "id": "nordstrom", "name": "Nordstrom", "type": "retail", "logo": "/images/brands/nordstrom.svg", "cardImage": null, "color": "#000000" },
+  { "id": "macys", "name": "Macy's", "type": "retail", "logo": "/images/brands/macys.svg", "cardImage": null, "color": "#E21A2C" },
+  { "id": "ulta-beauty", "name": "Ulta Beauty", "type": "retail", "logo": "/images/brands/ulta.svg", "cardImage": null, "color": "#F57224" },
+
+  { "id": "safeway", "name": "Safeway", "type": "grocery", "logo": "/images/brands/safeway.svg", "cardImage": null, "color": "#E8372C" },
+  { "id": "albertsons", "name": "Albertsons", "type": "grocery", "logo": "/images/brands/albertsons.svg", "cardImage": null, "color": "#0072CE" },
+  { "id": "heb", "name": "H-E-B", "type": "grocery", "logo": "/images/brands/heb.svg", "cardImage": null, "color": "#EE1C25" },
+
+  { "id": "equinox", "name": "Equinox", "type": "fitness", "logo": "/images/brands/equinox.svg", "cardImage": null, "color": "#000000" },
+  { "id": "orangetheory", "name": "Orangetheory", "type": "fitness", "logo": "/images/brands/orangetheory.svg", "cardImage": null, "color": "#F36F21" },
+  { "id": "peloton", "name": "Peloton", "type": "fitness", "logo": "/images/brands/peloton.svg", "cardImage": null, "color": "#000000" },
+
+  { "id": "verizon", "name": "Verizon", "type": "subscription", "logo": "/images/brands/verizon.svg", "cardImage": null, "color": "#CD040B" },
+  { "id": "att", "name": "AT&T", "type": "subscription", "logo": "/images/brands/att.svg", "cardImage": null, "color": "#009FDB" },
+  { "id": "xfinity", "name": "Xfinity", "type": "subscription", "logo": "/images/brands/xfinity.svg", "cardImage": null, "color": "#000000" },
+
+  { "id": "robinhood", "name": "Robinhood", "type": "fintech", "logo": "/images/brands/robinhood.svg", "cardImage": null, "color": "#00C805" },
+  { "id": "sofi", "name": "SoFi", "type": "fintech", "logo": "/images/brands/sofi.svg", "cardImage": null, "color": "#6BCDDB" },
+
+  { "id": "chase-bank", "name": "Chase Bank", "type": "bank", "logo": "/images/brands/chase.svg", "cardImage": null, "color": "#003087" },
+  { "id": "bank-of-america", "name": "Bank of America", "type": "bank", "logo": "/images/brands/bankofamerica.svg", "cardImage": null, "color": "#012169" },
+  { "id": "wells-fargo", "name": "Wells Fargo", "type": "bank", "logo": "/images/brands/wellsfargo.svg", "cardImage": null, "color": "#D71E28" },
+
+  { "id": "expedia", "name": "Expedia", "type": "subscription", "logo": "/images/brands/expedia.svg", "cardImage": null, "color": "#FBCE00" }
 ]
