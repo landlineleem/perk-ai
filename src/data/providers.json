@@ -108,7 +108,7 @@
   { "id": "heb", "name": "H-E-B", "type": "grocery", "logo": "/images/brands/heb.svg", "cardImage": null, "color": "#EE1C25" },
 
   { "id": "equinox", "name": "Equinox", "type": "fitness", "logo": "/images/brands/equinox.png", "cardImage": null, "color": "#000000" },
-  { "id": "orangetheory", "name": "Orangetheory", "type": "fitness", "logo": "/images/brands/orangetheory.svg", "cardImage": null, "color": "#F36F21" },
+  { "id": "orangetheory", "name": "Orangetheory", "type": "fitness", "logo": "/images/brands/orangetheory.webp", "cardImage": null, "color": "#F36F21" },
   { "id": "peloton", "name": "Peloton", "type": "fitness", "logo": "/images/brands/peloton.png", "cardImage": null, "color": "#000000" },
 
   { "id": "verizon", "name": "Verizon", "type": "subscription", "logo": "/images/brands/verizon.svg", "cardImage": null, "color": "#CD040B" },
