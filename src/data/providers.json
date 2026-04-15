@@ -99,7 +99,7 @@
   { "id": "crunchyroll", "name": "Crunchyroll", "type": "streaming", "logo": "/images/brands/crunchyroll.svg", "cardImage": null, "color": "#F47521" },
 
   { "id": "lowes", "name": "Lowe's", "type": "retail", "logo": "/images/brands/lowes.png", "cardImage": null, "color": "#004990" },
-  { "id": "nordstrom", "name": "Nordstrom", "type": "retail", "logo": "/images/brands/nordstrom.svg", "cardImage": null, "color": "#000000" },
+  { "id": "nordstrom", "name": "Nordstrom", "type": "retail", "logo": "/images/brands/nordstrom.png", "cardImage": null, "color": "#000000" },
   { "id": "macys", "name": "Macy's", "type": "retail", "logo": "/images/brands/macys.png", "cardImage": null, "color": "#E21A2C" },
   { "id": "ulta-beauty", "name": "Ulta Beauty", "type": "retail", "logo": "/images/brands/ulta.svg", "cardImage": null, "color": "#F57224" },
 
