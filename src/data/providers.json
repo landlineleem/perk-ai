@@ -115,7 +115,7 @@
   { "id": "att", "name": "AT&T", "type": "subscription", "logo": "/images/brands/att.svg", "cardImage": null, "color": "#009FDB" },
   { "id": "xfinity", "name": "Xfinity", "type": "subscription", "logo": "/images/brands/xfinity.svg", "cardImage": null, "color": "#000000" },
 
-  { "id": "robinhood", "name": "Robinhood", "type": "fintech", "logo": "/images/brands/robinhood.svg", "cardImage": null, "color": "#00C805" },
+  { "id": "robinhood", "name": "Robinhood", "type": "fintech", "logo": "/images/brands/robinhood.png", "cardImage": null, "color": "#00C805" },
   { "id": "sofi", "name": "SoFi", "type": "fintech", "logo": "/images/brands/sofi.svg", "cardImage": null, "color": "#6BCDDB" },
 
   { "id": "chase-bank", "name": "Chase Bank", "type": "bank", "logo": "/images/brands/chase.svg", "cardImage": null, "color": "#003087" },
